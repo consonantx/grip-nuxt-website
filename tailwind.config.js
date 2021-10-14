@@ -9,7 +9,19 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#144CF5",
+        secondary: "#CCF725",
+      },
+    },
+    fontFamily: {
+      display: ["Momentum Extended", "system-ui", "sans-serif"],
+      body: ["Neue Machina", "system-ui", "sans-serif"],
+    },
+    container: {
+      center: true
+    }
   },
   variants: {
     extend: {},
