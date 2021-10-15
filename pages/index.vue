@@ -1,5 +1,26 @@
 <template>
   <div class="h-screen w-screen bg-black overflow-hidden text-white">
+    <Head>
+      <Title>Grip - One Channel, All Payments Everything</Title>
+      <Link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon/apple-touch-icon.png"
+      />
+      <Link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon/favicon-32x32.png"
+      />
+      <Link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon/favicon-16x16.png"
+      />
+      <Link rel="manifest" href="/site.webmanifest" />
+    </Head>
     <layout-navbar></layout-navbar>
 
     <main
@@ -80,7 +101,9 @@
           <img src="/home/app.png" alt="App Image" />
         </div>
 
-        <common-blur-container class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-24">
+        <common-blur-container
+          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-24"
+        >
           <img
             src="/common/logos/mastercard.svg"
             alt="Mastercard Logo"
@@ -89,7 +112,9 @@
           <p class="mb-0 text-sm lg:text-xl text-white">*** 458</p>
         </common-blur-container>
 
-        <common-blur-container class="bottom-[35%] lg:bottom-[10%] -right-6 lg:-right-16">
+        <common-blur-container
+          class="bottom-[35%] lg:bottom-[10%] -right-6 lg:-right-16"
+        >
           <home-logo
             image-url="/common/logos/gtb.svg"
             image-alt="GTB Logo"
