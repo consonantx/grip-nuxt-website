@@ -11,9 +11,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#144CF5",
-        secondary: "#CCF725",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
       },
+      backgroundImage: {
+        abstract: "url('/common/abstract_bg.png')",
+        "shimmery-star": "url('/common/shimmery_star.png')"
+      }
     },
     fontFamily: {
       display: ["Momentum Extended", "system-ui", "sans-serif"],
