@@ -2,6 +2,7 @@
   <div class="h-screen w-screen bg-black overflow-hidden text-white">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
+      <Meta name="description" content="Consolidate all your existing ways of making payments into a single channel with grip. The best way to get a grip of your finances" />
       <Link
         rel="apple-touch-icon"
         sizes="180x180"
