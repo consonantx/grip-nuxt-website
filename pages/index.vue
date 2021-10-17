@@ -28,10 +28,10 @@
     <layout-navbar class="relative z-10"></layout-navbar>
 
     <main
-      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative z-10"
+      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative gap-x-16 z-10"
     >
       <!-- Header Content -->
-      <div class="flex flex-col gap-y-16 mt-10">
+      <div class="flex flex-col gap-y-24 mt-10">
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
@@ -63,8 +63,7 @@
         <nuxt-link
           to="/"
           class="
-            py-4
-            lg:py-6
+            py-6
             px-12
             lg:px-14
             bg-primary
@@ -92,7 +91,8 @@
           lg:max-w-max
           mx-auto
           min-w-[12rem]
-          lg:min-w-[36rem]
+          md:min-w-[24rem]
+          xl:min-w-[36rem]
           h-[30rem]
           lg:h-[40rem]
           lg:mr-10
