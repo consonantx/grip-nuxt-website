@@ -28,7 +28,18 @@
     <layout-navbar class="relative z-10"></layout-navbar>
 
     <main
-      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative gap-x-16 z-10"
+      class="
+        flex
+        container
+        justify-between
+        mt-0
+        lg:mt-10
+        flex-col
+        lg:flex-row
+        relative
+        gap-x-16
+        z-10
+      "
     >
       <!-- Header Content -->
       <div class="flex flex-col gap-y-24 mt-10">
@@ -61,7 +72,7 @@
         </div>
         <!-- Header Action -->
         <nuxt-link
-          to="/"
+          to="/join"
           class="
             py-6
             px-12
@@ -77,7 +88,7 @@
             lg:ml-0
             leading-none
           "
-          >Get Notified</nuxt-link
+          >Join Waitlist</nuxt-link
         >
       </div>
 
@@ -172,7 +183,22 @@
       </div>
     </main>
 
-    <footer class="bg-secondary p-2 absolute bottom-10 left-0 z-10 w-full gap-x-16 text-black font-light overflow-x-hidden flex flex-nowrap">
+    <footer
+      class="
+        bg-secondary
+        p-2
+        absolute
+        bottom-10
+        left-0
+        z-10
+        w-full
+        gap-x-16
+        text-black
+        font-light
+        overflow-x-hidden
+        hidden lg:flex flex-nowrap
+      "
+    >
       <span class="text-base leading-none">private beta</span>
       <span class="text-base leading-none">private beta</span>
       <span class="text-base leading-none">private beta</span>
@@ -185,7 +211,18 @@
       <span class="text-base leading-none">private beta</span>
     </footer>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+    <div
+      class="
+        container
+        absolute
+        w-screen
+        h-screen
+        top-0
+        z-0
+        left-1/2
+        -translate-x-1/2
+      "
+    >
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>
@@ -217,13 +254,21 @@
   height: 107rem;
   width: 107rem;
   position: absolute;
-  opacity: .65;
+  opacity: 0.65;
   &--a {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(228, 35, 47, 0.2484) 0%, rgba(0, 0, 0, 0) 91.15%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(228, 35, 47, 0.2484) 0%,
+      rgba(0, 0, 0, 0) 91.15%
+    );
   }
 
   &--b {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(73, 34, 227, 0.1782) 0%, rgba(0, 0, 0, 0) 91.15%);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(73, 34, 227, 0.1782) 0%,
+      rgba(0, 0, 0, 0) 91.15%
+    );
   }
 }
 </style>
