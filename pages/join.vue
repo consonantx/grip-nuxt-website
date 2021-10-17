@@ -39,11 +39,12 @@
         relative
         lg:gap-x-16
         z-10
+        overflow-scroll
       "
     >
       <!-- Header Content -->
       <div class="flex flex-col gap-y-24 mt-10">
-        <h1 class="hidden">You only need one grip card</h1>
+        <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
           class="
@@ -56,160 +57,134 @@
             flex flex-col
             leading-tight
             gap-y-4
+            lg:gap-y-6
           "
         >
-          <div class="track">
-            <span class="bg-secondary text-black px-6 py-2 rounded-full mr-2"
-              >You</span
-            >
-            <span>only</span>
+          <div class="flex items-center justify-center lg:justify-start">
+            Get
+            <div class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8">
+              <img
+                src="/common/icons/female.png"
+                alt="Girl Memoji Image"
+                class="w-12 lg:w-16 xl:w-20"
+              />
+              <span
+                class="rounded-full bg-secondary flex-grow-0 ml-1 lg:ml-2 px-2"
+              >
+                <img
+                  src="/common/icons/male.png"
+                  class="-mb-4 w-12 lg:w-16 xl:w-20"
+                  alt=""
+                />
+              </span>
+            </div>
           </div>
-          <div>need <span class="hero__cross-out">one</span></div>
-          <div>
-            <span class="bg-primary px-6 py-2 rounded-full mr-2">Grip</span>
-            <span>Card.</span>
+          <div>Notified</div>
+          <div>When We</div>
+          <div class="flex justify-center lg:justify-start">
+            <span>Launch</span>
+            <span class="rounded-full bg-secondary flex-grow-0 ml-4 xl:px-4">
+              <img
+                src="/common/icons/card.png"
+                class="w-12 lg:w-16 xl:w-20 mt-2"
+                alt="Card Image"
+              />
+            </span>
           </div>
         </div>
-        <!-- Header Action -->
-        <nuxt-link
-          to="/join"
-          class="
-            py-6
-            px-12
-            lg:px-14
-            bg-primary
-            rounded-xl
-            lg:rounded-2xl
-            text-lg
-            w-max
-            ml-auto
-            mr-auto
-            lg:mr-auto
-            lg:ml-0
-            leading-none
-          "
-          >Join Waitlist</nuxt-link
-        >
       </div>
 
       <!-- Header Banner -->
       <div
         class="
           relative
-          border-[1rem] border-[#161616]
           rounded-[5rem]
-          max-w-[90%]
           lg:max-w-max
           mx-auto
-          min-w-[12rem]
+          min-w-[90%]
           md:min-w-[24rem]
           xl:min-w-[36rem]
           h-[30rem]
           lg:h-[40rem]
           lg:mr-10
-          mt-24
-          lg:mt-0
-          bg-abstract bg-no-repeat bg-cover
+          bg-transparent
+          lg:bg-abstract bg-no-repeat bg-cover
           flex
         "
       >
-        <div class="relative w-full lg:h-[44rem] overflow-hidden -mt-24">
-          <img src="/home/app.png" alt="App Image" />
-        </div>
-
-        <common-blur-container
-          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-24"
-        >
-          <img
-            src="/common/logos/mastercard.svg"
-            alt="Mastercard Logo"
-            class="h-6 lg:h-9 mr-4"
-          />
-          <p class="mb-0 text-sm lg:text-xl text-white">*** 458</p>
-        </common-blur-container>
-
-        <common-blur-container
-          class="bottom-[35%] lg:bottom-[10%] -right-6 lg:-right-16"
-        >
-          <home-logo
-            image-url="/common/logos/gtb.svg"
-            image-alt="GTB Logo"
-            logo-background="bg-[#D94F00]"
-          ></home-logo>
-
-          <home-logo
-            image-url="/common/logos/stanbic.svg"
-            image-alt="GTB Logo"
-            logo-background="bg-[#EEF6FC]"
-            class="-ml-4"
-          ></home-logo>
-
-          <home-logo
-            image-url="/common/logos/access.svg"
-            image-alt="GTB Logo"
-            logo-background="bg-[#FFF2EB]"
-            class="-ml-4"
-          ></home-logo>
-
-          <home-logo
-            image-url="/common/logos/kuda.svg"
-            image-alt="GTB Logo"
-            logo-background="bg-[#F9F7FC]"
-            class="-ml-4"
-          ></home-logo>
-        </common-blur-container>
-
         <div
           class="
-            h-16
-            lg:h-24
-            w-16
-            lg:w-24
-            bg-shimmery-star bg-cover bg-no-repeat
+            absolute
+            inset-0
+            lg:inset-4
+            rounded-[5rem]
+            bg-transparent
+            lg:bg-[#01060E]
             flex
             items-center
             justify-center
-            absolute
-            right-0
-            top-0
-            translate-x-1/3
-            -translate-y-1/3
-            text-3xl
-            lg:text-5xl
+            lg:px-9
           "
         >
-          🔥
+          <form
+            action=""
+            method="post"
+            @submit="null"
+            class="w-full grid gap-y-20"
+          >
+            <input
+              type="text"
+              class="
+                text-xl
+                placeholder-gray-500
+                outline-none
+                bg-transparent
+                border-b
+                w-full
+                border-gray-600
+                pb-3
+              "
+              placeholder="Full Name"
+            />
+
+            <input
+              type="email"
+              class="
+                text-xl
+                placeholder-gray-500
+                outline-none
+                bg-transparent
+                border-b
+                w-full
+                border-gray-600
+                pb-3
+              "
+              placeholder="Email"
+            />
+
+            <input
+              type="submit"
+              value="Get Notified"
+              class="
+                py-6
+                px-12
+                lg:px-14
+                bg-primary
+                rounded-xl
+                lg:rounded-2xl
+                text-lg
+                w-full
+                ml-auto
+                mr-auto
+                lg:mr-auto
+                lg:ml-0
+                leading-none
+              "
+            />
+          </form>
         </div>
       </div>
     </main>
-
-    <footer
-      class="
-        bg-secondary
-        p-2
-        absolute
-        bottom-10
-        left-0
-        z-10
-        w-full
-        gap-x-16
-        text-black
-        font-light
-        overflow-x-hidden
-        hidden lg:flex flex-nowrap
-      "
-    >
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-      <span class="text-base leading-none">private beta</span>
-    </footer>
 
     <div
       class="
