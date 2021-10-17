@@ -172,6 +172,19 @@
       </div>
     </main>
 
+    <footer class="bg-secondary p-2 absolute bottom-10 left-0 z-10 w-full gap-x-16 text-black font-light overflow-x-hidden flex flex-nowrap">
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+      <span class="text-base leading-none">private beta</span>
+    </footer>
+
     <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
