@@ -42,7 +42,7 @@
       "
     >
       <!-- Header Content -->
-      <div class="flex flex-col gap-y-24 mt-10">
+      <div class="flex flex-col gap-y-14 lg:gap-y-24 mt-10">
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
