@@ -38,7 +38,7 @@
           class="
             text-5xl
             lg:text-6xl
-            xl:text-8xl
+            xl:text-7xl
             text-center
             lg:text-left
             font-display
