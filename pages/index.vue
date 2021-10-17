@@ -1,8 +1,11 @@
 <template>
-  <div class="h-screen w-screen bg-black overflow-hidden text-white">
+  <div class="h-screen w-screen bg-black overflow-hidden text-white relative">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
-      <Meta name="description" content="Consolidate all your existing ways of making payments into a single channel with grip. The best way to get a grip of your finances" />
+      <Meta
+        name="description"
+        content="Consolidate all your existing ways of making payments into a single channel with grip. The best way to get a grip of your finances"
+      />
       <Link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -22,10 +25,10 @@
       />
       <Link rel="manifest" href="/site.webmanifest" />
     </Head>
-    <layout-navbar></layout-navbar>
+    <layout-navbar class="relative z-10"></layout-navbar>
 
     <main
-      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row"
+      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative z-10"
     >
       <!-- Header Content -->
       <div class="flex flex-col gap-y-16 mt-10">
@@ -35,7 +38,7 @@
           class="
             text-5xl
             lg:text-6xl
-            xl:text-7xl
+            xl:text-8xl
             text-center
             lg:text-left
             font-display
@@ -73,6 +76,7 @@
             mr-auto
             lg:mr-auto
             lg:ml-0
+            leading-none
           "
           >Get Notified</nuxt-link
         >
@@ -167,6 +171,11 @@
         </div>
       </div>
     </main>
+
+    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+      <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
+      <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
+    </div>
   </div>
 </template>
 
@@ -187,6 +196,21 @@
       left: 0;
       top: 50%;
     }
+  }
+}
+
+.body-bg-circle {
+  backdrop-filter: blur(44px);
+  height: 107rem;
+  width: 107rem;
+  position: absolute;
+  opacity: .65;
+  &--a {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(228, 35, 47, 0.2484) 0%, rgba(0, 0, 0, 0) 91.15%);
+  }
+
+  &--b {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(73, 34, 227, 0.1782) 0%, rgba(0, 0, 0, 0) 91.15%);
   }
 }
 </style>
