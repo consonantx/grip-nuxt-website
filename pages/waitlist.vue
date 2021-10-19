@@ -1,0 +1,51 @@
+<template>
+  <div
+    class="h-screen w-screen bg-abstract lg:bg-none bg-no-repeat bg-cover lg:bg-black overflow-hidden text-white relative flex flex-col"
+  >
+    <Head>
+      <Title>Grip - You're On The Waitlist!</Title>
+      <Meta name="description" content="Check youur status on the waitlist!" />
+      <Link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+      <Link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+      <Link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+      <Link rel="manifest" href="/site.webmanifest" />
+    </Head>
+    <layout-navbar class="relative z-10"></layout-navbar>
+
+    <main class="flex container mt-0 lg:mt-10 relative z-10 flex-grow overflow-y-auto">
+      <!-- Page Content -->
+      <div
+        class="flex flex-col mt-10 lg:px-20 py-36 bg-transparent lg:bg-abstract rounded-[50px] mx-auto bg-no-repeat bg-cover items-center justify-center relative space-y-16 h-auto"
+      >
+        <common-blur-container
+          :should-include-border="false"
+          :should-include-default-padding="false"
+          class="px-4 pt-20 mt-10 pb-7 flex-col text-white relative text-center rounded-[50px]"
+        >
+          <h1 class="hidden">You're on the waitlist!</h1>
+          <div class="flex flex-col space-y-9">
+            <div class="w-52 h-28 relative mx-auto -mt-28 -mb-9">
+              <img src="/common/icons/card_lg.png" class="object-cover w-full h-full" alt="Card Image" />
+            </div>
+            <h2 class="text-4xl lg:text-6xl font-light">
+              You're
+              <br />currently
+            </h2>
+            <h3
+              class="p-14 md:p-16 lg:p-20 rounded-[50px] bg-secondary text-black text-6xl lg:text-7xl"
+            >#123</h3>
+            <p class="text-2xl lg:text-3xl font-display">On the waitlist</p>
+          </div>
+        </common-blur-container>
+        <button
+          class="bg-black rounded-2xl w-full py-6 lg:py-9 lg:text-2xl text-white leading-none mb-0"
+        >Share with Friends</button>
+      </div>
+    </main>
+
+    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+      <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
+      <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
+    </div>
+  </div>
+</template>

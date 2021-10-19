@@ -16,6 +16,7 @@ module.exports = {
       },
       backgroundImage: {
         abstract: "url('/common/abstract_bg.png')",
+        none: "url('')",
         "shimmery-star": "url('/common/shimmery_star.png')"
       }
     },
