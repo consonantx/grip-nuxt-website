@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen w-screen bg-abstract lg:bg-none bg-no-repeat bg-cover lg:bg-black overflow-hidden text-white relative flex flex-col"
+    class="max-h-screen max-w-screen bg-abstract lg:bg-none bg-no-repeat bg-cover lg:bg-black overflow-hidden text-white relative flex flex-col"
   >
     <Head>
       <Title>Grip - You're On The Waitlist!</Title>
@@ -15,17 +15,17 @@
     <main class="flex container mt-0 lg:mt-10 relative z-10 flex-grow overflow-y-auto">
       <!-- Page Content -->
       <div
-        class="flex flex-col mt-10 lg:px-20 py-36 bg-transparent lg:bg-abstract rounded-[50px] mx-auto bg-no-repeat bg-cover items-center justify-center relative space-y-16 h-auto"
+        class="flex flex-col mt-10 lg:px-20 py-14 bg-transparent lg:bg-abstract rounded-[50px] mx-auto bg-no-repeat bg-cover items-center justify-center relative space-y-16 min-h-[40rem] lg:min-h-[60rem] mb-16"
       >
         <common-blur-container
           :should-include-border="false"
           :should-include-default-padding="false"
-          class="px-4 pt-20 mt-10 pb-7 flex-col text-white relative text-center rounded-[50px]"
+          class="px-4 pt-20 mt-10 pb-7 text-white relative text-center rounded-[50px]"
         >
           <h1 class="hidden">You're on the waitlist!</h1>
           <div class="flex flex-col space-y-9">
             <div class="w-52 h-28 relative mx-auto -mt-28 -mb-9">
-              <img src="/common/icons/card_lg.png" class="object-cover w-full h-full" alt="Card Image" />
+              <img src="/common/icons/card_lg.png" class="object-cover w-full h-full" />
             </div>
             <h2 class="text-4xl lg:text-6xl font-light">
               You're

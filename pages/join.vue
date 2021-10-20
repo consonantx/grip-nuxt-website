@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen bg-black overflow-hidden text-white relative">
+  <div class="h-screen w-screen bg-black overflow-hidden text-white relative flex flex-col">
     <Head>
       <Title>Grip - Join Waitlist</Title>
       <Meta
@@ -28,11 +28,11 @@
             <div class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8">
               <img
                 src="/common/icons/female.png"
-                alt="Girl Memoji Image"
+                alt="Female Memoji Image"
                 class="w-12 lg:w-16 xl:w-20"
               />
               <span class="rounded-full bg-secondary flex-grow-0 ml-1 lg:ml-2 px-2">
-                <img src="/common/icons/male.png" class="-mb-4 w-12 lg:w-16 xl:w-20" alt />
+                <img src="/common/icons/male.png" class="-mb-4 w-12 lg:w-16 xl:w-20" alt="Male Memoji Image" />
               </span>
             </div>
           </div>
@@ -49,7 +49,7 @@
 
       <!-- Header Banner -->
       <div
-        class="relative rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[36rem] h-[30rem] lg:h-[40rem] lg:mr-10 bg-transparent lg:bg-abstract bg-no-repeat bg-cover flex"
+        class="relative rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[36rem] min-h-[30rem] lg:min-h-[40rem] lg:mr-10 bg-transparent lg:bg-abstract bg-no-repeat bg-cover flex"
       >
         <div
           class="absolute inset-0 lg:inset-4 rounded-[5rem] bg-transparent lg:bg-[#01060E] flex items-center justify-center lg:px-9"
