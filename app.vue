@@ -15,7 +15,7 @@
   height: 107rem;
   width: 107rem;
   position: absolute;
-  opacity: 0.65;
+  opacity: 0.75;
   &--a {
     background: radial-gradient(
       50% 50% at 50% 50%,

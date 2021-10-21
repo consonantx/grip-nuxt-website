@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen bg-black overflow-hidden text-white relative">
+  <div class="h-screen w-screen bg-black overflow-hidden text-white relative flex-col flex">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
       <Meta
@@ -9,7 +9,7 @@
       <Link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       <Link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
       <Link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-      <Link rel="manifest" href="/site.webmanifest" />
+      <Link rel="manifest" href="/favicon/site.webmanifest" />
     </Head>
     <layout-navbar class="relative z-10"></layout-navbar>
 
@@ -45,9 +45,9 @@
 
       <!-- Header Banner -->
       <div
-        class="relative border-[1rem] border-[#161616] rounded-[5rem] max-w-[90%] lg:max-w-max mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[30rem] lg:h-[40rem] lg:mr-10 mt-24 lg:mt-0 bg-abstract bg-no-repeat bg-cover flex"
+        class="relative border-[1rem] border-[#161616] rounded-[5rem] max-w-[90%] lg:max-w-max mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] lg:mr-10 mt-24 lg:mt-0 bg-abstract bg-no-repeat bg-cover flex"
       >
-        <div class="relative w-full lg:h-[44rem] overflow-hidden -mt-24">
+        <div class="relative w-full lg:h-[40rem] overflow-hidden -mt-24">
           <img src="/home/app.png" alt="App Image" />
         </div>
 
@@ -91,7 +91,7 @@
       </div>
     </main>
 
-    <footer
+    <!-- <footer
       class="bg-secondary p-2 absolute bottom-10 left-0 z-10 w-full gap-x-16 text-black font-light overflow-x-hidden hidden lg:flex flex-nowrap"
     >
       <span class="text-base leading-none">private beta</span>
@@ -104,7 +104,7 @@
       <span class="text-base leading-none">private beta</span>
       <span class="text-base leading-none">private beta</span>
       <span class="text-base leading-none">private beta</span>
-    </footer>
+    </footer> -->
 
     <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
