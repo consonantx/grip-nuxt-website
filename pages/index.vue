@@ -46,7 +46,7 @@
             :initial="headerTextMotion.initial"
             :enter="headerTextMotion.enter"
           >
-            <span class="mr-8">need</span>
+            <span class="mr-4 lg:mr-8">need</span>
             <span class="relative w-min">
               <div
                 class="absolute w-full h-full top-0 left-0 origin-left"
@@ -367,9 +367,9 @@ const headerTextMotion: Ref<Record<string, Variant>> = ref({
 
 const headerTextBgMotion: Ref<Record<string, Variant>> = ref({
   initial: {
-    scaleY: 0.1,
+    scaleY: 0.4,
     opacity: 0,
-    scaleX: 0.4
+    scaleX: 0.1
   },
   enter: {
     scaleY: 1,
