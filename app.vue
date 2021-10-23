@@ -1,5 +1,13 @@
 <template>
   <div class="bg-black">
+    <Head>
+      <Meta property="og:title" content="One Channel, All Payments Everything" />
+      <Meta property="og:site_name" content="Grip" />
+      <Meta property="og:url" content="https://trygrip.co" />
+      <Meta property="og:description" content="Consolidate all your existing ways of making payments into a single channel with grip. The best way to get a grip of your finances" />
+      <Meta property="og:type" content="website" />
+      <Meta property="og:image" content="/og_image.png" />
+    </Head>
     <NuxtPage />
   </div>
 </template>
