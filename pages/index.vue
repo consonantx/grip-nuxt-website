@@ -21,37 +21,48 @@
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
-          class="text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
+          class="text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
         >
           <div
             class="track relative"
-            v-motion
+            v-motion="'homeheaderTextMotion'"
             :initial="headerTextMotion.initial"
             :enter="headerTextMotion.enter"
+            :leave="headerTextBgMotion.initial"
           >
             <span class="text-black px-6 py-2 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-secondary rounded-full z-0 origin-bottom-left"
-                v-motion
+                v-motion="'homeheaderTextBgMotion'"
                 :initial="headerTextBgMotion.initial"
                 :enter="headerTextBgMotion.enter"
+                :leave="headerTextBgMotion.initial"
               ></div>
               <span class="relative z-10">You</span>
             </span>
             <span>only</span>
           </div>
+
           <div
             class="track relative"
-            v-motion
+            v-motion="'homeheaderTextMotion1'"
             :initial="headerTextMotion.initial"
-            :enter="headerTextMotion.enter"
+            :enter="{
+              ...headerTextMotion.enter,
+              transition: {
+                delay: 1000,
+                ...headerTextMotion.enter.transition
+              },
+            }"
+            :leave="headerTextBgMotion.initial"
           >
             <span class="mr-4 lg:mr-8">need</span>
             <span class="relative w-min">
               <div
                 class="absolute w-full h-full top-0 left-0 origin-left"
-                v-motion
+                v-motion="'homeheaderTextCrossOutMotion'"
                 :initial="headerTextCrossOutMotion.initial"
+                :leave="headerTextCrossOutMotion.initial"
                 :enter="headerTextCrossOutMotion.enter"
               >
                 <div class="hero__cross-out"></div>
@@ -61,15 +72,17 @@
           </div>
           <div
             class="track relative"
-            v-motion
+            v-motion="'homeheaderTextMotion2'"
             :initial="headerTextMotion.initial"
+            :leave="headerTextMotion.initial"
             :enter="headerTextMotion.enter"
           >
             <span class="px-6 py-2 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-primary rounded-full z-0 origin-bottom-left"
-                v-motion
+                v-motion="'homeheaderTextBgMotion1'"
                 :initial="headerTextBgMotion.initial"
+                :leave="headerTextBgMotion.initial"
                 :enter="headerTextBgMotion.enter"
               ></div>
               <span class="relative z-10">Grip</span>
@@ -81,9 +94,10 @@
         <nuxt-link
           to="/join"
           class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none"
-          v-motion
+          v-motion="'homeheaderButtonMotion'"
           :initial="headerButtonMotion.initial"
           :enter="headerButtonMotion.enter"
+          :leave="headerButtonMotion.enter"
         >Join Waitlist</nuxt-link>
       </div>
 
@@ -93,16 +107,18 @@
       >
         <div
           class="bg-[#161616] top-0 left-0 rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"
-          v-motion
+          v-motion="'homeappImageBgCoverMotion'"
           :initial="appImageBgCoverMotion.initial"
           :enter="appImageBgCoverMotion.enter"
+          :leave="appImageBgCoverMotion.initial"
         >
           <img
             class="w-full h-full object-cover rounded-[4rem] origin-top-right"
             src="/common/abstract_bg.png"
-            v-motion
+            v-motion="'homeappImageBgMotion'"
             :initial="appImageBgMotion.initial"
             :enter="appImageBgMotion.enter"
+            :leave="appImageBgMotion.initial"
           />
         </div>
 
@@ -116,8 +132,8 @@
         </div>
 
         <common-blur-container
-          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-24"
-          v-motion
+          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-16"
+          v-motion="'homecardDetailsPropMotion'"
           :initial="cardDetailsPropMotion.initial"
           :enter="cardDetailsPropMotion.enter"
         >
@@ -127,7 +143,7 @@
 
         <common-blur-container
           class="bottom-[35%] lg:bottom-[10%] -right-6 lg:-right-16"
-          v-motion
+          v-motion="'homebanksPropMotion'"
           :initial="banksPropMotion.initial"
           :enter="banksPropMotion.enter"
         >
@@ -216,6 +232,7 @@
 <script lang="ts" setup>
 import { Variant } from '@vueuse/motion'
 import { Ref } from 'vue'
+
 const appImageMotion: Ref<Record<string, Variant>> = ref({
   enter: {
     opacity: 1,
@@ -409,7 +426,6 @@ const headerTextCrossOutMotion: Ref<Record<string, Variant>> = ref({
   }
 })
 
-
 const headerButtonMotion: Ref<Record<string, Variant>> = ref({
   initial: {
     y: 100,
@@ -431,4 +447,21 @@ const headerButtonMotion: Ref<Record<string, Variant>> = ref({
   }
 })
 
+</script>
+
+<script lang="ts">
+// import { useMotions } from '@vueuse/motion'
+
+// const motions = useMotions()
+
+export default {
+  transition: {
+    onEnter(_: any, done: any){
+      console.log('entered')
+    },
+    onLeave(_: any, done: any) {
+      console.log('here')
+    }
+  }
+}
 </script>

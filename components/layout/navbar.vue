@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="container py-10 lg:py-16 flex justify-center lg:justify-between items-center mt-4 lg:mt-0"
+    class="container py-10 lg:py-12 flex justify-center lg:justify-between items-center mt-4 lg:mt-0"
   >
     <nuxt-link
       to="/"
@@ -31,7 +31,7 @@
     </nuxt-link>
     <nuxt-link
       to="/about"
-      class="lg:flex items-center border-[3px] rounded-full py-5 px-10 border-[#303030] hidden"
+      class="lg:flex items-center border-[3px] rounded-full py-4 px-8 border-[#303030] hidden"
       v-motion
       :initial="{
         opacity: 0,

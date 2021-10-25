@@ -21,24 +21,62 @@
         <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
-          class="text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
+          class="text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
         >
-          <div class="flex items-center justify-center lg:justify-start">
+          <div
+            class="flex items-center justify-center lg:justify-start"
+            v-motion="'joinHeaderTextMotion1'"
+            :initial="headerTextMotion.initial"
+            :leave="headerTextMotion.initial"
+            :enter="headerTextMotion.enter"
+          >
             Get
-            <div class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8">
+            <div
+              class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8 relative"
+            >
               <img
                 src="/common/icons/female.png"
                 alt="Female Memoji Image"
                 class="w-12 lg:w-16 xl:w-20"
+                v-motion="'joinHeaderTextImageMotion2'"
+              :initial="headerTextImageMotion2.initial"
+              :leave="headerTextImageMotion2.initial"
+              :enter="headerTextImageMotion2.enter"
               />
-              <span class="rounded-full bg-secondary flex-grow-0 ml-1 lg:ml-2 px-2">
-                <img src="/common/icons/male.png" class="-mb-4 w-12 lg:w-16 xl:w-20" alt="Male Memoji Image" />
+              <span
+                class="rounded-full bg-secondary flex-grow-0 ml-1 lg:ml-2 px-2"
+                v-motion="'joinHeaderTextImageMotion1'"
+                :initial="headerTextImageMotion.initial"
+                :leave="headerTextImageMotion.initial"
+                :enter="headerTextImageMotion.enter"
+              >
+                <img
+                  src="/common/icons/male.png"
+                  class="-mb-4 w-12 lg:w-16 xl:w-20"
+                  alt="Male Memoji Image"
+                />
               </span>
             </div>
           </div>
-          <div>Notified</div>
-          <div>When We</div>
-          <div class="flex justify-center lg:justify-start">
+          <div
+            v-motion="'joinHeaderTextMotion1'"
+            :initial="headerTextMotion.initial"
+            :leave="headerTextMotion.initial"
+            :enter="headerTextMotion.enter"
+          >Notified</div>
+          <div
+            v-motion="'joinHeaderTextMotion1'"
+            :initial="headerTextMotion.initial"
+            :leave="headerTextMotion.initial"
+            :enter="headerTextMotion.enter"
+          >When We</div>
+          <div
+            class="flex justify-center lg:justify-start items-center"
+            v-motion="'joinHeaderTextMotion1'"
+            :initial="headerTextMotion.initial"
+            :leave="headerTextMotion.initial"
+            :enter="headerTextMotion.enter"
+          >
             <span>Launch</span>
             <span class="rounded-full bg-secondary flex-grow-0 ml-4 xl:px-4">
               <img src="/common/icons/card.png" class="w-12 lg:w-16 xl:w-20 mt-2" alt="Card Image" />
@@ -49,12 +87,16 @@
 
       <!-- Header Banner -->
       <div
-        class="relative rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[36rem] min-h-[30rem] lg:min-h-[40rem] lg:mr-10 bg-transparent lg:bg-abstract bg-no-repeat bg-cover flex"
+        class="relative rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[33rem] min-h-[30rem] lg:min-h-[35rem] lg:mr-10 bg-transparent lg:bg-abstract bg-no-repeat bg-cover flex"
+        v-motion="'joinAppFormMotion1'"
+        :initial="appFormMotion.initial"
+        :leave="appFormMotion.initial"
+        :enter="appFormMotion.enter"
       >
         <div
-          class="absolute inset-0 lg:inset-4 rounded-[5rem] bg-transparent lg:bg-[#01060E] flex items-center justify-center lg:px-9"
+          class="absolute inset-0 lg:inset-3 rounded-[5rem] bg-transparent lg:bg-[#01060E] flex items-center justify-center lg:px-9"
         >
-          <form action="" method="post" @submit="null" class="w-full grid gap-y-20">
+          <form @submit.prevent="() => $router.push('/waitlist')" class="w-full grid gap-y-20">
             <input
               type="text"
               class="text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
@@ -83,3 +125,80 @@
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { Variant } from '@vueuse/motion'
+import { Ref } from 'vue'
+
+const appFormMotion: Ref<Record<string, Variant>> = ref({
+  enter: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      scale: {
+        duration: 750,
+        delay: 250
+      },
+      opacity: {
+        duration: 750,
+        delay: 250
+      }
+    }
+  },
+  initial: {
+    opacity: 0,
+    scale: 0.7,
+  }
+})
+
+const headerTextMotion: Ref<Record<string, Variant>> = ref({
+  initial: {
+    y: 100,
+    opacity: 0
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: {
+        duration: 1000,
+        delay: 1000
+      },
+      opacity: {
+        duration: 1500,
+        delay: 1000
+      }
+    }
+  }
+})
+
+const headerTextImageMotion: Ref<Record<string, Variant>> = ref({
+  initial: {
+    x: -100,
+  },
+  enter: {
+    x: 0,
+    transition: {
+      x: {
+        duration: 1000,
+        delay: 1250
+      },
+    }
+  }
+})
+
+const headerTextImageMotion2: Ref<Record<string, Variant>> = ref({
+  initial: {
+    scaleX: 0.5,
+  },
+  enter: {
+    scaleX: 1,
+    transition: {
+      scaleX: {
+        duration: 1000,
+        delay: 1250
+      },
+    }
+  }
+})
+</script>
