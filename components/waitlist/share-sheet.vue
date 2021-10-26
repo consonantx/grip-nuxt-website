@@ -19,21 +19,21 @@
         <div class="bg-[#b9e0f3] rounded-2xl p-5 w-max">
           <img src="/common/icons/twitter.svg" class="h-8 w-8" alt="Twitter Logo" />
         </div>
-        <p class="text-2xl">Twitter</p>
+        <p class="text-xl lg:text-2xl">Twitter</p>
       </div>
       <!-- Facebook -->
       <div class="flex space-x-5 items-center cursor-pointer" @click="share('facebook')">
         <div class="bg-[#bbe0fc] rounded-2xl p-5 w-max">
           <img src="/common/icons/facebook.svg" class="h-8 w-8" alt="Twitter Logo" />
         </div>
-        <p class="text-2xl">Facebook</p>
+        <p class="text-xl lg:text-2xl">Facebook</p>
       </div>
       <!-- Others -->
       <div class="flex space-x-5 items-center cursor-pointer" @click="share('other')">
         <div class="bg-[#bbe0fc] rounded-2xl p-5 w-max">
           <img src="/common/icons/rocket.svg" class="h-8 w-8" alt="Twitter Logo" />
         </div>
-        <p class="text-2xl">Others</p>
+        <p class="text-xl lg:text-2xl">Others</p>
       </div>
     </div>
   </div>
@@ -54,6 +54,17 @@ const props = defineProps<{
 
 onMounted(() => {
   window.addEventListener('click', (event: MouseEvent) => {
+    if (
+      (event.target as HTMLDivElement)?.offsetParent === document.body ||
+      (event.target as HTMLDivElement)?.classList?.contains('share-wrapper')
+    ) {
+      emit('close')
+    } else {
+      return
+    }
+  })
+
+  window.addEventListener('touchend', (event: TouchEvent) => {
     if (
       (event.target as HTMLDivElement)?.offsetParent === document.body ||
       (event.target as HTMLDivElement)?.classList?.contains('share-wrapper')
