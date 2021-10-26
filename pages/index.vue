@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen bg-black overflow-hidden text-white relative flex-col flex">
+  <div class="h-[120vh] lg:h-screen w-screen bg-black overflow-hidden text-white relative flex-col flex">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
       <Meta
@@ -93,7 +93,7 @@
         <!-- Header Action -->
         <nuxt-link
           to="/join"
-          class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none"
+          class="py-6 px-10 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none"
           v-motion="'homeheaderButtonMotion'"
           :initial="headerButtonMotion.initial"
           :enter="headerButtonMotion.enter"
@@ -103,7 +103,7 @@
 
       <!-- Header Banner -->
       <div
-        class="relative max-w-[90%] lg:max-w-max mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] lg:mr-10 mt-24 lg:mt-0 flex"
+        class="relative max-w-[80%] lg:max-w-max mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] lg:mr-10 mt-24 lg:mt-0 flex"
       >
         <div
           class="bg-[#161616] top-0 left-0 rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"

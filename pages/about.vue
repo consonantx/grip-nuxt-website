@@ -23,7 +23,7 @@
         <h1
           class="w-1/3 text-2xl md:text-3xl lg:text-5xl xl:text-6xl max-w-[34rem] leading-normal mx-auto lg:mx-0"
         >What we are building</h1>
-        <p class="whitespace-pre-line lg:w-11/12 leading-normal">
+        <p class="whitespace-pre-line lg:w-11/12 leading-normal text-lg">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
           <br />One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment. Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
           Grip connects it.
@@ -38,7 +38,7 @@
             class="text-xl md:text-2xl lg:text-4xl xl:text-5xl max-w-[34rem] leading-normal"
           >One Channel, All Payments Everything</h2>
           <p
-            class="whitespace-pre-line w-full leading-normal"
+            class="whitespace-pre-line w-full leading-normal text-lg"
           >Grip would be your access to a world of transformed finances. Think unified transaction records across all your existing payment channels, better budget, and expense tracking, and all the added benefits that come with having a single channel across your financial world!</p>
         </div>
       </section>
@@ -52,7 +52,7 @@
         <div class="lg:col-span-2"></div>
         <div class="lg:col-span-2">
           <p
-            class="whitespace-pre-line w-full leading-normal"
+            class="whitespace-pre-line w-full leading-normal text-lg"
           >Night out with friends? Your financial service provider isn’t having a particularly good day and your card declines? With Grip Fallback we switch through your cards on our end so you don’t have to. You tell us which cards to fall back to and when your primary fails, we try to charge those instead, effectively eliminating awkward moments</p>
         </div>
       </section>
@@ -61,7 +61,7 @@
         <div class="col-span-2 grid grid-cols-1 gap-y-6">
           <h2 class="text-2xl md:text-3xl lg:text-5xl max-w-[34rem] leading-normal">Access to unlimited FX</h2>
           <p
-            class="whitespace-pre-line w-full leading-normal"
+            class="whitespace-pre-line w-full leading-normal text-lg"
           >Bank FX restrictions boggling you down? We’ve been there too. With your Grip card, you get unlimited access to FX* and all you have to do is link your existing cards. Literally, that’s all it takes. Pay across online stores and in over 200+ countries without ever worrying about restrictions.</p>
         </div>
         <div class="col-span-2"></div>
@@ -70,9 +70,9 @@
       <section id="one-channel" class="grid grid-cols-4 gap-x-[12rem]">
         <div class="col-span-2"></div>
         <div class="col-span-2 grid grid-cols-1 gap-y-11">
-          <h2 class="text-5xl max-w-[34rem] leading-normal">You've never seen a card like this!</h2>
+          <h2 class="text-5xl max-w-[34rem] leading-none">You've never seen a card like this!</h2>
           <p
-            class="whitespace-pre-line w-full leading-normal"
+            class="whitespace-pre-line w-full leading-normal text-lg"
           >Our Grip cards are uniquely crafted for all people, and we have a variety of different cards across our entire offering range to appeal to each individual's unique taste. We’re all different in our own little ways, be different with your Grip card.</p>
         </div>
       </section>
@@ -82,7 +82,7 @@
         class="rounded-3xl bg-primary py-12 lg:py-24 px-8 lg:px-16 w-full flex flex-col lg:flex-row h-auto relative mb-24"
       >
         <div class="class grid grid-col gap-y-10 max-w-[32rem]">
-          <h2 class="text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-normal">
+          <h2 class="text-3xl lg:text-5xl xl:text-6xl font-extrabold leading-loose">
             There's a lot
             <span
               class="bg-secondary rounded-full px-4 py-1 font-extrabold text-black font-display"
@@ -98,9 +98,9 @@
           >Sign me up!</nuxt-link>
         </div>
         <div
-          class="relative lg:absolute lg:pr-16 overflow-hidden -bottom-12 lg:right-16 mt-10 lg:mt-0"
+          class="relative lg:absolute lg:pr-16 overflow-hidden -bottom-12 lg:bottom-0 lg:right-16 mt-10 lg:mt-0"
         >
-          <img src="/about/phone.png" alt class="px-10 lg:px-5" />
+          <img src="/about/phone.png" alt="App Screen" class="px-10 lg:px-0" />
         </div>
       </section>
     </main>

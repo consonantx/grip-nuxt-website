@@ -12,7 +12,7 @@
     </Head>
     <layout-navbar class="relative z-10"></layout-navbar>
 
-    <main class="flex container mt-0 relative z-10 flex-grow overflow-y-auto">
+    <main class="flex container mt-0 relative z-10 overflow-y-auto h-screen">
       <!-- Page Content -->
       <div
         class="flex flex-col mt-10 lg:px-20 py-14 bg-transparent lg:bg-abstract rounded-[50px] mx-auto bg-no-repeat bg-cover items-center justify-center relative space-y-16 min-h-[40rem] lg:min-h-[60rem] mb-16"

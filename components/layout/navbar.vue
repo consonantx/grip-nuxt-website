@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="container py-10 lg:py-12 flex justify-center lg:justify-between items-center mt-4 lg:mt-0"
+    class="container py-10 lg:py-12 flex justify-between items-center mt-4 lg:mt-0 mx-auto px-10 lg:px-0"
   >
     <nuxt-link
       to="/"
@@ -52,5 +52,27 @@
         }
       }"
     >About Grip</nuxt-link>
+    <button
+      class="flex items-center rounded-md p-3 font-bold bg-white text-black lg:hidden"
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: -100,
+      }"
+      :enter="{
+        opacity: 1,
+        y: 0,
+        transition: {
+          y: {
+            duration: 1000,
+            delay: 500
+          },
+          opacity: {
+            duration: 1000,
+            delay: 500
+          }
+        }
+      }"
+    >Menu</button>
   </nav>
 </template>
