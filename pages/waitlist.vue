@@ -39,13 +39,26 @@
         </common-blur-container>
         <button
           class="bg-black rounded-2xl w-full py-6 lg:py-9 lg:text-2xl text-white leading-none mb-0"
+          @click="shouldShowShareSheet = !shouldShowShareSheet"
         >Share with Friends</button>
       </div>
     </main>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
+    <div
+      class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex"
+    >
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>
+
+    <waitlist-share-sheet
+      referral-url="https://trygrip.co?referrer=qwertyuiop"
+      @close="shouldShowShareSheet = !shouldShowShareSheet"
+      v-if="shouldShowShareSheet"
+    ></waitlist-share-sheet>
   </div>
 </template>
+
+<script lang="ts" setup>
+const shouldShowShareSheet = ref(false)
+</script>
