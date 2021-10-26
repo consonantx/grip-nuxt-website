@@ -15,11 +15,12 @@
         y: 0,
         scale: 1,
         transition: {
+          type: [0.64, 0.04, 0.35, 1],
           y: {
-            duration: 1000
+            duration: 1400
           },
           opacity: {
-            duration: 1000
+            duration: 1400
           }
         }
       }"
@@ -41,13 +42,14 @@
         opacity: 1,
         y: 0,
         transition: {
+          type: [0.64, 0.04, 0.35, 1],
           y: {
-            duration: 1000,
-            delay: 500
+            duration: 1400,
+            delay: 110
           },
           opacity: {
-            duration: 1000,
-            delay: 500
+            duration: 1400,
+            delay: 110
           }
         }
       }"
@@ -63,13 +65,14 @@
         opacity: 1,
         y: 0,
         transition: {
+          type: [0.64, 0.04, 0.35, 1],
           y: {
-            duration: 1000,
-            delay: 500
+            duration: 1400,
+            delay: 110
           },
           opacity: {
-            duration: 1000,
-            delay: 500
+            duration: 1400,
+            delay: 110
           }
         }
       }"

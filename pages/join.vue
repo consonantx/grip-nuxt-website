@@ -60,22 +60,22 @@
           </div>
           <div
             v-motion="'joinHeaderTextMotion1'"
-            :initial="headerTextMotion.initial"
-            :leave="headerTextMotion.initial"
-            :enter="headerTextMotion.enter"
+            :initial="headerTextMotion2.initial"
+            :leave="headerTextMotion2.initial"
+            :enter="headerTextMotion2.enter"
           >Notified</div>
           <div
             v-motion="'joinHeaderTextMotion1'"
-            :initial="headerTextMotion.initial"
-            :leave="headerTextMotion.initial"
-            :enter="headerTextMotion.enter"
+            :initial="headerTextMotion3.initial"
+            :leave="headerTextMotion3.initial"
+            :enter="headerTextMotion3.enter"
           >When We</div>
           <div
             class="flex justify-center lg:justify-start items-center"
             v-motion="'joinHeaderTextMotion1'"
-            :initial="headerTextMotion.initial"
-            :leave="headerTextMotion.initial"
-            :enter="headerTextMotion.enter"
+            :initial="headerTextMotion4.initial"
+            :leave="headerTextMotion4.initial"
+            :enter="headerTextMotion4.enter"
           >
             <span>Launch</span>
             <span class="rounded-full bg-secondary flex-grow-0 ml-4 xl:px-4">
@@ -135,19 +135,20 @@ const appFormMotion: Ref<Record<string, Variant>> = ref({
     opacity: 1,
     scale: 1,
     transition: {
+      type: [0.22, 0.61, 0.35, 1],
       scale: {
-        duration: 750,
-        delay: 250
+        duration: 1420,
+        delay: 520
       },
       opacity: {
-        duration: 750,
-        delay: 250
+        duration: 1420,
+        delay: 520
       }
     }
   },
   initial: {
     opacity: 0,
-    scale: 0.7,
+    scale: 0.7
   }
 })
 
@@ -160,13 +161,80 @@ const headerTextMotion: Ref<Record<string, Variant>> = ref({
     y: 0,
     opacity: 1,
     transition: {
+      type: [0.22, 0.61, 0.35, 1],
       y: {
-        duration: 1000,
-        delay: 1000
+        duration: 1390,
+        delay: 390
       },
       opacity: {
-        duration: 1500,
-        delay: 1000
+        duration: 1390,
+        delay: 390
+      }
+    }
+  }
+})
+
+const headerTextMotion2: Ref<Record<string, Variant>> = ref({
+  initial: {
+    y: 100,
+    opacity: 0
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: [0.22, 0.61, 0.35, 1],
+      y: {
+        duration: 1360,
+        delay: 590
+      },
+      opacity: {
+        duration: 1360,
+        delay: 590
+      }
+    }
+  }
+})
+
+const headerTextMotion3: Ref<Record<string, Variant>> = ref({
+  initial: {
+    y: 100,
+    opacity: 0
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: [0.22, 0.61, 0.35, 1],
+      y: {
+        duration: 1370,
+        delay: 700
+      },
+      opacity: {
+        duration: 1370,
+        delay: 700
+      }
+    }
+  }
+})
+
+const headerTextMotion4: Ref<Record<string, Variant>> = ref({
+  initial: {
+    y: 100,
+    opacity: 0
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: [0.22, 0.61, 0.35, 1],
+      y: {
+        duration: 1290,
+        delay: 900
+      },
+      opacity: {
+        duration: 1290,
+        delay: 900
       }
     }
   }
@@ -179,6 +247,7 @@ const headerTextImageMotion: Ref<Record<string, Variant>> = ref({
   enter: {
     x: 0,
     transition: {
+      type: [0.22, 0.61, 0.35, 1],
       x: {
         duration: 1000,
         delay: 1250
@@ -194,6 +263,7 @@ const headerTextImageMotion2: Ref<Record<string, Variant>> = ref({
   enter: {
     scaleX: 1,
     transition: {
+      type: [0.22, 0.61, 0.35, 1],
       scaleX: {
         duration: 1000,
         delay: 1250

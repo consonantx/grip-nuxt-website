@@ -90,7 +90,7 @@
           </h2>
           <p class="leading-normal text-lg lg:text-2xl">
             There’s a lot more we’d like to share with you, but where’s the fun in knowing everything now? 😉
-            If we’ve piqued your interest, let us know by getting the waitlist and we’d let you know as soon as we launch.
+            If we’ve piqued your interest, let us know by getting the on waitlist and we’d let you know as soon as we launch.
           </p>
           <nuxt-link
             to="/join"

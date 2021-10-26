@@ -25,7 +25,7 @@
         >
           <div
             class="track relative"
-            v-motion="'homeheaderTextMotion'"
+            v-motion="'homeHeaderTextMotion'"
             :initial="headerTextMotion.initial"
             :enter="headerTextMotion.enter"
             :leave="headerTextBgMotion.initial"
@@ -33,7 +33,7 @@
             <span class="text-black px-6 py-2 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-secondary rounded-full z-0 origin-bottom-left"
-                v-motion="'homeheaderTextBgMotion'"
+                v-motion="'homeHeaderTextBgMotion'"
                 :initial="headerTextBgMotion.initial"
                 :enter="headerTextBgMotion.enter"
                 :leave="headerTextBgMotion.initial"
@@ -45,22 +45,16 @@
 
           <div
             class="track relative"
-            v-motion="'homeheaderTextMotion1'"
-            :initial="headerTextMotion.initial"
-            :enter="{
-              ...headerTextMotion.enter,
-              transition: {
-                delay: 1000,
-                ...headerTextMotion.enter.transition
-              },
-            }"
-            :leave="headerTextBgMotion.initial"
+            v-motion="'homeHeaderTextMotion1'"
+            :initial="headerTextMotion2.initial"
+            :enter="headerTextMotion2.enter"
+            :leave="headerTextMotion2.initial"
           >
             <span class="mr-4 lg:mr-8">need</span>
             <span class="relative w-min">
               <div
                 class="absolute w-full h-full top-0 left-0 origin-left"
-                v-motion="'homeheaderTextCrossOutMotion'"
+                v-motion="'homeHeaderTextCrossOutMotion'"
                 :initial="headerTextCrossOutMotion.initial"
                 :leave="headerTextCrossOutMotion.initial"
                 :enter="headerTextCrossOutMotion.enter"
@@ -72,15 +66,15 @@
           </div>
           <div
             class="track relative"
-            v-motion="'homeheaderTextMotion2'"
-            :initial="headerTextMotion.initial"
-            :leave="headerTextMotion.initial"
-            :enter="headerTextMotion.enter"
+            v-motion="'homeHeaderTextMotion2'"
+            :initial="headerTextMotion3.initial"
+            :leave="headerTextMotion3.initial"
+            :enter="headerTextMotion3.enter"
           >
             <span class="px-6 py-2 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-primary rounded-full z-0 origin-bottom-left"
-                v-motion="'homeheaderTextBgMotion1'"
+                v-motion="'homeHeaderTextBgMotion1'"
                 :initial="headerTextBgMotion.initial"
                 :leave="headerTextBgMotion.initial"
                 :enter="headerTextBgMotion.enter"
@@ -94,7 +88,7 @@
         <nuxt-link
           to="/join"
           class="py-6 px-10 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none"
-          v-motion="'homeheaderButtonMotion'"
+          v-motion="'homeHeaderButtonMotion'"
           :initial="headerButtonMotion.initial"
           :enter="headerButtonMotion.enter"
           :leave="headerButtonMotion.enter"
@@ -107,7 +101,7 @@
       >
         <div
           class="bg-[#161616] top-0 left-0 rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"
-          v-motion="'homeappImageBgCoverMotion'"
+          v-motion="'homeAppImageBgCoverMotion'"
           :initial="appImageBgCoverMotion.initial"
           :enter="appImageBgCoverMotion.enter"
           :leave="appImageBgCoverMotion.initial"
@@ -115,7 +109,7 @@
           <img
             class="w-full h-full object-cover rounded-[4rem] origin-top-right"
             src="/common/abstract_bg.png"
-            v-motion="'homeappImageBgMotion'"
+            v-motion="'homeAppImageBgMotion'"
             :initial="appImageBgMotion.initial"
             :enter="appImageBgMotion.enter"
             :leave="appImageBgMotion.initial"
@@ -133,7 +127,7 @@
 
         <common-blur-container
           class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-16"
-          v-motion="'homecardDetailsPropMotion'"
+          v-motion="'homeCardDetailsPropMotion'"
           :initial="cardDetailsPropMotion.initial"
           :enter="cardDetailsPropMotion.enter"
         >
@@ -143,7 +137,7 @@
 
         <common-blur-container
           class="bottom-[35%] lg:bottom-[10%] -right-6 lg:-right-16"
-          v-motion="'homebanksPropMotion'"
+          v-motion="'homeBanksPropMotion'"
           :initial="banksPropMotion.initial"
           :enter="banksPropMotion.enter"
         >
@@ -301,19 +295,26 @@ const appImageBgCoverMotion: Ref<Record<string, Variant>> = ref({
 const flamePropMotion: Ref<Record<string, Variant>> = ref({
   initial: {
     opacity: 0,
-    scale: 0,
+    x: -30,
+    y: -45,
   },
   enter: {
     opacity: 1,
-    scale: 1,
+    x: 0,
+    y: 0,
     transition: {
-      scale: {
-        duration: 500,
-        delay: 1000
+      type: [0.22, 0.61, 0.35, 1],
+      x: {
+        duration: 1170,
+        delay: 1020
+      },
+      y: {
+        duration: 1170,
+        delay: 1020
       },
       opacity: {
-        duration: 500,
-        delay: 1000
+        duration: 1170,
+        delay: 1020
       },
     }
   }
@@ -363,6 +364,52 @@ const banksPropMotion: Ref<Record<string, Variant>> = ref({
 
 const headerTextMotion: Ref<Record<string, Variant>> = ref({
   initial: {
+    y: 112,
+    x: 0,
+    opacity: 0
+  },
+  enter: {
+    y: 0,
+    x: 1,
+    opacity: 1,
+    transition: {
+      type: [0.64, 0.04, 0.35, 1],
+      y: {
+        duration: 1430,
+        delay: 590
+      },
+      opacity: {
+        duration: 1430,
+        delay: 590
+      }
+    }
+  }
+})
+
+const headerTextMotion2: Ref<Record<string, Variant>> = ref({
+  initial: {
+    y: 40,
+    opacity: 0
+  },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: [0.64, 0.04, 0.35, 1],
+      y: {
+        duration: 710,
+        delay: 1410
+      },
+      opacity: {
+        duration: 710,
+        delay: 1410
+      }
+    }
+  }
+})
+
+const headerTextMotion3: Ref<Record<string, Variant>> = ref({
+  initial: {
     y: 100,
     opacity: 0
   },
@@ -370,13 +417,14 @@ const headerTextMotion: Ref<Record<string, Variant>> = ref({
     y: 0,
     opacity: 1,
     transition: {
+      type: [0.22, 0.61, 0.35, 1],
       y: {
-        duration: 1000,
-        delay: 1000
+        duration: 1040,
+        delay: 1250
       },
       opacity: {
-        duration: 1500,
-        delay: 1000
+        duration: 1040,
+        delay: 1250
       }
     }
   }
@@ -418,9 +466,10 @@ const headerTextCrossOutMotion: Ref<Record<string, Variant>> = ref({
     opacity: 1,
     scaleX: 1,
     transition: {
+      type: [0.64, 0.04, 0.35, 1],
       scaleX: {
-        duration: 1000,
-        delay: 1750
+        duration: 830,
+        delay: 1470
       },
     }
   }
