@@ -21,7 +21,7 @@
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
-          class="text-4xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
+          class="text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
         >
           <div
             class="track relative"
@@ -199,7 +199,7 @@
       <span class="text-base leading-none">private beta</span>
     </footer>-->
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>
