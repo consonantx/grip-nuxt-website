@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="container py-10 lg:py-12 flex justify-between items-center mt-4 lg:mt-0 mx-auto px-10 lg:px-0"
+    class="container py-10 lg:py-12 flex justify-between items-center mt-0 mx-auto px-10 lg:px-0"
   >
     <nuxt-link
       to="/"

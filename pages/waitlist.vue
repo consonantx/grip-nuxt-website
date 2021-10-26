@@ -15,7 +15,7 @@
     <main class="flex container mt-0 relative z-10 overflow-y-auto h-screen">
       <!-- Page Content -->
       <div
-        class="flex flex-col mt-10 lg:px-20 py-14 bg-transparent lg:bg-abstract rounded-[50px] mx-auto bg-no-repeat bg-cover items-center justify-center relative space-y-16 min-h-[40rem] lg:min-h-[60rem] mb-16"
+        class="flex flex-col mt-10 lg:px-20 py-14 bg-transparent lg:bg-abstract rounded-[50px] mx-auto lg:bg-no-repeat lg:bg-cover items-center justify-center relative space-y-16 min-h-[40rem] lg:min-h-[60rem] mb-16"
       >
         <common-blur-container
           :should-include-border="false"
@@ -43,7 +43,7 @@
       </div>
     </main>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>

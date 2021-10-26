@@ -21,7 +21,7 @@
         <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
-          class="text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
+          class="text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
         >
           <div
             class="flex items-center justify-center lg:justify-start"
@@ -112,14 +112,14 @@
             <input
               type="submit"
               value="Get Notified"
-              class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-lg w-full ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none"
+              class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl lg:text-lg w-full ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none cursor-pointer"
             />
           </form>
         </div>
       </div>
     </main>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>
