@@ -30,7 +30,7 @@
             :enter="headerTextMotion.enter"
             :leave="headerTextBgMotion.initial"
           >
-            <span class="text-black px-6 py-2 mr-2 relative">
+            <span class="text-black px-3 lg:px-6 py-2 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-secondary rounded-full z-0 origin-bottom-left"
                 v-motion="'homeHeaderTextBgMotion'"
@@ -65,13 +65,13 @@
             </span>
           </div>
           <div
-            class="track relative flex"
+            class="track relative flex mx-auto items-center"
             v-motion="'homeHeaderTextMotion2'"
             :initial="headerTextMotion3.initial"
             :leave="headerTextMotion3.initial"
             :enter="headerTextMotion3.enter"
           >
-            <span class="px-6 py-4 mr-2 relative">
+            <span class="px-3 lg:px-6 py-4 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-primary rounded-full z-0 origin-bottom-left"
                 v-motion="'homeHeaderTextBgMotion1'"
