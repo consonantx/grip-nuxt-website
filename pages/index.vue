@@ -24,13 +24,13 @@
           class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
         >
           <div
-            class="track relative"
+            class="track relative overflow-hidden flex items-center mx-auto lg:mx-0"
             v-motion="'homeHeaderTextMotion'"
             :initial="headerTextMotion.initial"
             :enter="headerTextMotion.enter"
             :leave="headerTextBgMotion.initial"
           >
-            <span class="text-black px-3 lg:px-6 py-2 mr-2 relative">
+            <span class="text-black px-3 lg:px-6 py-4 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-secondary rounded-full z-0 origin-bottom-left"
                 v-motion="'homeHeaderTextBgMotion'"
@@ -44,7 +44,7 @@
           </div>
 
           <div
-            class="track relative"
+            class="track relative overflow-hidden"
             v-motion="'homeHeaderTextMotion1'"
             :initial="headerTextMotion2.initial"
             :enter="headerTextMotion2.enter"
@@ -65,7 +65,7 @@
             </span>
           </div>
           <div
-            class="track relative flex mx-auto items-center"
+            class="track relative flex mx-auto items-center overflow-hidden"
             v-motion="'homeHeaderTextMotion2'"
             :initial="headerTextMotion3.initial"
             :leave="headerTextMotion3.initial"
@@ -117,7 +117,7 @@
         </div>
 
         <div
-          class="relative w-full lg:h-[40rem] overflow-hidden -mt-20 "
+          class="relative lg:h-[40rem] overflow-hidden -mt-20 mx-auto w-3/4"
           v-motion
           :initial="appImageMotion.initial"
           :enter="appImageMotion.enter"
