@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-h-screen max-w-screen bg-abstract lg:bg-none bg-no-repeat bg-cover lg:bg-black overflow-hidden text-white relative flex flex-col"
+    class="max-h-screen max-w-screen bg-abstract lg:bg-none bg-no-repeat bg-cover lg:bg-[#020612] overflow-hidden text-white relative flex flex-col"
     v-if="waitlist_info && Object.keys(waitlist_info).length > 0"
   >
     <Head>

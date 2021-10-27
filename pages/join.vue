@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen bg-black overflow-hidden text-white relative flex flex-col">
+  <div class="h-screen w-screen bg-[#020612] overflow-hidden text-white relative flex flex-col">
     <Head>
       <Title>Grip - Join Waitlist</Title>
       <Meta
@@ -92,7 +92,7 @@
         :enter="appFormMotion.enter"
       >
         <div
-          class="absolute inset-0 lg:inset-3 rounded-[5rem] bg-transparent lg:bg-[#01060E] flex items-center justify-center lg:px-9"
+          class="absolute inset-0 lg:inset-3 rounded-[5rem] bg-transparent lg:bg-[#02050E] flex items-center justify-center lg:px-9"
         >
           <form
             @submit.prevent="submit()"
