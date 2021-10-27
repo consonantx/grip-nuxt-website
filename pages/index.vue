@@ -145,14 +145,14 @@
             image-url="/common/logos/gtb.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#D94F00]"
-            image-class="w-5 h-5"
+            image-class="w-6 h-6"
           ></home-logo>
 
           <home-logo
             image-url="/common/logos/stanbic.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#EEF6FC]"
-            image-class="w-5 h-5"
+            image-class="w-6 h-6"
             class="-ml-4"
           ></home-logo>
 
@@ -160,7 +160,7 @@
             image-url="/common/logos/access.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#FFF2EB]"
-            image-class="w-5 h-5"
+            image-class="w-6 h-6"
             class="-ml-4"
           ></home-logo>
 
@@ -168,7 +168,7 @@
             image-url="/common/logos/kuda.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#F9F7FC]"
-            image-class="w-5 h-5"
+            image-class="w-6 h-6"
             class="-ml-4"
           ></home-logo>
         </common-blur-container>
