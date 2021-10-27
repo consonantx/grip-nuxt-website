@@ -21,7 +21,7 @@
         <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
-          class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
+          class="text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-2 md:gap-y-4 lg:gap-y-6"
         >
           <div
             class="flex items-center justify-center lg:justify-start"
@@ -31,7 +31,7 @@
             :enter="headerTextMotion.enter"
           >
             Get
-            <div class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8 relative">
+            <div class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-4 lg:ml-8 relative">
               <img
                 src="/common/icons/female.png"
                 alt="Female Memoji Image"
@@ -76,7 +76,7 @@
             :enter="headerTextMotion4.enter"
           >
             <span>Launch</span>
-            <span class="rounded-full bg-secondary flex-grow-0 ml-4 xl:px-4">
+            <span class="rounded-full bg-secondary flex-grow-0 ml-4 px-2 xl:px-4">
               <img src="/common/icons/card.png" class="w-12 lg:w-16 xl:w-20 mt-2" alt="Card Image" />
             </span>
           </div>
@@ -253,7 +253,7 @@ const headerTextMotion4: Ref<Record<string, Variant>> = ref({
 
 const headerTextImageMotion: Ref<Record<string, Variant>> = ref({
   initial: {
-    x: -100,
+    x: -50,
   },
   enter: {
     x: 0,
@@ -269,7 +269,7 @@ const headerTextImageMotion: Ref<Record<string, Variant>> = ref({
 
 const headerTextImageMotion2: Ref<Record<string, Variant>> = ref({
   initial: {
-    scaleX: 0.5,
+    scaleX: 0.9,
   },
   enter: {
     scaleX: 1,

@@ -14,14 +14,14 @@
       :enter="menuMotion.enter"
       :leave="menuMotion.initial"
     >
-      <!-- Twitter -->
+      <!-- About -->
       <nuxt-link to="/about" class="flex items-center cursor-pointer" @click.native="$emit('close')">
         <p class="text-xl lg:text-2xl">About Us</p>
       </nuxt-link>
-      <!-- Facebook -->
-      <nuxt-link to="/track" class="flex items-center cursor-pointer" @click.native="$emit('close')">
+      <!-- Track -->
+      <!-- <nuxt-link to="/track" class="flex items-center cursor-pointer" @click.native="$emit('close')">
         <p class="text-xl lg:text-2xl">Track your position</p>
-      </nuxt-link>
+      </nuxt-link> -->
     </div>
   </div>
 </template>
@@ -64,10 +64,10 @@ const containerMotion: Ref<Record<string, Variant>> = ref({
     scale: 1,
     transition: {
       scale: {
-        duration: 750
+        duration: 250
       },
       opacity: {
-        duration: 750
+        duration: 250
       }
     }
   },
@@ -84,11 +84,11 @@ const menuMotion: Ref<Record<string, Variant>> = ref({
     transition: {
       y: {
         duration: 750,
-        delay: 750
+        delay: 250
       },
       opacity: {
         duration: 750,
-        delay: 750
+        delay: 250
       }
     }
   },
