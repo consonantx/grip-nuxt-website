@@ -162,12 +162,12 @@
         <div
           class="relative lg:absolute lg:pr-10 overflow-hidden -bottom-12 lg:bottom-0 lg:right-10 lg:mt-0"
         >
-          <img src="/about/phone.png" alt="App Screen" class="px-10 lg:px-0 max-w-[25rem]" />
+          <img src="/about/phone.png" alt="App Screen" class="lg:px-0 w-[90%] lg:w-auto max-w-[25rem] mx-auto" />
         </div>
       </section>
     </main>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2">
+    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>
