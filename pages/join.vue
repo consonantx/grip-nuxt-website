@@ -295,47 +295,76 @@ const isLoading = ref(false)
 
 const toast = useToast()
 
+const waitlist_info = useState<{
+  current_priority?: string,
+  referral_link?: string,
+  registered_email?: string,
+  total_referrals?: number,
+  total_users?: number,
+  user_id?: string
+}>('waitlist_info', () => ({}))
+
 const submit = async () => {
   if (email.value && name.value) {
     isLoading.value = true
     try {
-      const { code, data, message } = await $fetch<{
-        message: string,
-        code: string,
-        data: {
-          current_priority: string,
-          referral_link: string,
-          registered_email: string,
-          total_referrals: number,
-          total_users: number,
-          user_id: string
-        }
-      }>('http://grip.technology/user/wait-list', {
-        body: {
-          email,
-          name,
-          referralLink: `https://trygrip.co${referrer.value && '?&' + referrer.value}`
-        },
-        method: 'POST'
-      })
-      console.log(data)
+      const { code } = await $fetch<{ code: string }>(
+        `http://grip.technology/user/wait-list/${encodeURI(email.value)}`
+      )
+
       if (code === '000') {
-        const waitlist_info = useState('waitlist_info', () => data)
-        toast.success(`You've been added to the waitlist!`)
-        name.value = ''
-        email.value = ''
-        router.push('/waitlist')
-      } else {
-        toast.error('whoops, something went wrong. try again')
-        console.error('Waitlist sign on failed', ' code:' + code, ' message:' + message, ' data:', data)
+        toast.info(`You're already on the waitlist boss 👀`)
       }
     } catch (e) {
-      toast.error('whoops, something went wrong. try again')
-      console.error('Waitlist sign on failed', ' error -> ', e)
+      if ((e?.message as string).includes('400')) {
+        await addToWaitlist()
+      }
     }
     isLoading.value = false
   } else {
     toast.error('Both email and name are required')
   }
+}
+
+const addToWaitlist = async () => {
+  try {
+    const { code, data, message } = await $fetch<{
+      message: string,
+      code: string,
+      data: {
+        current_priority: string,
+        referral_link: string,
+        registered_email: string,
+        total_referrals: number,
+        total_users: number,
+        user_id: string
+      }
+    }>('http://grip.technology/user/wait-list', {
+      body: JSON.stringify({
+        email: email.value,
+        name: name.value,
+        referralLink: `https://trygrip.co${referrer.value ? '?&' + referrer.value : ''}`
+      }),
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'accept': 'application/json'
+      }
+    })
+    if (code === '000') {
+      waitlist_info.value = data
+      toast.success(`You've been added to the waitlist!`)
+      name.value = ''
+      email.value = ''
+      router.push('/waitlist')
+    } else {
+      toast.error('whoops, something went wrong. try again')
+      console.error('Waitlist sign on failed', ' code:' + code, ' message:' + message, ' data:', data)
+    }
+  } catch (e) {
+    toast.error('whoops, something went wrong. try again')
+    console.error('Waitlist sign on failed', ' error -> ', e)
+  }
+  isLoading.value = false
 }
 </script>
