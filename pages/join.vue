@@ -31,17 +31,15 @@
             :enter="headerTextMotion.enter"
           >
             Get
-            <div
-              class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8 relative"
-            >
+            <div class="bg-primary rounded-full pl-2 lg:pl-4 flex ml-8 relative">
               <img
                 src="/common/icons/female.png"
                 alt="Female Memoji Image"
                 class="w-12 lg:w-16 xl:w-20"
                 v-motion="'joinHeaderTextImageMotion2'"
-              :initial="headerTextImageMotion2.initial"
-              :leave="headerTextImageMotion2.initial"
-              :enter="headerTextImageMotion2.enter"
+                :initial="headerTextImageMotion2.initial"
+                :leave="headerTextImageMotion2.initial"
+                :enter="headerTextImageMotion2.enter"
               />
               <span
                 class="rounded-full bg-secondary flex-grow-0 ml-1 lg:ml-2 px-2"
@@ -96,30 +94,42 @@
         <div
           class="absolute inset-0 lg:inset-3 rounded-[5rem] bg-transparent lg:bg-[#01060E] flex items-center justify-center lg:px-9"
         >
-          <form @submit.prevent="() => $router.push('/waitlist')" class="w-full grid gap-y-20">
+          <form
+            @submit.prevent="submit()"
+            @keydown.enter.prevent="submit()"
+            class="w-full grid gap-y-20"
+          >
             <input
               type="text"
               class="text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
               placeholder="Full Name"
+              v-model="name"
             />
 
             <input
               type="email"
               class="text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
               placeholder="Email"
+              v-model="email"
             />
 
-            <input
+            <button
               type="submit"
               value="Get Notified"
-              class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl lg:text-lg w-full ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none cursor-pointer"
-            />
+              class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl lg:text-lg w-full ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed relative"
+              :disabled="!email || !name"
+            >
+              <span v-if="!isLoading">Get Notified</span>
+              <img src="~/assets/images/spinner.svg" class="w-6 h-6 mx-auto" v-else />
+            </button>
           </form>
         </div>
       </div>
     </main>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
+    <div
+      class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex"
+    >
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>
@@ -129,6 +139,7 @@
 <script lang="ts" setup>
 import { Variant } from '@vueuse/motion'
 import { Ref } from 'vue'
+import { useToast } from 'vue-toastification'
 
 const appFormMotion: Ref<Record<string, Variant>> = ref({
   enter: {
@@ -271,4 +282,60 @@ const headerTextImageMotion2: Ref<Record<string, Variant>> = ref({
     }
   }
 })
+
+const referrer = useState('ref_id')
+
+const router = useRouter()
+
+const name = ref('')
+
+const email = ref('')
+
+const isLoading = ref(false)
+
+const toast = useToast()
+
+const submit = async () => {
+  if (email.value && name.value) {
+    isLoading.value = true
+    try {
+      const { code, data, message } = await $fetch<{
+        message: string,
+        code: string,
+        data: {
+          current_priority: string,
+          referral_link: string,
+          registered_email: string,
+          total_referrals: number,
+          total_users: number,
+          user_id: string
+        }
+      }>('http://grip.technology/user/wait-list', {
+        body: {
+          email,
+          name,
+          referralLink: `https://trygrip.co${referrer.value && '?&' + referrer.value}`
+        },
+        method: 'POST'
+      })
+      console.log(data)
+      if (code === '000') {
+        const waitlist_info = useState('waitlist_info', () => data)
+        toast.success(`You've been added to the waitlist!`)
+        name.value = ''
+        email.value = ''
+        router.push('/waitlist')
+      } else {
+        toast.error('whoops, something went wrong. try again')
+        console.error('Waitlist sign on failed', ' code:' + code, ' message:' + message, ' data:', data)
+      }
+    } catch (e) {
+      toast.error('whoops, something went wrong. try again')
+      console.error('Waitlist sign on failed', ' error -> ', e)
+    }
+    isLoading.value = false
+  } else {
+    toast.error('Both email and name are required')
+  }
+}
 </script>

@@ -1,10 +1,14 @@
 <template>
   <div
     class="max-h-screen max-w-screen bg-abstract lg:bg-none bg-no-repeat bg-cover lg:bg-black overflow-hidden text-white relative flex flex-col"
+    v-if="waitlist_info && Object.keys(waitlist_info).length > 0"
   >
     <Head>
       <Title>Grip - You're On The Waitlist!</Title>
-      <Meta name="description" content="Check youur status on the waitlist!" />
+      <Meta
+        name="description"
+        :content="`You're currently ${waitlist_info?.current_priority} position on the waitlist!`"
+      />
       <Link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       <Link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
       <Link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
@@ -33,7 +37,7 @@
             </h2>
             <h3
               class="p-14 md:p-16 lg:p-20 rounded-[50px] bg-secondary text-black text-6xl lg:text-7xl"
-            >#123</h3>
+            >#{{Intl.NumberFormat('en-US').format(parseInt(waitlist_info?.current_priority))}}</h3>
             <p class="text-2xl lg:text-3xl font-display">On the waitlist</p>
           </div>
         </common-blur-container>
@@ -52,7 +56,7 @@
     </div>
 
     <waitlist-share-sheet
-      referral-url="https://trygrip.co?referrer=qwertyuiop"
+      :referral-url="waitlist_info?.referral_link"
       @close="shouldShowShareSheet = !shouldShowShareSheet"
       v-if="shouldShowShareSheet"
     ></waitlist-share-sheet>
@@ -61,4 +65,16 @@
 
 <script lang="ts" setup>
 const shouldShowShareSheet = ref(false)
+const waitlist_info = useState<{
+  current_priority: string,
+  referral_link: string,
+  registered_email: string,
+  total_referrals: number,
+  total_users: number,
+  user_id: string
+}>('waitlist_info')
+const router = useRouter()
+if (!waitlist_info.value) {
+  router.replace('/')
+}
 </script>

@@ -27,6 +27,9 @@
 <script lang="ts" setup>
 import './assets/css/tailwind.css'
 import './assets/scss/main.scss'
+
+const route = useRoute()
+const referrer = useState('ref_id', () => route.query?.ref_id)
 </script>
 
 <style lang="scss">

@@ -65,7 +65,7 @@
         >
           <h2
             class="text-2xl md:text-3xl lg:text-5xl max-w-[64rem] leading-normal mx-auto"
-          >Did someone day, Declined? With fallback we've got you covered</h2>
+          >Did someone say, Declined? With fallback we've got you covered</h2>
         </div>
         <div class="flex flex-col lg:flex-row w-full m-0 lg:space-x-[12rem] items-center">
           <div
