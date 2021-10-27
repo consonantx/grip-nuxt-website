@@ -28,8 +28,9 @@
         >What we are building</h1>
         <p class="whitespace-pre-line lg:w-11/12 leading-loose text-lg flex">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
-          <br />One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment. Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
-          Grip connects it.
+          <br />One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment.
+          <br />Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
+          <br />Grip connects it.
           <br />By consolidating all your debit cards, credit cards and digital wallets* into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
         </p>
       </section>
@@ -162,12 +163,18 @@
         <div
           class="relative lg:absolute lg:pr-10 overflow-hidden -bottom-12 lg:bottom-0 lg:right-10 lg:mt-0"
         >
-          <img src="/about/phone.png" alt="App Screen" class="lg:px-0 w-[90%] lg:w-auto max-w-[25rem] mx-auto" />
+          <img
+            src="/about/phone.png"
+            alt="App Screen"
+            class="lg:px-0 w-[90%] lg:w-auto max-w-[25rem] mx-auto"
+          />
         </div>
       </section>
     </main>
 
-    <div class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex">
+    <div
+      class="container absolute w-screen h-screen top-0 z-0 left-1/2 -translate-x-1/2 hidden lg:flex"
+    >
       <div class="body-bg-circle body-bg-circle--a -top-1/4 -right-1/4"></div>
       <div class="body-bg-circle body-bg-circle--b -bottom-3/4 -left-1/2"></div>
     </div>

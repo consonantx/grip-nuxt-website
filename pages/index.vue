@@ -21,7 +21,7 @@
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
-          class="text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
+          class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
         >
           <div
             class="track relative"
@@ -65,13 +65,13 @@
             </span>
           </div>
           <div
-            class="track relative"
+            class="track relative flex"
             v-motion="'homeHeaderTextMotion2'"
             :initial="headerTextMotion3.initial"
             :leave="headerTextMotion3.initial"
             :enter="headerTextMotion3.enter"
           >
-            <span class="px-6 py-2 mr-2 relative">
+            <span class="px-6 py-4 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-primary rounded-full z-0 origin-bottom-left"
                 v-motion="'homeHeaderTextBgMotion1'"
@@ -87,7 +87,7 @@
         <!-- Header Action -->
         <nuxt-link
           to="/join"
-          class="py-6 px-10 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none"
+          class="py-6 px-10 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 !leading-none"
           v-motion="'homeHeaderButtonMotion'"
           :initial="headerButtonMotion.initial"
           :enter="headerButtonMotion.enter"
@@ -117,7 +117,7 @@
         </div>
 
         <div
-          class="relative w-full lg:h-[40rem] overflow-hidden -mt-20"
+          class="relative w-full lg:h-[40rem] overflow-hidden -mt-20 "
           v-motion
           :initial="appImageMotion.initial"
           :enter="appImageMotion.enter"
@@ -126,13 +126,13 @@
         </div>
 
         <common-blur-container
-          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-16"
+          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-16 px-3 py-4"
           v-motion="'homeCardDetailsPropMotion'"
           :initial="cardDetailsPropMotion.initial"
           :enter="cardDetailsPropMotion.enter"
         >
           <img src="/common/logos/mastercard.svg" alt="Mastercard Logo" class="h-6 lg:h-9 mr-4" />
-          <p class="mb-0 text-sm lg:text-xl text-white">*** 458</p>
+          <p class="mb-0 text-sm lg:text-xl text-white font-bold">*** 458</p>
         </common-blur-container>
 
         <common-blur-container
@@ -145,12 +145,14 @@
             image-url="/common/logos/gtb.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#D94F00]"
+            image-class="w-5 h-5"
           ></home-logo>
 
           <home-logo
             image-url="/common/logos/stanbic.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#EEF6FC]"
+            image-class="w-5 h-5"
             class="-ml-4"
           ></home-logo>
 
@@ -158,6 +160,7 @@
             image-url="/common/logos/access.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#FFF2EB]"
+            image-class="w-5 h-5"
             class="-ml-4"
           ></home-logo>
 
@@ -165,6 +168,7 @@
             image-url="/common/logos/kuda.svg"
             image-alt="GTB Logo"
             logo-background="bg-[#F9F7FC]"
+            image-class="w-5 h-5"
             class="-ml-4"
           ></home-logo>
         </common-blur-container>
