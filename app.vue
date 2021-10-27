@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black">
+  <div class="bg-[#020612]">
     <Head>
       <Meta property="og:title" content="One Channel, All Payments Everything" />
       <Meta property="og:site_name" content="Grip" />
@@ -38,7 +38,7 @@ const referrer = useState('ref_id', () => route.query?.ref_id)
   height: 107rem;
   width: 107rem;
   position: absolute;
-  opacity: 0.75;
+  opacity: 0.45;
   &--a {
     background: radial-gradient(
       50% 50% at 50% 50%,

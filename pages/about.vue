@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-screen bg-black overflow-hidden text-white relative flex flex-col">
+  <div class="h-screen w-screen bg-[#020612] overflow-hidden text-white relative flex flex-col">
     <Head>
       <Title>Grip - What We're Building!</Title>
       <Meta

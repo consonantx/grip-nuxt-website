@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[120vh] lg:min-h-[55rem] lg:h-[105vh] 2xl:h-screen bg-black !overflow-hidden text-white relative flex-col flex">
+  <div class="h-[120vh] lg:min-h-[55rem] lg:h-[105vh] 2xl:h-screen bg-[#020612] !overflow-hidden text-white relative flex-col flex">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
       <Meta
