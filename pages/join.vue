@@ -309,7 +309,7 @@ const submit = async () => {
     isLoading.value = true
     try {
       const { code } = await $fetch<{ code: string }>(
-        `http://grip.technology/user/wait-list/${encodeURI(email.value)}`
+        `https://grip.technology/user/wait-list/${encodeURI(email.value)}`
       )
 
       if (code === '000') {
@@ -339,7 +339,7 @@ const addToWaitlist = async () => {
         total_users: number,
         user_id: string
       }
-    }>('http://grip.technology/user/wait-list', {
+    }>('https://grip.technology/user/wait-list', {
       body: JSON.stringify({
         email: email.value,
         name: name.value,
