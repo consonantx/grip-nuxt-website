@@ -21,7 +21,7 @@
         <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
-          class="text-4xl md:text-5xl lg:text-6xl xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
+          class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-6"
         >
           <div
             class="flex items-center justify-center lg:justify-start"
