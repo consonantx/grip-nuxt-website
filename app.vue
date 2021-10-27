@@ -65,7 +65,11 @@ const shouldShowMenu = useState('shouldShowMenu', () => false)
   transition: scrollbar-color 0.3s ease-out;
 
   &::-webkit-scrollbar {
-    width: 20px;
+    width: 0px;
+
+    @media screen and (min-width: 1024px) {
+      width: 15px;
+    }
   }
 
   &::-webkit-scrollbar-track {
@@ -75,9 +79,13 @@ const shouldShowMenu = useState('shouldShowMenu', () => false)
 
   &::-webkit-scrollbar-thumb {
     border-radius: 100px;
-    border: 5px solid transparent;
+    border: 0px solid transparent;
     background-clip: content-box;
     background-color: #6d6e75;
+
+    @media screen and (min-width: 1024px) {
+      border: 5px solid transparent;
+    }
   }
 }
 </style>

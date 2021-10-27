@@ -14,7 +14,7 @@
     <layout-navbar class="relative z-10"></layout-navbar>
 
     <main
-      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative lg:gap-x-16 z-10 overflow-y-auto"
+      class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative lg:gap-x-16 z-10 overflow-y-auto mb-5 lg:mb-0"
     >
       <!-- Header Content -->
       <div class="flex flex-col gap-y-24">
