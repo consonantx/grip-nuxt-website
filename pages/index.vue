@@ -21,7 +21,7 @@
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
-          class="text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-2 mg:gap-y-4 lg:gap-y-8"
+          class="text-[44px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col !leading-none gap-y-4 mg:gap-y-6 lg:gap-y-8"
         >
           <div
             class="track relative overflow-hidden flex items-center mx-auto lg:mx-0"
@@ -87,7 +87,7 @@
         <!-- Header Action -->
         <nuxt-link
           to="/join"
-          class="py-6 px-10 lg:px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 !leading-none"
+          class="py-6 px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 !leading-none"
           v-motion="'homeHeaderButtonMotion'"
           :initial="headerButtonMotion.initial"
           :enter="headerButtonMotion.enter"
@@ -100,14 +100,14 @@
         class="relative max-w-[22rem] lg:max-w-[35rem] 2xl:max-w-[40rem] mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] 2xl:h-[40rem] lg:mr-10 mt-20 lg:mt-0 flex"
       >
         <div
-          class="bg-[#161616] top-0 left-0 rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"
+          class="bg-[#161616] top-0 left-0 rounded-[3.25rem] lg:rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"
           v-motion="'homeAppImageBgCoverMotion'"
           :initial="appImageBgCoverMotion.initial"
           :enter="appImageBgCoverMotion.enter"
           :leave="appImageBgCoverMotion.initial"
         >
           <img
-            class="w-full h-full object-cover rounded-[4rem] origin-top-right"
+            class="w-full h-full object-cover rounded-[2.25rem] lg:rounded-[4rem] origin-top-right"
             src="/common/abstract_bg.png"
             v-motion="'homeAppImageBgMotion'"
             :initial="appImageBgMotion.initial"
@@ -126,7 +126,7 @@
         </div>
 
         <common-blur-container
-          class="bottom-[50%] lg:bottom-1/4 -left-6 lg:-left-16 px-3 py-4 rounded-xl"
+          class="bottom-[50%] lg:bottom-1/4 -left-5 lg:-left-16 px-3 py-4 rounded-xl border-0 lg:border-4"
           v-motion="'homeCardDetailsPropMotion'"
           :initial="cardDetailsPropMotion.initial"
           :enter="cardDetailsPropMotion.enter"
@@ -136,7 +136,7 @@
         </common-blur-container>
 
         <common-blur-container
-          class="bottom-[25%] lg:bottom-[10%] -right-6 lg:-right-16 rounded-xl"
+          class="bottom-[25%] lg:bottom-[10%] -right-5 lg:-right-16 rounded-xl border-0 lg:border-4"
           v-motion="'homeBanksPropMotion'"
           :initial="banksPropMotion.initial"
           :enter="banksPropMotion.enter"

@@ -53,7 +53,7 @@
           >One Channel, All Payments Everything</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
-          >Grip would be your access to a world of transformed finances. Think unified transaction records across all your existing payment channels, better budget, and expense tracking, and all the added benefits that come with having a single channel across your financial world!</p>
+          >Grip would be your access to a world of transformed finances. Think unified transaction records across all your existing payment channels, better budget and expense tracking, and all the added benefits that come with having a single channel across your financial world!</p>
         </div>
       </section>
 
@@ -153,7 +153,7 @@
           </h2>
           <p class="leading-normal text-lg lg:text-2xl max-w-[40rem]">
             There’s a lot more we’d like to share with you, but where’s the fun in knowing everything now? 😉
-            If we’ve piqued your interest, let us know by getting the on waitlist and we’d let you know as soon as we launch.
+            If we’ve piqued your interest, let us know by getting on the  waitlist and we’d let you know as soon as we launch.
           </p>
           <nuxt-link
             to="/join"
