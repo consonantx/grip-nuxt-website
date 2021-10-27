@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[120vh] lg:min-h-[55rem] lg:h-[105vh] 2xl:h-screen bg-[#020612] !overflow-hidden text-white relative flex-col flex">
+  <div class="h-[57rem] lg:min-h-[55rem] lg:h-[105vh] 2xl:h-screen bg-[#020612] !overflow-hidden text-white relative flex-col flex">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
       <Meta
@@ -17,11 +17,11 @@
       class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative z-10"
     >
       <!-- Header Content -->
-      <div class="flex flex-col gap-y-14 lg:gap-y-24 mt-10">
+      <div class="flex flex-col gap-y-14 lg:gap-y-24 mt-5 lg:mt-10">
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
-          class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-4 lg:gap-y-8"
+          class="text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-2 mg:gap-y-4 lg:gap-y-8"
         >
           <div
             class="track relative overflow-hidden flex items-center mx-auto lg:mx-0"
@@ -30,7 +30,7 @@
             :enter="headerTextMotion.enter"
             :leave="headerTextBgMotion.initial"
           >
-            <span class="text-black px-3 lg:px-6 py-4 mr-2 relative">
+            <span class="text-black px-3 lg:px-6 py-2 lg:py-4 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-secondary rounded-full z-0 origin-bottom-left"
                 v-motion="'homeHeaderTextBgMotion'"
@@ -71,7 +71,7 @@
             :leave="headerTextMotion3.initial"
             :enter="headerTextMotion3.enter"
           >
-            <span class="px-3 lg:px-6 py-4 mr-2 relative">
+            <span class="px-3 lg:px-6 py-2 lg:py-4 mr-2 relative">
               <div
                 class="absolute top-0 right-0 w-full h-full bg-primary rounded-full z-0 origin-bottom-left"
                 v-motion="'homeHeaderTextBgMotion1'"
@@ -97,7 +97,7 @@
 
       <!-- Header Banner -->
       <div
-        class="relative max-w-[20rem] lg:max-w-[35rem] 2xl:max-w-[40rem] mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] 2xl:h-[40rem] lg:mr-10 mt-28 lg:mt-0 flex"
+        class="relative max-w-[22rem] lg:max-w-[35rem] 2xl:max-w-[40rem] mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] 2xl:h-[40rem] lg:mr-10 mt-20 lg:mt-0 flex"
       >
         <div
           class="bg-[#161616] top-0 left-0 rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"
@@ -117,7 +117,7 @@
         </div>
 
         <div
-          class="relative lg:h-[40rem] 2xl:h-[44rem] overflow-hidden -mt-20 mx-auto w-3/4"
+          class="relative lg:h-[40rem] 2xl:h-[44rem] overflow-hidden -mt-10 lg:-mt-20 mx-auto w-3/4"
           v-motion
           :initial="appImageMotion.initial"
           :enter="appImageMotion.enter"
@@ -126,7 +126,7 @@
         </div>
 
         <common-blur-container
-          class="bottom-[60%] lg:bottom-1/4 -left-6 lg:-left-16 px-3 py-4"
+          class="bottom-[50%] lg:bottom-1/4 -left-6 lg:-left-16 px-3 py-4 rounded-xl"
           v-motion="'homeCardDetailsPropMotion'"
           :initial="cardDetailsPropMotion.initial"
           :enter="cardDetailsPropMotion.enter"
@@ -136,7 +136,7 @@
         </common-blur-container>
 
         <common-blur-container
-          class="bottom-[35%] lg:bottom-[10%] -right-6 lg:-right-16"
+          class="bottom-[25%] lg:bottom-[10%] -right-6 lg:-right-16 rounded-xl"
           v-motion="'homeBanksPropMotion'"
           :initial="banksPropMotion.initial"
           :enter="banksPropMotion.enter"

@@ -28,7 +28,7 @@
         scale: 1.2
       }"
     >
-      <img src="/logo.svg" class="h-12 w-12" alt="Logo" />
+      <img src="/logo.svg" class="w-10 lg:h-12 h-10 lg:w-12" alt="Logo" />
     </nuxt-link>
     <nuxt-link
       to="/about"
@@ -55,7 +55,8 @@
       }"
     >About Grip</nuxt-link>
     <button
-      class="flex items-center rounded-md p-3 font-bold bg-white text-black lg:hidden"
+      class="flex flex-col space-y-2 items-center border-[3px] border-[#303030] rounded-3xl p-3 font-bold text-white lg:hidden"
+      @click="shouldShowMenu = true"
       v-motion
       :initial="{
         opacity: 0,
@@ -76,6 +77,13 @@
           }
         }
       }"
-    >Menu</button>
+    >
+    <span class="h-[2px] bg-white rounded-full w-6"></span>
+    <span class="h-[2px] bg-white rounded-full w-6"></span>
+    </button>
   </nav>
 </template>
+
+<script lang="ts" setup>
+const shouldShowMenu = useState('shouldShowMenu')
+</script>

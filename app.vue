@@ -21,6 +21,7 @@
       <Meta name="twitter:image" content="https://trygrip.netlify.app/og_image.png" />
     </Head>
     <NuxtPage />
+    <layout-nav-menu @close="shouldShowMenu = false" v-if="shouldShowMenu"></layout-nav-menu>
   </div>
 </template>
 
@@ -30,6 +31,7 @@ import './assets/scss/main.scss'
 
 const route = useRoute()
 const referrer = useState('ref_id', () => route.query?.ref_id)
+const shouldShowMenu = useState('shouldShowMenu', () => false)
 </script>
 
 <style lang="scss">
