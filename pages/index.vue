@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[120vh] lg:h-[110vh] 2xl:h-screen !w-screen bg-black !overflow-hidden text-white relative flex-col flex">
+  <div class="h-[120vh] lg:min-h-[55rem] lg:h-[105vh] 2xl:h-screen bg-black !overflow-hidden text-white relative flex-col flex">
     <Head>
       <Title>Grip - One Channel, All Payments Everything</Title>
       <Meta
@@ -97,7 +97,7 @@
 
       <!-- Header Banner -->
       <div
-        class="relative max-w-[20rem] lg:max-w-[30rem] 2xl:max-w-[40rem] mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[40rem] lg:mr-10 mt-28 lg:mt-0 flex"
+        class="relative max-w-[20rem] lg:max-w-[35rem] 2xl:max-w-[40rem] mx-auto min-w-[12rem] md:min-w-[28rem] xl:min-w-[36rem] h-[28rem] lg:h-[36rem] 2xl:h-[40rem] lg:mr-10 mt-28 lg:mt-0 flex"
       >
         <div
           class="bg-[#161616] top-0 left-0 rounded-[5rem] absolute w-full h-full p-4 origin-top-right flex items-center justify-center overflow-hidden"
@@ -117,7 +117,7 @@
         </div>
 
         <div
-          class="relative lg:h-[44rem] overflow-hidden -mt-20 mx-auto w-3/4"
+          class="relative lg:h-[40rem] 2xl:h-[44rem] overflow-hidden -mt-20 mx-auto w-3/4"
           v-motion
           :initial="appImageMotion.initial"
           :enter="appImageMotion.enter"
