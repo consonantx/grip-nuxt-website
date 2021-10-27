@@ -24,7 +24,7 @@
         :visible="contentMotion.enter"
       >
         <h1
-          class="w-1/3 text-2xl md:text-3xl lg:text-5xl xl:text-6xl max-w-[34rem] leading-relaxed mx-auto lg:mx-0"
+          class="w-2/3 lg:w-1/3 text-3xl lg:text-5xl xl:text-6xl max-w-[34rem] leading-relaxed mx-auto lg:mx-0"
         >What we are building</h1>
         <p class="whitespace-pre-line lg:w-11/12 leading-loose text-lg flex">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
