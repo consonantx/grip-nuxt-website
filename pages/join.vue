@@ -17,14 +17,14 @@
       class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative lg:gap-x-16 z-10 overflow-y-auto"
     >
       <!-- Header Content -->
-      <div class="flex flex-col gap-y-24 mt-10">
+      <div class="flex flex-col gap-y-24">
         <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
-          class="text-[40px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-2 md:gap-y-4 lg:gap-y-6"
+          class="text-[44px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-2 md:gap-y-4 lg:gap-y-6 px-10"
         >
           <div
-            class="flex items-center justify-center lg:justify-start"
+            class="flex items-center justify-start"
             v-motion="'joinHeaderTextMotion1'"
             :initial="headerTextMotion.initial"
             :leave="headerTextMotion.initial"
@@ -57,19 +57,21 @@
             </div>
           </div>
           <div
+          class="flex justify-start items-center"
             v-motion="'joinHeaderTextMotion1'"
             :initial="headerTextMotion2.initial"
             :leave="headerTextMotion2.initial"
             :enter="headerTextMotion2.enter"
           >Notified</div>
           <div
+          class="flex justify-start items-center"
             v-motion="'joinHeaderTextMotion1'"
             :initial="headerTextMotion3.initial"
             :leave="headerTextMotion3.initial"
             :enter="headerTextMotion3.enter"
           >When We</div>
           <div
-            class="flex justify-center lg:justify-start items-center"
+            class="flex justify-start items-center"
             v-motion="'joinHeaderTextMotion1'"
             :initial="headerTextMotion4.initial"
             :leave="headerTextMotion4.initial"
@@ -85,30 +87,30 @@
 
       <!-- Header Banner -->
       <div
-        class="relative rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[33rem] min-h-[30rem] lg:min-h-[35rem] lg:mr-10 bg-transparent lg:bg-abstract bg-no-repeat bg-cover flex"
+        class="relative rounded-[2rem] lg:rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[33rem] min-h-[25rem] lg:min-h-[35rem] lg:mr-10 bg-[#0C0C0C] lg:bg-abstract bg-no-repeat bg-cover flex mt-10"
         v-motion="'joinAppFormMotion1'"
         :initial="appFormMotion.initial"
         :leave="appFormMotion.initial"
         :enter="appFormMotion.enter"
       >
         <div
-          class="absolute inset-0 lg:inset-3 rounded-[5rem] bg-transparent lg:bg-[#02050E] flex items-center justify-center lg:px-9"
+          class="absolute inset-0 lg:inset-3 rounded-[5rem] bg-transparent lg:bg-[#0C0C0C] flex items-center justify-center px-6 lg:px-9"
         >
           <form
             @submit.prevent="submit()"
             @keydown.enter.prevent="submit()"
-            class="w-full grid gap-y-20"
+            class="w-full grid gap-y-16 lg:gap-y-20"
           >
             <input
               type="text"
-              class="text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
+              class="text-lg lg:text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
               placeholder="Full Name"
               v-model="name"
             />
 
             <input
               type="email"
-              class="text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
+              class="text-lg lg:text-xl placeholder-gray-500 outline-none bg-transparent border-b w-full border-gray-600 pb-3"
               placeholder="Email"
               v-model="email"
             />
@@ -116,7 +118,7 @@
             <button
               type="submit"
               value="Get Notified"
-              class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl lg:text-lg w-full ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed relative"
+              class="py-6 px-12 lg:px-14 bg-primary rounded-xl lg:rounded-2xl lg:text-lg w-full ml-auto mr-auto lg:mr-auto lg:ml-0 !leading-none cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed relative"
               :disabled="!email || !name"
             >
               <span v-if="!isLoading">Get Notified</span>
