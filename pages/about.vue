@@ -37,7 +37,7 @@
           Grip connects it.
           <br />
           <br />
-          By consolidating all your debit cards, credit cards and digital wallets* into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
+          By consolidating all your debit cards, credit cards and digital wallets into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
         </p>
       </section>
 
@@ -111,7 +111,7 @@
           >Access to unlimited FX</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
-          >Bank FX restrictions boggling you down? We’ve been there too. With your Grip card, you get unlimited access to FX* and all you have to do is link your existing cards. Literally, that’s all it takes. Pay across online stores and in over 200+ countries without ever worrying about restrictions.</p>
+          >Bank FX restrictions boggling you down? We’ve been there too. With your Grip card, you get unlimited access to FX and all you have to do is link your existing cards. Literally, that’s all it takes. Pay across online stores and in over 200+ countries without ever worrying about restrictions.</p>
         </div>
         <div class="w-2/3 lg:w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
           <img src="/about/fx.png" alt="Unlimited FX" />
@@ -176,6 +176,8 @@
           />
         </div>
       </section>
+
+      <section id="footnotes"></section>
     </main>
 
     <div
