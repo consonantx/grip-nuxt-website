@@ -21,7 +21,7 @@
         <h1 class="hidden">Get notified when we launch!</h1>
         <!-- Header Text -->
         <div
-          class="text-[44px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col leading-tight gap-y-2 md:gap-y-4 lg:gap-y-6 px-10"
+          class="text-[44px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-center lg:text-left font-display flex flex-col !leading-tight gap-y-2 md:gap-y-4 lg:gap-y-6 px-10"
         >
           <div
             class="flex items-center justify-start"
@@ -78,8 +78,8 @@
             :enter="headerTextMotion4.enter"
           >
             <span>Launch</span>
-            <span class="rounded-full bg-secondary flex-grow-0 ml-4 px-2 xl:px-4">
-              <img src="/common/icons/card.png" class="w-12 lg:w-16 xl:w-20 mt-2" alt="Card Image" />
+            <span class="rounded-full bg-secondary flex items-center justify-center ml-4 px-4 xl:px-4 py-2">
+              <img src="/common/icons/card.png" class="w-10 lg:w-16 xl:w-20" alt="Card Image" />
             </span>
           </div>
         </div>

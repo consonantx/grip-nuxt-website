@@ -17,7 +17,7 @@
       class="flex container justify-between mt-0 lg:mt-10 flex-col lg:flex-row relative z-10"
     >
       <!-- Header Content -->
-      <div class="flex flex-col gap-y-14 lg:gap-y-24 mt-5 lg:mt-10">
+      <div class="flex flex-col gap-y-14 lg:gap-y-24 mt-2 lg:mt-10">
         <h1 class="hidden">You only need one grip card</h1>
         <!-- Header Text -->
         <div
