@@ -55,6 +55,7 @@
       }"
     >About Grip</nuxt-link>
     <button
+    v-if="shouldShowDropdown"
       class="flex flex-col space-y-2 items-center border-[3px] border-[#303030] rounded-3xl p-3 font-bold text-white lg:hidden"
       @click="shouldShowMenu = true"
       v-motion
@@ -86,4 +87,10 @@
 
 <script lang="ts" setup>
 const shouldShowMenu = useState('shouldShowMenu')
+const props = defineProps({
+  shouldShowDropdown: {
+    type: Boolean,
+    default: true
+  }
+})
 </script>

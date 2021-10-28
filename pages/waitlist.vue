@@ -14,17 +14,17 @@
       <Link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
       <Link rel="manifest" href="/favicon/site.webmanifest" />
     </Head>
-    <layout-navbar class="relative z-10"></layout-navbar>
+    <layout-navbar class="relative z-10" :should-show-dropdown="false"></layout-navbar>
 
     <main class="flex container mt-0 relative z-10 overflow-y-auto h-screen">
       <!-- Page Content -->
       <div
-        class="flex flex-col mt-10 lg:px-20 py-14 bg-transparent lg:bg-abstract rounded-[50px] mx-auto lg:bg-no-repeat lg:bg-cover items-center justify-center relative space-y-16 min-h-[40rem] lg:min-h-[60rem] mb-16"
+        class="flex flex-col lg:mt-10 lg:px-20 py-14 bg-transparent lg:bg-abstract rounded-[50px] mx-auto lg:bg-no-repeat lg:bg-cover items-center justify-center relative space-y-16 min-h-[40rem] lg:min-h-[60rem] mb-16 w-[90%] lg:w-auto"
       >
         <common-blur-container
           :should-include-border="false"
           :should-include-default-padding="false"
-          class="px-4 pt-20 mt-10 pb-7 text-white relative text-center rounded-[50px]"
+          class="px-4 pt-20 mt-10 pb-7 text-white relative text-center rounded-[35px] lg:rounded-[50px] w-full justify-center"
         >
           <h1 class="hidden">You're on the waitlist!</h1>
           <div class="flex flex-col space-y-9">
@@ -36,7 +36,7 @@
               <br />currently
             </h2>
             <h3
-              class="p-14 md:p-16 lg:p-20 rounded-[50px] bg-secondary text-black text-6xl lg:text-7xl"
+              class="p-14 md:p-16 lg:p-20 rounded-[50px] bg-secondary text-black text-6xl lg:text-7xl w-full"
             >#{{Intl.NumberFormat('en-US').format(parseInt(waitlist_info?.priority))}}</h3>
             <p class="text-2xl lg:text-3xl font-display">On the waitlist</p>
           </div>

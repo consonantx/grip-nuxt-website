@@ -29,7 +29,7 @@
         <p class="whitespace-pre-line lg:w-11/12 leading-loose text-lg flex">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
           <br />
-          <br />One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment.
+          <br />One average, 9 in every 20 individuals in the Global banked population have one (or more) cards with them at every moment.
           Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
           <br />
           <br />Grip connects it.
@@ -57,7 +57,7 @@
           :visible="contentMotion.enter"
         >
           <h2
-            class="text-3xl lg:text-4xl xl:text-5xl lg:max-w-[32rem] leading-loose"
+            class="text-3xl lg:text-4xl xl:text-5xl lg:max-w-[32rem] leading-normal"
           >One Channel, All Payments Everything</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
@@ -109,7 +109,7 @@
           :visible="contentMotion.enter"
         >
           <h2
-            class="text-3xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-loose"
+            class="text-3xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-normal"
           >Access to unlimited FX</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
@@ -144,7 +144,7 @@
           :visible="contentMotion.enter"
         >
           <h2
-            class="text-3xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-loose"
+            class="text-3xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-normal"
           >You've never seen a card like this!</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"

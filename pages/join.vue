@@ -87,7 +87,7 @@
 
       <!-- Header Banner -->
       <div
-        class="relative rounded-[2rem] lg:rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[33rem] min-h-[25rem] lg:min-h-[35rem] lg:mr-10 bg-[#0C0C0C] lg:bg-abstract bg-no-repeat bg-cover flex mt-10"
+        class="relative rounded-[2rem] lg:rounded-[5rem] lg:max-w-max mx-auto min-w-[90%] md:min-w-[28rem] xl:min-w-[33rem] min-h-[25rem] lg:min-h-[35rem] lg:mr-10 bg-[#0C0C0C] lg:bg-abstract bg-no-repeat bg-cover flex mt-10 lg:mt-0"
         v-motion="'joinAppFormMotion1'"
         :initial="appFormMotion.initial"
         :leave="appFormMotion.initial"
@@ -139,9 +139,20 @@
 </template>
 
 <script lang="ts" setup>
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 import { Variant } from '@vueuse/motion'
 import { Ref } from 'vue'
 import { useToast } from 'vue-toastification'
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
+const referrer = useState('ref_id')
+
+const router = useRouter()
+
+const toast = useToast()
+
+const isLarge = ref(breakpoints.isGreater('md'))
 
 const appFormMotion: Ref<Record<string, Variant>> = ref({
   enter: {
@@ -255,7 +266,7 @@ const headerTextMotion4: Ref<Record<string, Variant>> = ref({
 
 const headerTextImageMotion: Ref<Record<string, Variant>> = ref({
   initial: {
-    x: -50,
+    x: isLarge.value ? -100 : -50,
   },
   enter: {
     x: 0,
@@ -285,17 +296,11 @@ const headerTextImageMotion2: Ref<Record<string, Variant>> = ref({
   }
 })
 
-const referrer = useState('ref_id')
-
-const router = useRouter()
-
 const name = ref('')
 
 const email = ref('')
 
 const isLoading = ref(false)
-
-const toast = useToast()
 
 const waitlist_info = useState<{
   current_priority?: string,

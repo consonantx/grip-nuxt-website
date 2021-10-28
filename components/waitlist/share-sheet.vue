@@ -82,10 +82,10 @@ const containerMotion: Ref<Record<string, Variant>> = ref({
     scale: 1,
     transition: {
       scale: {
-        duration: 750
+        duration: 250
       },
       opacity: {
-        duration: 750
+        duration: 250
       }
     }
   },
@@ -102,11 +102,11 @@ const bottomSheetMotion: Ref<Record<string, Variant>> = ref({
     transition: {
       y: {
         duration: 750,
-        delay: 750
+        delay: 250
       },
       opacity: {
         duration: 750,
-        delay: 750
+        delay: 250
       }
     }
   },
@@ -126,7 +126,7 @@ const share = async (shareChannel: 'twitter' | 'facebook' | 'other') => {
       emit('close')
       break;
     case "twitter":
-      window.open(`https://twitter.com/intent/tweet?url=${encodeURI(props.referralUrl)}&via=trygripapp&text=I%20just%20joined%20the%20waitlist%20for%20Grip%21%20Managing%20all%20your%20finances%20from%20a%20single%20channel%20has%20never%20been%20easier%21`, '__blank')
+      window.open(`https://twitter.com/intent/tweet?url=${encodeURI(props.referralUrl)}&via=trygripapp&text=I%20just%20joined%20the%20waitlist%20for%20Grip%21%20Managing%20all%my%20finances%20from%20a%20single%20channel%20has%20never%20been%20easier%21`, '__blank')
       toast.success(`You've shared your referral link on twitter!`)
       emit('close');
       break;
