@@ -14,24 +14,30 @@
     <layout-navbar class="relative z-10"></layout-navbar>
 
     <main
-      class="container justify-between lg:pt-10 relative grid grid-cols-1 gap-y-36 z-10 overflow-y-auto px-8 lg:px-0 text-center lg:text-left"
+      class="container justify-between lg:pt-10 relative grid grid-cols-1 gap-y-36 z-10 overflow-y-auto px-8 lg:px-0 text-left"
     >
       <section
         id="what-are-we-building"
-        class="w-full grid grid-cols-1 gap-y-11 text-center md:text-left"
+        class="w-full grid grid-cols-1 gap-y-11 text-left"
         v-motion
         :initial="contentMotion.initial"
         :visible="contentMotion.enter"
       >
         <h1
-          class="w-2/3 lg:w-1/3 text-3xl lg:text-5xl xl:text-6xl max-w-[34rem] leading-relaxed mx-auto lg:mx-0"
+          class="w-2/3 lg:w-1/3 text-4xl lg:text-5xl xl:text-6xl max-w-[34rem] leading-relaxed mr-auto lg:mx-0"
         >What we are building</h1>
         <p class="whitespace-pre-line lg:w-11/12 leading-loose text-lg flex">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
-          <br />One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment.
-          <br />Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
-          <br />Grip connects it.
-          <br />By consolidating all your debit cards, credit cards and digital wallets* into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
+          <br />
+          <br />
+          One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment.
+          Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
+          <br />
+          <br />
+          Grip connects it.
+          <br />
+          <br />
+          By consolidating all your debit cards, credit cards and digital wallets* into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
         </p>
       </section>
 
@@ -39,7 +45,7 @@
         id="one-channel"
         class="flex flex-col lg:flex-row items-center lg:space-x-[12rem] w-full"
       >
-        <div class="w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
+        <div class="w-2/3 lg:w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
           <img src="/about/channel.png" alt="One Channel For All Your Payments" />
         </div>
         <div
@@ -49,7 +55,7 @@
           :visible="contentMotion.enter"
         >
           <h2
-            class="text-xl md:text-2xl lg:text-4xl xl:text-5xl lg:max-w-[32rem] leading-loose"
+            class="text-3xl lg:text-4xl xl:text-5xl lg:max-w-[32rem] leading-loose"
           >One Channel, All Payments Everything</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
@@ -70,7 +76,7 @@
         </div>
         <div class="flex flex-col lg:flex-row w-full m-0 lg:space-x-[12rem] items-center">
           <div
-            class="w-1/2"
+            class="w-2/3 lg:w-1/2"
             v-motion
             :initial="contentMotion.initial"
             :visible="contentMotion.enter"
@@ -101,13 +107,13 @@
           :visible="contentMotion.enter"
         >
           <h2
-            class="text-xl md:text-2xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-loose"
+            class="text-3xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-loose"
           >Access to unlimited FX</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
           >Bank FX restrictions boggling you down? We’ve been there too. With your Grip card, you get unlimited access to FX* and all you have to do is link your existing cards. Literally, that’s all it takes. Pay across online stores and in over 200+ countries without ever worrying about restrictions.</p>
         </div>
-        <div class="w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
+        <div class="w-2/3 lg:w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
           <img src="/about/fx.png" alt="Unlimited FX" />
         </div>
       </section>
@@ -131,7 +137,7 @@
           :visible="contentMotion.enter"
         >
           <h2
-            class="text-xl md:text-2xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-loose"
+            class="text-3xl lg:text-4xl xl:text-5xl max-w-[32rem] leading-loose"
           >You've never seen a card like this!</h2>
           <p
             class="whitespace-pre-line w-full leading-loose text-lg"
