@@ -29,15 +29,12 @@
         <p class="whitespace-pre-line lg:w-11/12 leading-loose text-lg flex">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
           <br />
-          <br />
-          One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment.
+          <br />One in every 3 individuals in the Global banked population have 3 (or more) cards with them at every moment.
           Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
           <br />
+          <br />Grip connects it.
           <br />
-          Grip connects it.
-          <br />
-          <br />
-          By consolidating all your debit cards, credit cards and digital wallets into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
+          <br />By consolidating all your debit cards, credit cards and digital wallets into a single channel, Grip will be the only card you’d ever need to carry around and the only pin you’d ever need to remember!
         </p>
       </section>
 
@@ -45,7 +42,12 @@
         id="one-channel"
         class="flex flex-col lg:flex-row items-center lg:space-x-[12rem] w-full"
       >
-        <div class="w-2/3 lg:w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
+        <div
+          class="w-2/3 lg:w-1/2"
+          v-motion
+          :initial="contentMotion.initial"
+          :visible="contentMotion.enter"
+        >
           <img src="/about/channel.png" alt="One Channel For All Your Payments" />
         </div>
         <div
@@ -113,7 +115,12 @@
             class="whitespace-pre-line w-full leading-loose text-lg"
           >Bank FX restrictions boggling you down? We’ve been there too. With your Grip card, you get unlimited access to FX and all you have to do is link your existing cards. Literally, that’s all it takes. Pay across online stores and in over 200+ countries without ever worrying about restrictions.</p>
         </div>
-        <div class="w-2/3 lg:w-1/2" v-motion :initial="contentMotion.initial" :visible="contentMotion.enter">
+        <div
+          class="w-2/3 lg:w-1/2"
+          v-motion
+          :initial="contentMotion.initial"
+          :visible="contentMotion.enter"
+        >
           <img src="/about/fx.png" alt="Unlimited FX" />
         </div>
       </section>
@@ -153,17 +160,21 @@
         :visible="contentMotion.enter"
       >
         <div class="class grid grid-col gap-y-10">
-          <h2 class="text-3xl lg:text-5xl xl:text-6xl font-extrabold max-w-[32rem]">
-            There's a lot
-            <span class="font-extrabold text-white font-display">More</span>
-          </h2>
-          <p class="leading-normal text-lg lg:text-2xl max-w-[40rem]">
+          <div class="flex flex-col lg:space-y-4 justify-center lg:justify-start">
+            <h2 class="text-3xl lg:text-5xl xl:text-6xl font-extrabold max-w-[32rem] mx-auto lg:mx-0">There's a</h2>
+            <h2 class="text-3xl lg:text-5xl xl:text-6xl font-extrabold max-w-[32rem] mx-auto lg:mx-0">
+              <span class="font-extrabold font-display">lot</span>
+              <span class="font-extrabold text-black bg-secondary rounded-full px-4 py-1 font-display ml-2 lg:ml-4">More</span>
+            </h2>
+          </div>
+
+          <p class="leading-normal text-lg lg:text-xl xl:text-2xl max-w-[40rem]">
             There’s a lot more we’d like to share with you, but where’s the fun in knowing everything now? 😉
-            If we’ve piqued your interest, let us know by getting on the  waitlist and we’d let you know as soon as we launch.
+            If we’ve piqued your interest, let us know by getting on the waitlist and we’d let you know as soon as we launch.
           </p>
           <nuxt-link
             to="/join"
-            class="py-6 px-12 lg:px-14 bg-white text-black rounded-xl lg:rounded-2xl text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none font-bold"
+            class="py-5 lg:py-6 px-12 lg:px-14 bg-white text-black rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 leading-none font-bold"
           >Sign me up!</nuxt-link>
         </div>
         <div
@@ -176,8 +187,6 @@
           />
         </div>
       </section>
-
-      <section id="footnotes"></section>
     </main>
 
     <div
