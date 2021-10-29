@@ -139,10 +139,10 @@
 </template>
 
 <script lang="ts" setup>
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core"
 import { Variant } from '@vueuse/motion'
 import { Ref } from 'vue'
 import { useToast } from 'vue-toastification'
+import { breakpointsTailwind } from '../composables/use-breakpoints'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
@@ -323,7 +323,7 @@ const submit = async () => {
         toast.info(`You're already on the waitlist boss 👀`)
       }
     } catch (e) {
-      if ((e?.message as string).includes('400')) {
+      if (((e as any)?.message as string).includes('400')) {
         await addToWaitlist()
       }
     }
