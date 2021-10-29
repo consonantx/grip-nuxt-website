@@ -57,14 +57,14 @@
             </div>
           </div>
           <div
-          class="flex justify-start items-center"
+            class="flex justify-start items-center"
             v-motion="'joinHeaderTextMotion1'"
             :initial="headerTextMotion2.initial"
             :leave="headerTextMotion2.initial"
             :enter="headerTextMotion2.enter"
           >Notified</div>
           <div
-          class="flex justify-start items-center"
+            class="flex justify-start items-center"
             v-motion="'joinHeaderTextMotion1'"
             :initial="headerTextMotion3.initial"
             :leave="headerTextMotion3.initial"
@@ -78,7 +78,9 @@
             :enter="headerTextMotion4.enter"
           >
             <span>Launch</span>
-            <span class="rounded-full bg-secondary flex items-center justify-center ml-4 px-4 xl:px-4 py-2">
+            <span
+              class="rounded-full bg-secondary flex items-center justify-center ml-4 px-4 xl:px-4 py-2"
+            >
               <img src="/common/icons/card.png" class="w-10 lg:w-16 xl:w-20" alt="Card Image" />
             </span>
           </div>
@@ -142,9 +144,6 @@
 import { Variant } from '@vueuse/motion'
 import { Ref } from 'vue'
 import { useToast } from 'vue-toastification'
-import { breakpointsTailwind } from '../composables/use-breakpoints'
-
-const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const referrer = useState('ref_id')
 
@@ -152,7 +151,16 @@ const router = useRouter()
 
 const toast = useToast()
 
-const isLarge = ref(breakpoints.isGreater('md'))
+const isLarge = ref(process.client && window.innerWidth > 1024 ? true : false)
+
+
+onMounted(() => {
+  if (process.client) {
+    window.addEventListener('resize', (_: UIEvent) => {
+      window.innerWidth > 1024 ? isLarge.value = true : isLarge.value = false
+    })
+  }
+})
 
 const appFormMotion: Ref<Record<string, Variant>> = ref({
   enter: {
