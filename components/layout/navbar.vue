@@ -31,7 +31,7 @@
       <img src="/logo.svg" class="w-10 lg:h-12 h-10 lg:w-12" alt="Logo" />
     </nuxt-link>
     <nuxt-link
-      to="/about"
+      to="/join"
       class="lg:flex items-center border-[3px] rounded-full py-4 px-8 border-[#303030] hidden"
       v-motion
       :initial="{
@@ -53,7 +53,7 @@
           }
         }
       }"
-    >About Grip</nuxt-link>
+    >Join Waitlist</nuxt-link>
     <button
     v-if="shouldShowDropdown"
       class="flex flex-col space-y-2 items-center border-[3px] border-[#303030] rounded-3xl p-3 font-bold text-white lg:hidden"

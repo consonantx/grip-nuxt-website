@@ -15,8 +15,8 @@
       :leave="menuMotion.initial"
     >
       <!-- About -->
-      <nuxt-link to="/about" class="flex items-center cursor-pointer" @click.native="$emit('close')">
-        <p class="text-xl lg:text-2xl">About Us</p>
+      <nuxt-link to="/join" class="flex items-center cursor-pointer" @click.native="$emit('close')">
+        <p class="text-xl lg:text-2xl">Join Waitlist</p>
       </nuxt-link>
       <!-- Track -->
       <!-- <nuxt-link to="/track" class="flex items-center cursor-pointer" @click.native="$emit('close')">

@@ -86,13 +86,13 @@
         </div>
         <!-- Header Action -->
         <nuxt-link
-          to="/join"
+          to="/about"
           class="py-6 px-14 bg-primary rounded-xl lg:rounded-2xl text-base lg:text-lg w-max ml-auto mr-auto lg:mr-auto lg:ml-0 !leading-none"
           v-motion="'homeHeaderButtonMotion'"
           :initial="headerButtonMotion.initial"
           :enter="headerButtonMotion.enter"
           :leave="headerButtonMotion.enter"
-        >Join Waitlist</nuxt-link>
+        >About Grip</nuxt-link>
       </div>
 
       <!-- Header Banner -->
