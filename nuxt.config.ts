@@ -6,9 +6,10 @@ export default defineNuxtConfig({
       postcssOptions: {
         plugins: {
           tailwindcss: {},
-          autoprefixer: {}
-        }
-      }
-    }
-  }
-})
+          autoprefixer: {},
+        },
+      },
+    },
+  },
+  
+});
