@@ -354,7 +354,7 @@ const addToWaitlist = async () => {
         total_users: number,
         user_id: string
       }
-    }>('https://grip.technology/user/wait-list', {
+    }>('https://dev-api.grip.technology/user/wait-list', {
       body: JSON.stringify({
         email: email.value,
         name: name.value,
