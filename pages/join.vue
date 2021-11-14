@@ -324,7 +324,7 @@ const submit = async () => {
     isLoading.value = true
     try {
       const { code } = await $fetch<{ code: string }>(
-        `https://grip.technology/user/wait-list/${encodeURI(email.value)}`
+        `https://dev-api.grip.technology/user/wait-list/${encodeURI(email.value)}`
       )
 
       if (code === '000') {
