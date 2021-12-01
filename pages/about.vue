@@ -29,7 +29,7 @@
         <p class="whitespace-pre-line lg:w-11/12 leading-loose text-lg flex">
           Think what Netflix is to TV and Spotify to music but make it for your finances.
           <br />
-          <br />One average, 9 in every 20 individuals in the Global banked population have one (or more) cards with them at every moment.
+          <br />On average, 9 in every 20 individuals in the Global banked population have one (or more) cards with them at every moment.
           Having too many cards and digital wallets is a side effect of a heavily fragmented financial ecosystem.
           <br />
           <br />Grip connects it.
