@@ -3138,6 +3138,19 @@ log-symbols@^4.1.0:
     chalk "^4.1.0"
     is-unicode-supported "^0.1.0"
 
+lottie-web-vue@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/lottie-web-vue/-/lottie-web-vue-2.0.6.tgz#c92c8f5658b372b04c63f3d4e85cec46e20cf63d"
+  integrity sha512-xtdzuYsLoyiTcGWprJXnVu+tRza5T0OJuPzI5o4x+A+QrlifBLaDzUBX4EPye+mGJ/Nzd83lWtOJpknuFHpPCw==
+  dependencies:
+    lottie-web "^5.8.1"
+    vue "^3.2.29"
+
+lottie-web@^5.8.1:
+  version "5.9.4"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.9.4.tgz#c01478ee5dd47f916cb4bb79040c11d427872d57"
+  integrity sha512-bSs1ZTPifnBVejO1MnQHdfrKfcn02YTCmgOh2wcAEICqRA0V7GzDh8FnwXY6+EzT+i8XOunaIloo/5xC5YNbsA==
+
 lru-cache@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
@@ -5224,7 +5237,7 @@ vue-router@^4.0.16:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue@^3.2.37:
+vue@^3.2.29, vue@^3.2.37:
   version "3.2.37"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.37.tgz#da220ccb618d78579d25b06c7c21498ca4e5452e"
   integrity sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ==

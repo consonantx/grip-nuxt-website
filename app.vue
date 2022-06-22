@@ -25,6 +25,7 @@ import './assets/scss/main.scss'
       />
       <Meta name="twitter:image" content="https://trygrip.co/og_image.png" />
     </Head>
+    <SharedLoader></SharedLoader>
     <NuxtPage />
   </div>
 </template>
