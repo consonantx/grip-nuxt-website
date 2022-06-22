@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-import Faq from "~/data/faqQuestions"
+import Faq from "~~/data/faqQuestions"
 import { MinusSmIcon, ChevronDownIcon } from "@heroicons/vue/solid"
 
 const props = defineProps<{

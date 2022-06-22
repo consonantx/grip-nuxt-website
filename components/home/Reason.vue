@@ -1,16 +1,16 @@
 <template>
-  <section id="why-grip-section" class="bg-light pt-24 lg:py-52 relative">
+  <section id="why-grip-section" class="bg-light pt-24 lg:py-52 relative" ref="targetSection">
     <div class="container grid grid-cols-1 lg:grid-cols-2 gap-x-24">
       <div class="flex flex-col">
-        <h2 class="text-primary font-gilmer text-lg lg:text-2xl font-semibold">Why Grip? We're the best in Finances
+        <h2 class="text-primary font-gilmer text-lg lg:text-2xl font-semibold" ref="titleRef">Why Grip? We're the best in Finances
           <span class="drop-shadow-xl">🚀</span>
         </h2>
-        <p class="mt-3 lg:mt-11 mb-11 lg:mb-20 text-2xl lg:text-3xl font-title font-bold">
+        <p class="mt-3 lg:mt-11 mb-11 lg:mb-20 text-2xl lg:text-3xl font-title font-bold" ref="mainTextRef">
           Grip seamlessly aggregates all your credit cards, debit cards, bank accounts and fintech wallets into one
           super app and one card, so it's the only card you need to carry and the only pin you need to remember.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 lg:gap-y-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 lg:gap-y-20" ref="stepsRef">
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
             <img src="/home/icons/profile.svg" alt="Profile Image">
             <div class="flex flex-col space-y-2">
@@ -64,5 +64,22 @@
 </template>
 
 <script lang="ts" setup>
+import { useIntersectionObserver } from "@vueuse/core"
+import { reasonSectionAnimation } from "@/animations/home"
 
+const targetIsInView = ref(false)
+const targetSection = ref<HTMLElement>(null)
+
+const titleRef = ref<HTMLElement>(null)
+const mainTextRef = ref<HTMLElement>(null)
+const stepsRef = ref<HTMLElement>(null)
+
+const { stop } = useIntersectionObserver(targetSection, ([{ isIntersecting }], observerElement) => {
+  if (!targetIsInView.value && isIntersecting) {
+    targetIsInView.value = true
+    reasonSectionAnimation(titleRef, mainTextRef, stepsRef)
+  }
+}, {
+  threshold: 0.2
+})
 </script>
