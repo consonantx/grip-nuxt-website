@@ -21,8 +21,13 @@ import { useTimeoutFn } from "@vueuse/core"
 
 import AnimationData from "@/data/loader.json"
 
+const emit = defineEmits(['isCompleted'])
+
 const loaderRef = ref(null)
 const computedAnimationData = computed(() => AnimationData)
 const shouldShowLoader = ref(true)
-const { } = useTimeoutFn(() => shouldShowLoader.value = false, 5000)
+const { } = useTimeoutFn(() => {
+  shouldShowLoader.value = false
+  emit("isCompleted")
+}, 5000)
 </script>

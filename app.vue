@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import './assets/scss/main.scss'
-</script>
-
 <template>
   <div>
     <Head>
@@ -26,7 +22,12 @@ import './assets/scss/main.scss'
       <Meta name="twitter:image" content="https://trygrip.co/og_image.png" />
     </Head>
     <!-- TODO: add loader back -->
-    <!-- <SharedLoader></SharedLoader> -->
-    <NuxtPage />
+    <SharedLoader @is-completed="() => showPage = true"></SharedLoader>
+    <NuxtPage v-if="showPage" />
   </div>
 </template>
+
+<script lang="ts" setup>
+import './assets/scss/main.scss'
+const showPage = ref(false)
+</script>
