@@ -1,18 +1,21 @@
 <template>
   <div>
     <Presence>
-      <Motion :exit="{ y: '-100%', opacity: '0' }" :transition="{ duration: 0.5, easing: 'ease'}"
-        class="fixed flex items-center justify-center inset-0 overflow-hidden bg-[#000000] z-10"
+      <Motion :exit="{ y: '-2000%' }" :transition="{ duration: 0.75, easing: 'ease'}"
+        class="fixed flex items-center justify-center inset-0 overflow-hidden bg-[#000000] z-20"
         v-if="shouldShowLoader">
-        <LottieAnimation ref="loaderRef" :animation-data="computedAnimationData" :autoplay="true" :loop="true">
-        </LottieAnimation>
+        <div class="w-40 h-40">
+          <ClientOnly>
+            <Vue3Lottie ref="loaderRef" :animation-data="computedAnimationData" :autoplay="true" :loop="true" />
+          </ClientOnly>
+        </div>
       </Motion>
     </Presence>
   </div>
 </template>
 
 <script lang="ts" setup>
-import LottieAnimation from 'lottie-web-vue'
+import { Vue3Lottie } from "vue3-lottie"
 import { Motion, Presence } from "motion/vue"
 import { useTimeoutFn } from "@vueuse/core"
 
@@ -21,6 +24,5 @@ import AnimationData from "@/data/loader.json"
 const loaderRef = ref(null)
 const computedAnimationData = computed(() => AnimationData)
 const shouldShowLoader = ref(true)
-const { } = useTimeoutFn(() => shouldShowLoader.value = false, 6000)
-
+const { } = useTimeoutFn(() => shouldShowLoader.value = false, 5000)
 </script>
