@@ -64,22 +64,14 @@
 </template>
 
 <script lang="ts" setup>
-import { useIntersectionObserver } from "@vueuse/core"
 import { reasonSectionAnimation } from "@/animations/home"
 
-const targetIsInView = ref(false)
 const targetSection = ref<HTMLElement>(null)
 
 const titleRef = ref<HTMLElement>(null)
 const mainTextRef = ref<HTMLElement>(null)
 const stepsRef = ref<HTMLElement>(null)
 
-const { stop } = useIntersectionObserver(targetSection, ([{ isIntersecting }], observerElement) => {
-  if (!targetIsInView.value && isIntersecting) {
-    targetIsInView.value = true
-    reasonSectionAnimation(titleRef, mainTextRef, stepsRef)
-  }
-}, {
-  threshold: 0.2
-})
+useAnimationTrigger(targetSection, () => reasonSectionAnimation(titleRef, mainTextRef, stepsRef))
+
 </script>

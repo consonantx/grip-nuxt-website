@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col" ref="targetSection">
     <div class="" v-for="(question, index) in allQuestions" :key="index">
       <div :class="[
         'flex flex-col space-y-2 pb-3',
@@ -27,11 +27,24 @@
 <script lang="ts" setup>
 import Faq from "~~/data/faqQuestions"
 import { MinusSmIcon, ChevronDownIcon } from "@heroicons/vue/solid"
+import { stagger, timeline } from "motion"
+import { useIntersectionObserver } from "@vueuse/core"
 
 const props = defineProps<{
-  filterByFeatured: boolean
+  filterByFeatured?: boolean,
+  animationDelay?: number
 }>()
 
 const allQuestions = computed(() => props.filterByFeatured ? Faq.filter(x => x.isFeatured) : Faq)
 const activeQuestion = ref(null)
+
+const targetSection = ref<HTMLElement>(null)
+
+const animateComponent = () => timeline([
+  [targetSection.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: "ease-out", endDelay: props.animationDelay ?? 0 }],
+  // @ts-ignore
+  [targetSection.value.children, { y: [50, 0], opacity: [0 ,1] }, { duration: 0.5, easing: "ease-out", delay: stagger(0.25) }]
+])
+
+useAnimationTrigger(targetSection, () => animateComponent())
 </script>

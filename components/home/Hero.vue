@@ -1,16 +1,24 @@
 <template>
   <section class="h-[57rem] lg:h-[40rem] xl:h-[50rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden"
-    id="hero">
+    id="hero" ref="targetSection">
     <h1 class="hidden">You only need one card</h1>
+    <div class="absolute inset-0 bg-overlay z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
     <div class="container flex flex-col lg:flex-row">
       <div class="relative flex flex-col justify-center">
         <div
           class="text-center lg:text-left text-[120px] lg:text-[220px] xl:text-[310px] uppercase font-title leading-none font-black text-primary transition-colors duration-200 ease-in-out hover:text-secondary">
-          <span class="font-title">GRIP</span> <br /> <span class="font-title">CARD</span>
+          <div class="font-title overflow-y-hidden relative">
+            <div ref="sectionTitleOneRef">GRIP</div>
+          </div>
+          <div class="font-title overflow-y-hidden relative">
+            <div ref="sectionTitleTwoRef">CARD</div>
+          </div>
         </div>
-        <div
-          class="before:absolute before:h-[2px] before:content-[''] before:w-20 lg:before:w-44 before:bg-secondary before:left-0 before:top-1/2 before:-translate-y-1/2 pl-24 lg:pl-48 relative mx-auto lg:ml-0 lg:text-2xl font-title">
-          You only need one card</div>
+        <div class=" pl-24 lg:pl-48 relative mx-auto lg:ml-0 lg:text-2xl font-title overflow-hidden">
+          <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-20 lg:w-44" ref="subtitleLineRef">
+          </div>
+          <div ref="subtitleRef">You only need one card</div>
+        </div>
       </div>
       <div
         class="rotate-[15deg] lg:rotate-0 lg:absolute -translate-x-[5%] md:translate-x-[10%] lg:translate-x-[55%] translate-y-[10%] md:translate-y-[5%] lg:-translate-y-16 xl:-translate-y-24 w-[55rem] md:w-[65rem] lg:w-auto 2xl:w-[90rem]">
@@ -32,4 +40,21 @@
 
 <script lang="ts" setup>
 import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
+import { useTimeoutFn } from "@vueuse/core"
+
+import { heroSectionAnimation } from "@/animations/home"
+
+const shouldShowCover = ref(true)
+const targetSection = ref<HTMLElement>(null)
+
+const sectionTitleOneRef = ref<HTMLElement>(null)
+const sectionTitleTwoRef = ref<HTMLElement>(null)
+const sectionCoverRef = ref<HTMLElement>(null)
+const subtitleLineRef = ref<HTMLElement>(null)
+const subtitleRef = ref<HTMLElement>(null)
+
+useTimeoutFn(() => shouldShowCover.value = false, 2000)
+
+useAnimationTrigger(targetSection, () => heroSectionAnimation(sectionTitleOneRef, sectionTitleTwoRef, sectionCoverRef, subtitleLineRef, subtitleRef))
+
 </script>
