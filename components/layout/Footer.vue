@@ -5,7 +5,7 @@
       <div class="container grid md:grid-cols-10 gap-y-20">
         <div class="md:col-span-3 flex flex-col space-y-9">
           <h2 class="text-5xl font-title">One Debit Card. <span class="text-secondary">No BS</span></h2>
-          <NuxtLink href="mailto:hello@trygrip.co" class="font-gilmer text-xl underline">hello@trygrip.co</NuxtLink>
+          <NuxtLink href="mailto:hello@trygrip.co" class="font-gilmer text-xl underline text-primary font-semibold">hello@trygrip.co</NuxtLink>
           <p class="font-gilmer text-xl">Abuja, Nigeria</p>
           <div class="flex space-x-8">
             <NuxtLink href="https://twitter.com/trygripapp" target="__blank">

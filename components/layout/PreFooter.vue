@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col space-y-6 text-center">
+  <div class="flex flex-col space-y-6 text-center" ref="preFooterRef">
     <h2 class="font-title text-4xl lg:text-6xl font-black text-white">
       <span class="text-secondary font-title">Global Card.</span>
       <br class="lg:hidden" />
@@ -28,3 +28,20 @@
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+import { animate, stagger } from "motion"
+
+const preFooterRef = ref<HTMLElement>(null)
+
+// @ts-ignore
+useAnimationTrigger(preFooterRef, () => animate(preFooterRef.value.children, {
+  opacity: [0, 1],
+  y: [50, 0]
+}, {
+  delay: stagger(0.25),
+  duration: 0.5,
+  easing: "ease-out"
+}
+), { threshold: 0.1 })
+</script>

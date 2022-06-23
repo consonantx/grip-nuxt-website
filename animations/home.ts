@@ -7,11 +7,24 @@ export const reasonSectionAnimation = (
   steps: Ref<HTMLElement>
 ) => {
   timeline([
-    [sectionTitle.value, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.8, easing: "ease-out" }],
-    [mainText.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.8, easing: "ease-out" }],
+    [sectionTitle.value, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.75 }],
+    [mainText.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.75, at: 0.5 }],
     // @ts-ignore
-    [steps.value.children, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.8, easing: "ease-out", delay: stagger(0.25) }],
+    [steps.value.children, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.75, delay: stagger(0.25), at: 1 }],
   ], {})
+}
+
+export const cardSectionAnimation = (
+  sectionTitles: Ref<HTMLElement>,
+) => {
+  // @ts-ignore
+  animate(sectionTitles.value.children, {
+    opacity: [0, 1],
+    y: [50, 0]
+  }, {
+    duration: 0.75,
+    delay: stagger(0.25)
+  })
 }
 
 export const faqSectionAnimation = (

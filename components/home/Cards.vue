@@ -2,7 +2,7 @@
   <section class="bg-[#000000] py-24 lg:py-44 relative" id="card-designs">
     <div class="container grid lg:grid-cols-2 gap-x-48 content-center justify-items-center">
       <!-- DESIGNED WITH... -->
-      <div class="flex flex-col text-white justify-center">
+      <div class="flex flex-col text-white justify-center" ref="cardSectionDescriptionRef">
         <h2 class="text-4xl lg:text-7xl font-title w-min">
           Designed <br />
           With <br />
@@ -58,7 +58,9 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/solid"
 import { Motion, Presence } from "motion/vue"
 
+import { cardSectionAnimation } from "@/animations/home"
 const cardDesignTextSwitcher = ref(1)
+const cardSectionDescriptionRef = ref<HTMLElement>(null)
 
 setInterval(() => {
   if (cardDesignTextSwitcher.value < 3) {
@@ -82,4 +84,6 @@ const cardDesignTextSwitcherAnimation = computed(() => ({
     transform: "translateY(-100%)",
   }
 }))
+
+useAnimationTrigger(cardSectionDescriptionRef, () => cardSectionAnimation(cardSectionDescriptionRef))
 </script>
