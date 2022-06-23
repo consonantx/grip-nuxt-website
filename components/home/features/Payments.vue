@@ -15,7 +15,7 @@
       </p>
       <NuxtLink href="#"
         class="border-2 p-6 rounded-xl border-[#e3e3e3] text-black text-xl font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
-        <span>Find Out More</span>
+        <span class="font-gilmer">Find Out More</span>
         <ArrowRightIcon class="w-5 text-primary ml-2 -rotate-45"></ArrowRightIcon>
       </NuxtLink>
 
