@@ -1,5 +1,5 @@
 <template>
-  <section id="faqs" class="bg-light pb-24 relative" ref="targetSection">
+  <section id="faqs" class="bg-white pb-24 relative" ref="targetSection">
     <div class="container flex flex-col text-center">
       <div class="flex flex-col space-y-4 mb-10" ref="sectionTitleRef">
         <h2 class="font-title font-black text-3xl">FAQ</h2>
