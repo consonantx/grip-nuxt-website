@@ -4,7 +4,7 @@
       <Motion :exit="{ y: '-2000%' }" :transition="{ duration: 0.75, easing: 'ease'}"
         class="fixed flex items-center justify-center inset-0 overflow-hidden bg-[#000000] z-20"
         v-if="shouldShowLoader">
-        <div class="w-40 h-40">
+        <div class="w-24 lg:w-40 h-24 lg:h-40">
           <ClientOnly>
             <Vue3Lottie ref="loaderRef" :animation-data="computedAnimationData" :autoplay="true" :loop="true" />
           </ClientOnly>
