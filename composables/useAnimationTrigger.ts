@@ -1,5 +1,5 @@
 import { IntersectionObserverOptions, useIntersectionObserver } from "@vueuse/core"
-import { Ref } from "vue"
+import { Ref } from "@/types"
 
 export const useAnimationTrigger = (
   targetSection: Ref<HTMLElement>,
