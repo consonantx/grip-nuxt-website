@@ -19,7 +19,7 @@ import { Vue3Lottie } from "vue3-lottie"
 import { Motion, Presence } from "motion/vue"
 import { useTimeoutFn } from "@vueuse/core"
 
-import AnimationData from "@/data/loader.json"
+import AnimationData from "@/data/loaderData"
 
 const emit = defineEmits(['isCompleted'])
 

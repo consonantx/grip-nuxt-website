@@ -2,7 +2,7 @@
   <section id="faqs" class="bg-light pt-24 lg:pt-44 pb-24 relative" ref="targetSection">
     <div class="container flex flex-col text-center lg:text-left lg:grid lg:grid-cols-2">
       <div class="flex flex-col space-y-4 mb-8 lg:mb-0" ref="sectionTitleRef">
-        <h2 class="font-title font-black text-3xl">FAQ</h2>
+        <h1 class="font-title font-black text-3xl">FAQ</h1>
         <p class="font-title lg:text-lg">
           Have some questions? <br />
           We've probably already answered them.

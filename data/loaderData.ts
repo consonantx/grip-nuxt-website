@@ -1,4 +1,4 @@
-{
+export default {
   "v": "5.5.7",
   "meta": {
     "g": "LottieFiles AE 0.1.21",

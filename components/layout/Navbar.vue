@@ -12,10 +12,10 @@
         :exit="{ transform: 'scaleY(0.2)', opacity: 0 }" :transition="{ duration: 0.5, easing: 'ease-out', delay: 0.5 }"
         v-if="showMenu" class="origin-top top-4 inset-x-4 bg-white pt-10 pb-6 px-6 z-[12] fixed rounded-3xl">
         <div class="flex flex-col space-y-4">
-          <NuxtLink to="/" class="font-gilmer text-sm font-semibold" @click.native="showMenu = false">Home</NuxtLink>
-          <NuxtLink to="/about" class="font-gilmer text-sm font-semibold" @click.native="showMenu = false">About Us</NuxtLink>
-          <NuxtLink href="https://blog.trygrip.co" class="font-gilmer text-sm font-semibold" @click.native="showMenu = false">Blog</NuxtLink>
-          <NuxtLink to="/faq" class="font-gilmer text-sm font-semibold" @click.native="showMenu = false">FAQs</NuxtLink>
+          <NuxtLink to="/" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Home</NuxtLink>
+          <NuxtLink to="/about" class="font-gilmer text-sm font-semibold" @click="showMenu = false">About Us</NuxtLink>
+          <NuxtLink href="https://blog.trygrip.co" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Blog</NuxtLink>
+          <NuxtLink to="/faq" class="font-gilmer text-sm font-semibold" @click="showMenu = false">FAQs</NuxtLink>
         </div>
         <div class="flex items-center justify-center mt-6">
           <button @click="showMenu = !showMenu">

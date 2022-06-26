@@ -1,5 +1,5 @@
 import { animate, timeline, stagger } from "motion"
-import { Ref } from "vue"
+import { Ref } from "@/types"
 
 export const reasonSectionAnimation = (
   sectionTitle: Ref<HTMLElement>,

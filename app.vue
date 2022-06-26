@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="scroll-smooth">
     <Head>
       <Meta property="og:title" name="og:title" content="One Channel, All Payments Everything" />
       <Meta property="og:site_name" name="og:site_name" content="Grip" />
