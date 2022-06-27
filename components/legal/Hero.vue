@@ -35,34 +35,34 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
->>>*:not(h1, h2) {
+:deep(*:not(h1, h2)) {
   font-family: 'Gilmer' !important;
 }
 
->>>h2 {
+:deep(h2) {
   font-family: 'Neue Machina' !important;
   font-weight: bold;
   margin-bottom: 24px;
   margin-top: 24px;
 }
 
->>>p,
->>>li,
->>>h2 {
+:deep(p),
+:deep(li),
+:deep(h2) {
   font-size: 24px;
 }
 
->>>ol,
->>>ul {
+:deep(ol),
+:deep(ul) {
   list-style: disc;
   padding-left: 40px;
 
-  &>>>li {
+  & :deep(li) {
     line-height: 40px;
   }
 }
 
->>> hr {
+ :deep(hr) {
   margin-top: 20px;
   margin-bottom: 20px;
 }

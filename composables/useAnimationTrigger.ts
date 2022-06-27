@@ -9,6 +9,7 @@ export const useAnimationTrigger = (
   const targetIsInView = ref(false)
   
   if (targetSection.value) targetSection.value.hidden = true
+  // @ts-ignore
   const { stop } = useIntersectionObserver(targetSection, ([{ isIntersecting }], observerElement) => {
     if (!targetIsInView.value && isIntersecting) {
       targetIsInView.value = true
