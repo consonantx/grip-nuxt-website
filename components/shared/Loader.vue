@@ -1,7 +1,7 @@
 <template>
   <div>
     <Presence>
-      <Motion :exit="{ y: '-2000%' }" :transition="{ duration: 0.75, easing: 'ease'}"
+      <Motion :exit="{ y: '-2000%' }" :transition="{ duration: 0.75, easing: 'ease' }"
         class="fixed flex items-center justify-center inset-0 overflow-hidden bg-[#000000] z-20"
         v-if="shouldShowLoader">
         <div class="w-20 lg:w-32 h-20 lg:h-32">

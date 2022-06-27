@@ -14,7 +14,8 @@
         <div class="flex flex-col space-y-4">
           <NuxtLink to="/" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Home</NuxtLink>
           <NuxtLink to="/about" class="font-gilmer text-sm font-semibold" @click="showMenu = false">About Us</NuxtLink>
-          <NuxtLink href="https://blog.trygrip.co" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Blog</NuxtLink>
+          <NuxtLink href="https://blog.trygrip.co" class="font-gilmer text-sm font-semibold" @click="showMenu = false">
+            Blog</NuxtLink>
           <NuxtLink to="/faq" class="font-gilmer text-sm font-semibold" @click="showMenu = false">FAQs</NuxtLink>
         </div>
         <div class="flex items-center justify-center mt-6">
