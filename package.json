@@ -16,6 +16,7 @@
     "motion": "^10.10.0",
     "sass": "^1.49.9",
     "vue-markdown-render": "^2.0.0",
+    "vue3-carousel": "^0.1.40",
     "vue3-lottie": "^2.2.5"
   }
 }

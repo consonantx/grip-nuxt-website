@@ -5,7 +5,7 @@
         <Motion :initial="{ opacity: 0, y: -50 }" :animate="{ opacity: [0, 1], y: [-50, 0 ] }"
           :transition="{ duration: 0.8, delay }">
           <img src="/logo-dark.svg" alt="Grip Logo" class="h-10" v-if="props.isDark">
-          <img src="/logo.svg" alt="Grip Logo" class="h-10">
+          <img src="/logo.svg" alt="Grip Logo" class="h-10" v-else>
         </Motion>
       </NuxtLink>
     </div>

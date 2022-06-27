@@ -9,7 +9,7 @@
     <Presence>
       <Motion :initial="{ transform: 'scaleY(0.2)', opacity: 0 }"
         :animate="{ transform: ['scaleY(0.2)', 'scaleY(1)'], opacity: [0, 1] }"
-        :exit="{ transform: 'scaleY(0.2)', opacity: 0 }" :transition="{ duration: 0.5, easing: 'ease-out', delay: 0.5 }"
+        :exit="{ transform: 'scaleY(0.2)', opacity: 0 }" :transition="{ duration: 0.3, easing: 'ease-out', delay: 0.5 }"
         v-if="showMenu" class="origin-top top-4 inset-x-4 bg-white pt-10 pb-6 px-6 z-[12] fixed rounded-3xl">
         <div class="flex flex-col space-y-4">
           <NuxtLink to="/" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Home</NuxtLink>
