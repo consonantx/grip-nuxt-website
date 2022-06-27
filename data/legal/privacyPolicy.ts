@@ -63,7 +63,7 @@ Consonant is entirely committed to protecting the information we collect from yo
 
 You are responsible for the protection of your password in its entirety. **You must not share your Grip password with anyone.**
 
-We will never request for your password via email or SMS or any other means. In the event you receive such communication, please disregard and contact us on: +2348103402615 and <hello@trygrip.co>.
+We will never request for your password via email or SMS or any other means. In the event you receive such communication, please disregard and contact us on: +2349072127888 and <hello@trygrip.co>.
 
 In the event you share your password with a third party, you will be liable for any security issues that might arise. If you believe your password has been compromised, please change it immediately and contact us.
 
