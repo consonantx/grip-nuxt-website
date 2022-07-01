@@ -18,7 +18,7 @@
       <!-- HERO SECTION -->
       <HomeHero></HomeHero>
       <HomeReason></HomeReason>
-      <HomeFeaturesPayments></HomeFeaturesPayments>
+      <HomeFeature></HomeFeature>
       <HomeFaq></HomeFaq>
       <HomeCards></HomeCards>
     </main>

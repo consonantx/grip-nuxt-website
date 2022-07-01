@@ -1,4 +1,4 @@
-import { animate, timeline, stagger } from "motion"
+import { timeline, stagger } from "motion"
 import { Ref } from "~~/interfaces"
 
 export const heroSectionAnimation = (

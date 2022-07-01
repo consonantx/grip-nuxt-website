@@ -29,10 +29,10 @@
     <!-- HERO FOOTER -->
     <div class="container">
       <div class="flex justify-center lg:justify-end -translate-y-48 md:-translate-y-72 lg:-translate-y-12">
-        <div class="flex flex-col items-center">
-          <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1"></ArrowCircleDownIcon>
+        <button class="flex flex-col items-center" @click="scrollTo('why-grip-section')">
+          <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
           <p class="font-display text-[10px] leading-none">Scroll Down</p>
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -43,6 +43,7 @@ import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
 import { useTimeoutFn } from "@vueuse/core"
 
 import { heroSectionAnimation } from "@/animations/home"
+import { Ref } from "@/interfaces"
 
 const shouldShowCover = ref(true)
 const targetSection = ref<HTMLElement>(null)
@@ -56,5 +57,11 @@ const subtitleRef = ref<HTMLElement>(null)
 useTimeoutFn(() => shouldShowCover.value = false, 2000)
 
 useAnimationTrigger(targetSection, () => heroSectionAnimation(sectionTitleOneRef, sectionTitleTwoRef, sectionCoverRef, subtitleLineRef, subtitleRef))
+
+const scrollTo = (elementId: string) => {
+  if (document.querySelector(`#${elementId}`)) {
+    document.querySelector(`#${elementId}`).scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+}
 
 </script>

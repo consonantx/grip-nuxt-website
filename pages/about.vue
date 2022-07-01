@@ -1,7 +1,7 @@
 <template>
   <div class="bg-light">
     <Head>
-      <Title>Grip - One Card, All Payments Everything</Title>
+      <Title>About Us | Grip - One Card, All Payments Everything</Title>
       <Meta name="description"
         content="Consolidate all your existing ways of making payments into a single channel with grip. The best way to get a grip of your finances" />
       <Link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />

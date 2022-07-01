@@ -1,5 +1,5 @@
 import { animate, timeline, stagger } from "motion"
-import { Ref } from "@/types"
+import { Ref } from "~~/interfaces"
 
 export const reasonSectionAnimation = (
   sectionTitle: Ref<HTMLElement>,
