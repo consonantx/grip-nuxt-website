@@ -10,7 +10,7 @@ export default [
     imageFour: '/home/features/offline_store.png',
     action: '',
     actionType: '',
-    hasAction: false,
+    hasAction: true,
   },
   {
     titleOne: 'Bank',

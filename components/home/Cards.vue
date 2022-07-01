@@ -87,7 +87,7 @@ setInterval(() => {
   } else {
     cardDesignTextSwitcher.value = 1
   }
-}, 3000)
+}, 5000)
 
 const cardDesignTextSwitcherAnimation = computed(() => ({
   initial: {
@@ -139,9 +139,7 @@ const cardDesignNameSwitcher = computed(() => ({
   }
 }))
 
-
-
-const { data: cardDesigns } = await useFetch("/api/designs")
+const { data: cardDesigns } = await useFetch("/api/designs", {  })
 
 const currentDesignIndex = ref(0)
 

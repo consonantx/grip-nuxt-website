@@ -9,8 +9,9 @@
       <Link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
       <Link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
       <Link rel="manifest" href="/favicon/site.webmanifest" />
+      <Link rel="preload" as="image" href="/home/header_image.png" />
     </Head>
-    
+
     <LayoutHeader :delay="0.8"></LayoutHeader>
     <LayoutNavbar></LayoutNavbar>
 
