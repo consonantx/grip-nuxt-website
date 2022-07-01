@@ -48,7 +48,7 @@
       <!-- Description -->
       <Presence :exit-before-enter="true">
         <template v-for="(description, index) in allDescriptions" :key="index+description">
-          <Motion tag="p" class="text-gray-400 font-gilmer text-base lg:text-2xl max-w-xl pb-5 lg:-mt-4" v-if="activeFeatureIndex === index"
+          <Motion tag="p" class="text-gray-400 font-gilmer text-base lg:text-xl max-w-xl pb-5 lg:-mt-4" v-if="activeFeatureIndex === index"
             :initial="descriptionTextSwitcherAnimation.initial" :animate="descriptionTextSwitcherAnimation.animate"
             :exit="descriptionTextSwitcherAnimation.exit" :transition="descriptionTextSwitcherAnimation.transition">
             {{ description.description }}
@@ -59,14 +59,14 @@
       <!-- Actions -->
       <NuxtLink :href="activeFeature?.action" :target="activeFeature?.actionType === 'internal' ? '' : '__blank'"
         v-if="activeFeature?.hasAction"
-        class="border-2 p-4 lg:p-6 rounded-xl border-[#e3e3e3] text-black lg:text-xl font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
+        class="border-2 p-4 lg:p-6 rounded-xl border-[#e3e3e3] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
         <span class="font-gilmer">Find Out More</span>
         <ArrowRightIcon class="w-5 text-primary ml-2 -rotate-45"></ArrowRightIcon>
       </NuxtLink>
 
       <!-- Feature Images -->
       <div class="flex justify-around">
-        <div class="lg:absolute lg:top-1 lg:left-0 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:top-20 lg:left-0 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -78,7 +78,7 @@
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:top-1 lg:right-0 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:top-20 lg:right-0 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -90,7 +90,7 @@
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:bottom-1 lg:left-20 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:bottom-10 lg:left-20 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -102,7 +102,7 @@
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:bottom-1 lg:right-20 h-40 lg:h-60 xl:h-80 w360 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:bottom-10 lg:right-20 h-40 lg:h-60 xl:h-80 w360 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"

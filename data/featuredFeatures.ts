@@ -36,6 +36,6 @@ export default [
     imageFour: '/home/features/online_store.png',
     action: '',
     actionType: '',
-    hasAction: false,
+    hasAction: true,
   }
 ]
