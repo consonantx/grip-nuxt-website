@@ -12,7 +12,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 lg:gap-y-20" ref="stepsRef">
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/profile.svg" alt="Profile Image">
+            <img src="/home/icons/profile.svg" alt="Profile Image"/>
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Choose a Plan</h3>
               <p class="text-xs font-title">
@@ -22,7 +22,7 @@
           </div>
 
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/slider.svg" alt="Slider Image">
+            <img src="/home/icons/slider.svg" alt="Slider Image"/>
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Sign Up</h3>
               <p class="text-xs font-title">
@@ -32,7 +32,7 @@
           </div>
 
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/link.svg" alt="Link Channels">
+            <img src="/home/icons/link.svg" alt="Link Channels"/>
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Link your Cards, Accounts & Wallets</h3>
               <p class="text-xs font-title">
@@ -42,7 +42,7 @@
           </div>
 
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/manage.svg" alt="Manage Channels">
+            <img src="/home/icons/manage.svg" alt="Manage Channels"/>
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Manage & Pay</h3>
               <p class="text-xs font-title">

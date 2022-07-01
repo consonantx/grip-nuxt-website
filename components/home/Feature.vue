@@ -7,33 +7,50 @@
       </div>
 
       <!-- Titles -->
-      <Presence :exit-before-enter="true">
-        <template v-for="(titles, index) in allTitles" :key="index">
-          <Motion class="font-title text-7xl font-black leading-tight w-max relative overflow-hidden"
-            v-if="activeFeatureIndex === index">
-            <Presence :exit-before-enter="true">
+      <div class="flex flex-col items-center">
+        <div class="font-title text-7xl font-black leading-tight w-max relative overflow-hidden">
+          <Presence :exit-before-enter="true">
+            <template v-for="(titles, index) in allTitles" :key="index">
               <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
-                :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition">{{
-                titles.titleOne }}</Motion>
-            </Presence>
-            <Presence :exit-before-enter="true">
+                :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index">{{
+                titles.titleOne
+                }}</Motion>
+            </template>
+          </Presence>
+        </div>
+
+        <div class="font-title text-7xl font-black leading-tight w-max relative overflow-hidden">
+          <Presence :exit-before-enter="true">
+            <template v-for="(titles, index) in allTitles" :key="index">
               <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
-                :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition"> {{
-                titles.titleTwo }} </Motion>
-            </Presence>
-            <Presence :exit-before-enter="true">
+                :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index">{{
+                titles.titleTwo
+                }}</Motion>
+            </template>
+          </Presence>
+        </div>
+
+        <div class="font-title text-7xl font-black leading-tight w-max relative overflow-hidden">
+          <Presence :exit-before-enter="true">
+            <template v-for="(titles, index) in allTitles" :key="index">
               <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
-                :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition"> {{
-                titles.titleThree }} </Motion>
-            </Presence>
-          </Motion>
-        </template>
-      </Presence>
+                :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index">{{
+                titles.titleThree
+                }}</Motion>
+            </template>
+          </Presence>
+        </div>
+      </div>
 
       <!-- Description -->
       <Presence :exit-before-enter="true">
         <template v-for="(description, index) in allDescriptions" :key="index+description">
-          <Motion tag="p" class="text-gray-400 font-gilmer text-2xl max-w-xl pb-5" v-if="activeFeatureIndex === index">
+          <Motion tag="p" class="text-gray-400 font-gilmer text-2xl max-w-xl pb-5" v-if="activeFeatureIndex === index"
+            :initial="descriptionTextSwitcherAnimation.initial" :animate="descriptionTextSwitcherAnimation.animate"
+            :exit="descriptionTextSwitcherAnimation.exit" :transition="descriptionTextSwitcherAnimation.transition">
             {{ description.description }}
           </Motion>
         </template>
@@ -49,18 +66,53 @@
 
       <!-- Feature Images -->
       <div class="flex">
-        <Presence :exit-before-enter="true">
-          <Motion class="absolute top-1 left-0 w-80"><img src="/home/features/pos.png" alt="" /></Motion>
-        </Presence>
-        <Presence :exit-before-enter="true">
-          <Motion class="absolute top-1 right-0 w-80"><img src="/home/features/pos.png" alt="" /></Motion>
-        </Presence>
-        <Presence :exit-before-enter="true">
-          <Motion class="absolute bottom-1 left-20 w-80"><img src="/home/features/pos.png" alt="" /></Motion>
-        </Presence>
-        <Presence :exit-before-enter="true">
-          <Motion class="absolute bottom-1 right-20 w-80"><img src="/home/features/pos.png" alt="" /></Motion>
-        </Presence>
+        <div class="absolute top-1 left-0 h-80 w-80">
+          <Presence :exit-before-enter="true">
+            <template v-for="(image, index) in allImages" :key="index">
+              <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
+                :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index" tag="img" :src="image.imageOne"
+                class="w-full h-full object-cover">
+              </Motion>
+            </template>
+          </Presence>
+        </div>
+
+        <div class="absolute top-1 right-0 h-80 w-80">
+          <Presence :exit-before-enter="true">
+            <template v-for="(image, index) in allImages" :key="index">
+              <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
+                :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index" tag="img" :src="image.imageTwo"
+                class="w-full h-full object-cover">
+              </Motion>
+            </template>
+          </Presence>
+        </div>
+
+        <div class="absolute bottom-1 left-20 h-80 w-80">
+          <Presence :exit-before-enter="true">
+            <template v-for="(image, index) in allImages" :key="index">
+              <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
+                :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index" tag="img" :src="image.imageThree"
+                class="w-full h-full object-cover">
+              </Motion>
+            </template>
+          </Presence>
+        </div>
+
+        <div class="absolute bottom-1 right-20 h-80 w-80">
+          <Presence :exit-before-enter="true">
+            <template v-for="(image, index) in allImages" :key="index">
+              <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
+                :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition"
+                v-if="activeFeatureIndex === index" tag="img" :src="image.imageFour"
+                class="w-full h-full object-cover">
+              </Motion>
+            </template>
+          </Presence>
+        </div>
       </div>
     </div>
   </section>
@@ -105,7 +157,7 @@ const initiateAnimationTrigger = () => {
 
   const { y } = useWindowScroll()
 
-  watch(y, (newY) => {
+  watch(y, () => {
     if (targetSectionTop.value < 0) {
       const index = Math.floor(Math.abs(targetSectionTop.value) / featureSectionsSizes.value)
       if (index < 1) activeFeatureIndex.value = 0
@@ -133,6 +185,41 @@ const titleTextSwitcherAnimation = computed(() => ({
   exit: {
     opacity: 0,
     transform: "translateY(-100%)",
+  },
+  transition: {
+    duration: 0.5,
+    ease: "easeInOut",
+  }
+}))
+
+const imageSwitcherAnimation = computed(() => ({
+  initial: {
+    opacity: 0,
+    scale: 0.2,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.2,
+  },
+  transition: {
+    duration: 0.5,
+    ease: "easeInOut",
+  }
+}))
+
+const descriptionTextSwitcherAnimation = computed(() => ({
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
   },
   transition: {
     duration: 0.5,
