@@ -7,7 +7,7 @@ export default [
     imageOne: '/home/features/pos.png',
     imageTwo: '/home/features/cash_wallet.png',
     imageThree: '/home/features/entertainment.png',
-    imageFour: '/home/features/online_store.png',
+    imageFour: '/home/features/offline_store.png',
     action: '',
     actionType: '',
     hasAction: false,
