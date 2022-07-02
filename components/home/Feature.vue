@@ -1,13 +1,13 @@
 <template>
-  <section class="bg-white min-h-screen text-center h-[400vh]" ref="targetSection">
+  <section class="bg-white min-h-screen text-center h-[400vh] py-12 lg:py-0" ref="targetSection">
     <div class="container flex flex-col items-center justify-center top-0 sticky min-h-screen overflow-hidden">
       <div
-        class="lg:text-lg text-primary font-gilmer uppercase border-2 border-[#e3e3e3] rounded-full tracking-widest px-4 lg:px-6 py-4 leading-none">
+        class="text-sm lg:text-lg text-primary font-gilmer uppercase border-2 border-[#e3e3e3] rounded-full tracking-widest px-4 lg:px-6 py-4 leading-none">
         features <span class="drop-shadow-lg ml-2">🚀</span>
       </div>
 
       <!-- Titles -->
-      <div class="flex flex-col items-center mt-4 lg:mt-10  mb-3 lg:mb-8 space-y-2">
+      <div class="flex flex-col items-center mt-4 lg:mt-10  mb-3 lg:mb-8 lg:space-y-2">
         <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <template v-for="(titles, index) in allTitles" :key="index">
@@ -58,7 +58,7 @@
       </Presence>
 
       <!-- Actions -->
-      <div class="mt-8 lg:mt-10 mb-0 lg:mb-16">
+      <div class="mt-4 lg:mt-10 mb-0 lg:mb-16">
         <NuxtLink :href="activeFeature?.action" :target="activeFeature?.actionType === 'internal' ? '' : '__blank'"
           v-if="activeFeature?.hasAction"
           class="border-2 p-4 lg:p-5 rounded-xl border-[#e3e3e3] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
@@ -116,7 +116,7 @@
       </div>
 
       <div class="flex items-center flex-col justify-center">
-        <SharedScrollProgress :scroll-progress="mouseIndicatorScrollProgress"></SharedScrollProgress>
+        <SharedScrollProgress :scroll-progress="mouseIndicatorScrollProgress" class="w-12 h-12 lg:w-auto lg:h-auto"></SharedScrollProgress>
         <p class="font-gilmer font-semibold text-xs mt-4 leading-none">Scroll Down</p>
       </div>
     </div>

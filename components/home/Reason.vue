@@ -1,5 +1,5 @@
 <template>
-  <section id="why-grip-section" class="bg-light pt-24 lg:py-52 relative" ref="targetSection">
+  <section id="why-grip-section" class="bg-light pt-24 lg:py-52 relative overflow-y-hidden" ref="targetSection">
     <div class="container grid grid-cols-1 lg:grid-cols-2 gap-x-24">
       <div class="flex flex-col">
         <h2 class="text-primary font-gilmer text-lg lg:text-2xl font-semibold" ref="titleRef">Why Grip? We're the best in Finances
