@@ -7,7 +7,7 @@
       </div>
 
       <!-- Titles -->
-      <div class="flex flex-col items-center mt-10 mb-8 space-y-2">
+      <div class="flex flex-col items-center mt-4 lg:mt-10  mb-3 lg:mb-8 space-y-2">
         <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <template v-for="(titles, index) in allTitles" :key="index">
@@ -58,7 +58,7 @@
       </Presence>
 
       <!-- Actions -->
-      <div class="mt-10 mb-16">
+      <div class="mt-8 lg:mt-10 mb-0 lg:mb-16">
         <NuxtLink :href="activeFeature?.action" :target="activeFeature?.actionType === 'internal' ? '' : '__blank'"
           v-if="activeFeature?.hasAction"
           class="border-2 p-4 lg:p-5 rounded-xl border-[#e3e3e3] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
@@ -68,8 +68,8 @@
       </div>
 
       <!-- Feature Images -->
-      <div class="flex justify-around">
-        <div class="lg:absolute lg:top-20 lg:left-0 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+      <div class="flex justify-around -space-x-5">
+        <div class="lg:absolute lg:top-20 lg:left-0 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -80,7 +80,7 @@
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:top-20 lg:right-0 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:top-20 lg:right-0 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -91,7 +91,7 @@
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:bottom-10 lg:left-20 h-40 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:bottom-10 lg:left-20 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -103,7 +103,7 @@
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:bottom-10 lg:right-20 h-40 lg:h-60 xl:h-80 w360 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:bottom-10 lg:right-20 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
