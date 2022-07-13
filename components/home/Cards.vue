@@ -37,8 +37,7 @@
               <Motion tag="img" class="object-contain h-full w-full xl:-translate-y-8 drop-shadow-lg"
                 :initial="cardDesignImageSwitcher.initial" :animate="cardDesignImageSwitcher.animate"
                 :transition="cardDesignImageSwitcher.transition" :exit="cardDesignImageSwitcher.exit"
-                :src="cardDesigns[index]?.frontBackViewUrl || ''" :alt="design.designName"
-                preload="true"
+                :src="cardDesigns[index]?.frontBackViewUrl || ''" :alt="design.designName" preload="true"
                 v-if="currentDesignIndex === index" />
             </template>
           </Presence>
@@ -139,7 +138,16 @@ const cardDesignNameSwitcher = computed(() => ({
   }
 }))
 
-const { data: cardDesigns } = await useFetch("/api/designs", {  })
+const { data: cardDesigns } = await useLazyFetch("/api/designs", {
+  default: () => [
+    {
+      designName: "Default",
+      frontBackViewUrl: "/home/card_default_front.svg",
+      backgroundHexColor: "#F5F5F5",
+
+    },
+  ]
+})
 
 const currentDesignIndex = ref(0)
 
