@@ -1,23 +1,27 @@
 <template>
-  <section class="h-[57rem] lg:h-[40rem] xl:h-[50rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden"
+  <section class="h-[58rem] lg:h-[40rem] xl:h-[50rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden"
     id="hero" ref="targetSection">
     <h1 class="hidden">You only need one card</h1>
     <div class="absolute inset-0 bg-overlay z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
     <div class="container flex flex-col lg:flex-row">
       <div class="relative flex flex-col justify-center">
         <div
-          class="text-center lg:text-left text-[120px] lg:text-[220px] xl:text-[310px] uppercase font-title leading-none font-black text-primary transition-colors duration-200 ease-in-out hover:text-secondary">
+          class="text-center lg:text-left text-[85px] lg:text-[150px] xl:text-[190px] uppercase font-title leading-none font-black text-primary transition-colors duration-200 ease-in-out hover:text-secondary">
           <div class="font-title overflow-y-hidden relative">
-            <div ref="sectionTitleOneRef">GRIP</div>
+            <div ref="sectionTitleOneRef">UNIFY</div>
           </div>
           <div class="font-title overflow-y-hidden relative">
-            <div ref="sectionTitleTwoRef">CARD</div>
+            <div ref="sectionTitleTwoRef">YOUR</div>
           </div>
+          <div class="font-title overflow-y-hidden relative">
+            <div ref="sectionTitleThreeRef">MONEY</div>
+          </div>
+          
         </div>
-        <div class=" pl-24 lg:pl-48 relative mx-auto lg:ml-0 lg:text-2xl font-title overflow-hidden">
-          <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-20 lg:w-44" ref="subtitleLineRef">
+        <div class=" pl-24 lg:pl-36 xl:pl-48 relative mx-auto lg:ml-0 text-xl xl:text-2xl font-title overflow-hidden">
+          <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-20 lg:w-32 xl:w-44" ref="subtitleLineRef">
           </div>
-          <div ref="subtitleRef">You only need one card</div>
+          <div ref="subtitleRef">One card and app to supercharge your finances</div>
         </div>
       </div>
       <div
@@ -28,7 +32,7 @@
 
     <!-- HERO FOOTER -->
     <div class="container">
-      <div class="flex justify-center lg:justify-end -translate-y-48 md:-translate-y-72 lg:-translate-y-12">
+      <div class="flex justify-center lg:justify-end -translate-y-48 md:-translate-y-72 lg:translate-y-4">
         <button class="flex flex-col items-center" @click="scrollTo('why-grip-section')">
           <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
           <p class="font-display text-[10px] leading-none">Scroll Down</p>
@@ -50,13 +54,14 @@ const targetSection = ref<HTMLElement>(null)
 
 const sectionTitleOneRef = ref<HTMLElement>(null)
 const sectionTitleTwoRef = ref<HTMLElement>(null)
+const sectionTitleThreeRef = ref<HTMLElement>(null)
 const sectionCoverRef = ref<HTMLElement>(null)
 const subtitleLineRef = ref<HTMLElement>(null)
 const subtitleRef = ref<HTMLElement>(null)
 
 useTimeoutFn(() => shouldShowCover.value = false, 2000)
 
-useAnimationTrigger(targetSection, () => heroSectionAnimation(sectionTitleOneRef, sectionTitleTwoRef, sectionCoverRef, subtitleLineRef, subtitleRef))
+useAnimationTrigger(targetSection, () => heroSectionAnimation(sectionTitleOneRef, sectionTitleTwoRef, sectionTitleThreeRef, sectionCoverRef, subtitleLineRef, subtitleRef))
 
 const scrollTo = (elementId: string) => {
   if (document.querySelector(`#${elementId}`)) {

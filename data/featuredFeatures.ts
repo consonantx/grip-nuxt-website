@@ -25,17 +25,17 @@ export default [
     actionType: '',
     hasAction: true,
   },
-  {
-    titleOne: 'Fallback',
-    titleTwo: 'With',
-    titleThree: 'Grip',
-    description: 'Never have another declined payment again. Fallback to a secondary account if your main payment fails.',
-    imageOne: '/home/features/abeg.png',
-    imageTwo: '/home/features/cash_wallet.png',
-    imageThree: '/home/features/fallback.png',
-    imageFour: '/home/features/online_store.png',
-    action: '',
-    actionType: '',
-    hasAction: true,
-  }
+  // {
+  //   titleOne: 'Fallback',
+  //   titleTwo: 'With',
+  //   titleThree: 'Grip',
+  //   description: 'Never have another declined payment again. Fallback to a secondary account if your main payment fails.',
+  //   imageOne: '/home/features/abeg.png',
+  //   imageTwo: '/home/features/cash_wallet.png',
+  //   imageThree: '/home/features/fallback.png',
+  //   imageFour: '/home/features/online_store.png',
+  //   action: '',
+  //   actionType: '',
+  //   hasAction: true,
+  // }
 ]
