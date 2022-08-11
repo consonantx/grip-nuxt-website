@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#000000] py-24 lg:py-44 relative" id="card-designs">
+  <section class="bg-[#000000] py-24 lg:py-32 relative" id="card-designs">
     <div class="container grid lg:grid-cols-2 gap-x-48 content-center justify-items-center">
       <!-- DESIGNED WITH... -->
       <div class="flex flex-col text-white justify-center" ref="cardSectionDescriptionRef">
