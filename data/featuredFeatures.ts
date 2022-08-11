@@ -13,9 +13,9 @@ export default [
     hasAction: true,
   },
   {
-    titleOne: 'Bank',
-    titleTwo: 'Level',
-    titleThree: 'Security',
+    titleOne: 'Bank Level',
+    titleTwo: 'Security',
+    titleThree: ' ',
     description: 'Stay ahead of the curb with world class security systems and a robust level of protection.',
     imageOne: '/home/features/insurance.png',
     imageTwo: '/home/features/cash_chest_white.png',

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-overlay">
+  <div class="bg-black">
 
     <Head>
       <Title>Grip - One Card, All Payments Everything</Title>

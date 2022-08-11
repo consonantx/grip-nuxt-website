@@ -1,7 +1,7 @@
 <template>
   <footer id="footer" class="bg-[#000000] relative pt-28">
     <LayoutPreFooter></LayoutPreFooter>
-    <div class="bg-white pt-20 overflow-hidden -mt-40 relative z-[2] text-[#000000] ml-5 md:ml-0">
+    <div class="bg-white w-11/12 self-end pt-20 overflow-hidden -mt-40 relative z-[2] text-[#000000] ml-10 md:ml-0">
       <div class="container grid md:grid-cols-10 gap-y-20">
         <div class="md:col-span-3 flex flex-col space-y-9">
           <h2 class="text-5xl font-title">One Debit Card. <span class="text-secondary">No BS</span></h2>

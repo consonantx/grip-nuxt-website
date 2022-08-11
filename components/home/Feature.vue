@@ -2,7 +2,7 @@
   <section class="bg-white min-h-screen text-center h-[400vh] py-12 lg:py-0" ref="targetSection">
     <div class="container flex flex-col items-center justify-center top-0 sticky min-h-screen overflow-hidden">
       <div
-        class="text-sm lg:text-lg text-primary font-gilmer uppercase border-2 border-[#e3e3e3] rounded-full tracking-widest px-4 lg:px-6 py-4 leading-none">
+        class="text-sm lg:text-lg text-primary font-gilmer uppercase border-2 border-[#F8F8F8] rounded-full tracking-widest px-4 lg:px-6 py-4 leading-none">
         features <span class="drop-shadow-lg ml-2">🚀</span>
       </div>
 
@@ -61,9 +61,9 @@
       <div class="mt-4 lg:mt-10 mb-0 lg:mb-16">
         <NuxtLink :href="activeFeature?.action" :target="activeFeature?.actionType === 'internal' ? '' : '__blank'"
           v-if="activeFeature?.hasAction"
-          class="border-2 p-4 lg:p-5 rounded-xl border-[#e3e3e3] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
+          class="border-2 p-4 lg:p-5 rounded-[18px] border-[#F0F0F0] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40 hover:rounded-[32px]">
           <span class="font-gilmer">Find Out More</span>
-          <ArrowRightIcon class="w-5 text-primary ml-2 -rotate-45"></ArrowRightIcon>
+          <ArrowRightIcon class="w-5 text-primary ml-2 -rotate-0 hover:rotate-45"></ArrowRightIcon>
         </NuxtLink>
       </div>
 

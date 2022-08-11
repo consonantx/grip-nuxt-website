@@ -2,26 +2,26 @@
   <section class="h-[58rem] lg:h-[40rem] xl:h-[50rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden"
     id="hero" ref="targetSection">
     <h1 class="hidden">You only need one card</h1>
-    <div class="absolute inset-0 bg-overlay z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
+    <div class="absolute inset-0 bg-[#00000] z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
     <div class="container flex flex-col lg:flex-row">
       <div class="relative flex flex-col justify-center">
         <div
-          class="text-center lg:text-left text-[85px] lg:text-[150px] xl:text-[190px] uppercase font-title leading-none font-black text-primary transition-colors duration-200 ease-in-out hover:text-secondary">
-          <div class="font-title overflow-y-hidden relative">
-            <div ref="sectionTitleOneRef">UNIFY</div>
+          class="text-center lg:text-left text-[85px] lg:text-[150px] xl:text-[300px]  font-title leading-none uppercase font-black text-primary">
+          <div class="font-title leading-[18rem] overflow-y-hidden relative">
+            <div ref="sectionTitleOneRef">Grip</div>
           </div>
-          <div class="font-title overflow-y-hidden relative">
-            <div ref="sectionTitleTwoRef">YOUR</div>
+          <div class="font-title leading-[18rem] overflow-y-hidden relative">
+            <div ref="sectionTitleTwoRef">Card</div>
           </div>
-          <div class="font-title overflow-y-hidden relative">
+          <!-- <div class="font-title leading-[10rem] overflow-y-hidden relative">
             <div ref="sectionTitleThreeRef">MONEY</div>
-          </div>
+          </div> -->
           
         </div>
-        <div class=" pl-24 lg:pl-36 xl:pl-48 relative mx-auto lg:ml-0 text-xl xl:text-2xl font-title overflow-hidden">
-          <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-20 lg:w-32 xl:w-44" ref="subtitleLineRef">
+        <div class=" pl-24 lg:pl-36 xl:pl-36 relative mx-auto lg:ml-0 text-xl xl:text-2xl font-title overflow-hidden">
+          <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[1px] bg-secondary w-10 lg:w-12 xl:w-32" ref="subtitleLineRef">
           </div>
-          <div ref="subtitleRef">One card and app to supercharge your finances</div>
+          <div ref="subtitleRef">Unifying your Payments</div>
         </div>
       </div>
       <div
