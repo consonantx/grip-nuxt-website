@@ -7,10 +7,10 @@ export const reasonSectionAnimation = (
   steps: Ref<HTMLElement>
 ) => {
   timeline([
-    [sectionTitle.value, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.75, allowWebkitAcceleration: true }],
-    [mainText.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.75, at: 0.5, allowWebkitAcceleration: true }],
+    [sectionTitle.value, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.70,easing: [0.2, 0.6, 0.35, 1], allowWebkitAcceleration: true }],
+    [mainText.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.70, at: 0.3, easing: [0.2, 0.6, 0.35, 1],allowWebkitAcceleration: true }],
     // @ts-ignoreallowWebkitAcceleration: true
-    [steps.value.children, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.75, delay: stagger(0.25), at: 1,  }],
+    [steps.value.children, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.70, delay: stagger(0.19), at: 0.4, easing: [0.2, 0.6, 0.35, 1],  }],
   ], {})
 }
 
@@ -31,7 +31,7 @@ export const faqSectionAnimation = (
   sectionTitle: Ref<HTMLElement>,
 ) => {
   timeline([
-    [sectionTitle.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.8, easing: "ease-out", allowWebkitAcceleration: true }],
+    [sectionTitle.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.6, easing: "ease-out", allowWebkitAcceleration: true }],
   ])
 }
 

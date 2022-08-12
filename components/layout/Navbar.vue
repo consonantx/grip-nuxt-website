@@ -9,8 +9,8 @@
     <Presence>
       <Motion :initial="{ transform: 'scaleY(0.2)', opacity: 0 }"
         :animate="{ transform: ['scaleY(0.2)', 'scaleY(1)'], opacity: [0, 1] }"
-        :exit="{ transform: 'scaleY(0.2)', opacity: 0 }" :transition="{ duration: 0.3, easing: 'ease-out', delay: 0.5 }"
-        v-if="showMenu" class="origin-top top-4 inset-x-4 bg-white pt-10 pb-6 px-6 z-[12] fixed rounded-3xl">
+        :exit="{ transform: 'scaleY(0.2)', opacity: 0 }" :transition="{ duration: 0.3, easing: 'ease-out', delay: 0.7 }"
+        v-if="showMenu" class="origin-top top-4 inset-x-4 backdrop-blur-sm bg-white/30 pt-10 pb-6 px-6 z-[12] fixed rounded-3xl">
         <div class="flex flex-col space-y-4">
           <NuxtLink to="/" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Home</NuxtLink>
           <NuxtLink to="/about" class="font-gilmer text-sm font-semibold" @click="showMenu = false">About Us</NuxtLink>
@@ -28,19 +28,19 @@
 
     <Motion :initial="{ y: 200, opacity: 0 }" :animate="{ y: [200, 0], opacity: [0, 1] }"
       :transition="{ duration: 0.75, delay: 0.2 }" class="fixed bottom-10 flex justify-center inset-x-0 z-10">
-      <div class="p-1 rounded-xl bg-white flex space-x-2 items-stretch shadow-xl shadow-[#00000012]">
+      <div class="p-1 rounded-full bg-white flex space-x-2 items-stretch shadow-xl shadow-[#00000012]">
         <!-- Desktop Menu Options -->
         <div class="space-x-2 hidden md:flex">
-          <NuxtLink to="/" class="flex items-center px-3 rounded-[9px] font-title" exact-active-class="bg-hue">Home
+          <NuxtLink to="/" class="flex items-center px-3 rounded-full font-title" exact-active-class="bg-[#f2f2f2]">Home
           </NuxtLink>
-          <NuxtLink to="/about" class="flex items-center px-3 rounded-[9px] font-title" exact-active-class="bg-hue">
+          <NuxtLink to="/about" class="flex items-center px-3 rounded-full font-title" exact-active-class="bg-[#f2f2f2]">
             About
             Us
           </NuxtLink>
-          <NuxtLink to="/faq" class="flex items-center px-3 rounded-[9px] font-title" exact-active-class="bg-hue">FAQ
+          <NuxtLink to="/faq" class="flex items-center px-3 rounded-full font-title" exact-active-class="bg-[#f2f2f2]">FAQ
           </NuxtLink>
-          <NuxtLink href="https://blog.trygrip.co" class="flex items-center px-3 rounded-[9px] font-title"
-            exact-active-class="bg-hue">Blog</NuxtLink>
+          <!-- <NuxtLink href="https://blog.trygrip.co" class="flex items-center px-3 rounded-[9px] font-title"
+            exact-active-class="bg-[#f2f2f2]">Blog</NuxtLink> -->
         </div>
 
         <!-- Mobile Menu Options -->
@@ -50,8 +50,8 @@
         </button>
 
         <NuxtLink href="https://waitlist.trygrip.co" target="__blank"
-          class="py-4 px-5 bg-primary text-white font-title uppercase text-sm leading-none font-bold rounded-[9px] flex-1 shadow-lg shadow-[#00000026]">
-          join waitlist</NuxtLink>
+          class="py-4 px-5 bg-primary text-white font-title text-sm leading-none font-bold rounded-[22px] flex-1 drop-shadow-md hover:drop-shadow-2xl">
+          Get Card</NuxtLink>
       </div>
     </Motion>
   </div>

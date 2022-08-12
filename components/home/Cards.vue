@@ -3,9 +3,7 @@
     <div class="container grid lg:grid-cols-2 gap-x-48 content-center justify-items-center">
       <!-- DESIGNED WITH... -->
       <div class="flex flex-col text-white justify-center" ref="cardSectionDescriptionRef">
-        <h2 class="text-4xl lg:text-7xl font-title w-min">
-          Designed <br />
-          With <br />
+        <h2 class="text-4xl lg:text-6xl font-title w-min">Designed  With
           <div class="w-min relative overflow-hidden">
             <Presence :exit-before-enter="true">
               <Motion :initial="cardDesignTextSwitcherAnimation.initial"
@@ -22,7 +20,7 @@
           </div>
         </h2>
 
-        <p class="mt-4 lg:text-lg text-gray-400">The debit card designed for everyday spending, with simplicity and
+        <p class="mt-4 lg:text-md text-gray-400">The debit card designed for everyday spending, with simplicity and
           transparency
           built right in. Live your
           best life with a card you can brag about.</p>
@@ -31,7 +29,7 @@
       <!-- CARD SWITCHER -->
       <div class="flex flex-col mt-16 lg:mt-0 w-4/5 lg:w-auto">
         <div
-          class="w-full lg:h-[28rem] xl:h-[37.5rem] bg-[url('/home/card_switcher_bg.svg')] bg-contain bg-no-repeat py-4">
+          class="w-full lg:h-[28rem] xl:h-[37.5rem] bg-[url('/home/card_switcher_bg.svg')] bg-contain">
           <Presence :exit-before-enter="true">
             <template :key="index" v-for="(design, index) in cardDesigns">
               <Motion tag="img" class="object-contain h-full w-full xl:-translate-y-8 drop-shadow-lg"
@@ -42,7 +40,7 @@
             </template>
           </Presence>
         </div>
-        <div class="bg-white p-4 lg:p-6 rounded-2xl flex items-center justify-between">
+        <div class="bg-white p-4 lg:p-6 rounded-[30px] flex items-center justify-between">
           <Presence :exit-before-enter="true">
             <template v-for="(design, index) in cardDesigns" :key="index">
               <Motion :initial="cardDesignNameSwitcher.initial" :animate="cardDesignNameSwitcher.animate"
@@ -86,7 +84,7 @@ setInterval(() => {
   } else {
     cardDesignTextSwitcher.value = 1
   }
-}, 5000)
+}, 6000)
 
 const cardDesignTextSwitcherAnimation = computed(() => ({
   initial: {
@@ -100,6 +98,11 @@ const cardDesignTextSwitcherAnimation = computed(() => ({
   exit: {
     opacity: 0,
     transform: "translateY(-100%)",
+  },
+    transition: {
+      delay:0.3,
+    duration: 0.65,
+    ease: "ease-out",
   }
 }))
 
@@ -118,7 +121,7 @@ const cardDesignImageSwitcher = computed(() => ({
   },
   transition: {
     duration: 0.35,
-    ease: "easeInOut",
+    ease: "ease-out",
   }
 }))
 
