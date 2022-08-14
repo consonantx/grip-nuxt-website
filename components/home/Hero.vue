@@ -15,11 +15,11 @@
           <div class="font-title xl:leading-[9rem] overflow-y-hidden relative">
             <div ref="sectionTitleOneRef">Grip</div>
           </div>
-          <div class="font-title xl:leading-[10rem] overflow-y-hidden relative -top-[9%]">
+          <div class="font-title xl:leading-[10rem] overflow-y-hidden relative -top-[3%]">
             <div ref="sectionTitleTwoRef">Card</div>
           </div>
         </div>
-        <div class="relative -top-[4%] mx-auto md:text-[20px] lg:ml-0  xl:text-[20] font-title overflow-hidden">
+        <div class="relative -top-[5%] mx-auto md:text-[20px] lg:ml-0  xl:text-[20] font-title overflow-hidden">
           <div class="absolute top-1/2 left- -translate-y-1/2 h-[1px] bg-secondary sm:w-24 w-10 lg:w-12 xl:w-32" ref="subtitleLineRef">
           </div>
           <div class="xl:ml-36" ref="subtitleRef">Unifying your Payments</div>
