@@ -1,5 +1,5 @@
 <template>
-  <section class="h-[58rem] lg:h-[40rem] xl:h-[45rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden flex flex-col"
+  <section class="h-[58rem] lg:h-[40rem] xl:h-[43rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden flex flex-col"
     id="hero" ref="targetSection">
     <h1 class="hidden">You only need one card</h1>
     <div class="absolute inset-0 bg-[#000000] z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
@@ -10,7 +10,7 @@
           <div class="font-title xl:leading-[9rem] overflow-y-hidden relative">
             <div ref="sectionTitleOneRef">Grip</div>
           </div>
-          <div class="font-title xl:leading-[10rem] overflow-y-hidden relative">
+          <div class="font-title xl:leading-[10rem] overflow-y-hidden relative -top-[9%]">
             <div ref="sectionTitleTwoRef">Card</div>
           </div>
           <!-- <div class="font-title leading-[10rem] overflow-y-hidden relative">
@@ -18,10 +18,10 @@
           </div> -->
           
         </div>
-        <div class=" ml-2 lg:pl-36 xl:pl-36 relative mx-auto md:text-[20px] lg:ml-0  xl:text-[20] font-title overflow-hidden">
+        <div class="relative -top-[4%] mx-auto md:text-[20px] lg:ml-0  xl:text-[20] font-title overflow-hidden">
           <div class="absolute top-1/2 left- -translate-y-1/2 h-[1px] bg-secondary sm:w-24 w-10 lg:w-12 xl:w-32" ref="subtitleLineRef">
           </div>
-          <div class="sm:ml-2" ref="subtitleRef">Unifying your Payments</div>
+          <div class="xl:ml-36" ref="subtitleRef">Unifying your Payments</div>
         </div>
       </div>
       <!-- <div
@@ -35,12 +35,14 @@
       <!-- <div class="flex justify-end flex-grow">
         <div class="h-full w-full">
           <video class="object-fill justify-end" autoplay>
-            <source src="/home/Card_Splash.mp4" type="video/mp4">
+            <source src="/home/Web_.mp4" type="video/mp4">
           </video>
         </div>
       </div>  -->
-      <div class="flex flex-auto w-12 ml-7 lg:w-24 lg:min-h-full bg-[#ffffff]">
-
+      <div class="flex flex-auto w-12 ml-7 lg:w-24 lg:min-h-full">
+         <video class="object-fill justify-end" autoplay loop preloaded controls>
+            <source src="/home/Web_.mp4" type="video/mp4">
+          </video>
       </div>
     </div>
 
