@@ -19,7 +19,7 @@ export default [
     description: 'Stay ahead of the curb with world class security systems and a robust level of protection.',
     imageOne: '/home/features/insurance.png',
     imageTwo: '/home/features/cash_chest_white.png',
-    imageThree: '/home/features/cash_chest_blue.png',
+    imageThree: '/home/features/cash_chest.png',
     imageFour: '/home/features/cash_wallet.png',
     action: '',
     actionType: '',

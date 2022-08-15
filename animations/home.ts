@@ -36,7 +36,7 @@ export const faqSectionAnimation = (
 }
 
 export const heroSectionAnimation = (
-  titleLineOne: Ref<HTMLElement>,
+  sectionTitleOneRef: Ref<HTMLElement>,
   titleLineTwo: Ref<HTMLElement>,
   titleLineThree: Ref<HTMLElement>,
   sectionCover: Ref<HTMLElement>,
@@ -44,11 +44,11 @@ export const heroSectionAnimation = (
   subTitle: Ref<HTMLElement>
 ) => {
   timeline([
-    [titleLineOne.value, { transform: ["translateY(100%)", "translateY(0%)"], }, { duration: 1, easing: [0.42, 0, 1, 1], delay: 0.5, allowWebkitAcceleration: true }],
-    [titleLineTwo.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.42, 0, 1, 1], at: 1, allowWebkitAcceleration: true }],
-    [titleLineThree.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.42, 0, 1, 1], at: 1.25, allowWebkitAcceleration: true }],
-    [subTitleLine.value, { transform: ["translateX(-100%)", "translateX(0%)"] }, { duration: 1, easing: [0.42, 0, 1, 1], at: 1, allowWebkitAcceleration: true }],
+    [sectionTitleOneRef.value, { transform: ["translateY(100%)", "translateY(0%)"], }, { duration: 1, easing: [0.2, 0.6, 0.35, 1], delay: 1, allowWebkitAcceleration: true }],
+    [titleLineTwo.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.2, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
+    [titleLineThree.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.2, 0.6, 0.35, 1], at: 1.25, allowWebkitAcceleration: true }],
+    [subTitleLine.value, { transform: ["translateX(-100%)", "translateX(0%)"] }, { duration: 1, easing: [0.2, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
     [sectionCover.value, { transform: ["translateX(0%)", "translateX(250%)"] }, { duration: 5, easing: [0.2, 0.6, 0.35, 1], at: 1.2 }],
-    [subTitle.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: [0.42, 0, 1, 1], at: 1, allowWebkitAcceleration: true }],
+    [subTitle.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: [0.2, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
   ])
 }

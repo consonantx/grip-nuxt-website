@@ -4,7 +4,7 @@
     <h1 class="hidden">You only need one card</h1>
     <div class="absolute inset-0 bg-[#000000] z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
     <div class="flex justify-around -space-x-5">
-        <div class="lg:absolute lg:top-20 lg:left-20 h-36 lg:h-60 xl:h-80 w-22 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:top-20 lg:left-40 h-36 lg:h-60 xl:h-80 w-16 lg:w-40 xl:w-40 drop-shadow-2xl">
           <img src="/home/features/naira1.png"  /> 
         </div>
         </div>
@@ -15,12 +15,12 @@
           <div class="font-title xl:leading-[9rem] overflow-y-hidden relative">
             <div ref="sectionTitleOneRef">Grip</div>
           </div>
-          <div class="font-title xl:leading-[10rem] overflow-y-hidden relative -top-[3%]">
+          <div class="font-title xl:leading-[10rem] overflow-y-hidden relative -top-[10%]">
             <div ref="sectionTitleTwoRef">Card</div>
           </div>
         </div>
-        <div class="relative -top-[5%] mx-auto md:text-[20px] lg:ml-0  xl:text-[20] font-title overflow-hidden">
-          <div class="absolute top-1/2 left- -translate-y-1/2 h-[1px] bg-secondary sm:w-24 w-10 lg:w-12 xl:w-32" ref="subtitleLineRef">
+        <div class="relative -top-[7%] mx-auto md:text-[20px] lg:ml-0  xl:text-[20] font-title overflow-hidden">
+          <div class="absolute top-1/2 left-[0%] -translate-y-1/2 h-[1px] bg-secondary sm:w-24 w-10 lg:w-12 xl:w-32" ref="subtitleLineRef">
           </div>
           <div class="xl:ml-36" ref="subtitleRef">Unifying your Payments</div>
         </div>
@@ -36,7 +36,9 @@
       </div>
        <div
         class="rotate-[15deg] lg:rotate-0 lg:absolute -translate-x-[5%] md:translate-x-[10%] lg:translate-x-[55%] translate-y-[10%] md:translate-y-[5%] lg:-translate-y-16 xl:-translate-y-24 w-[55rem] md:w-[65rem] lg:w-auto 2xl:w-[90rem]">
-         <img src="/home/hero_image.png" class="object-fill lg:w-10/12 xl:w-11/12" /> 
+          <video class="object-fill justify-end" autoplay loop>
+            <source src="/home/Web_.mp4" type="video/mp4">
+          </video>
     
       </div>
       <!-- <div class="flex justify-end flex-grow">
