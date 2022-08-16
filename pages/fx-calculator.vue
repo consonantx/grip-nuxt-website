@@ -16,25 +16,67 @@
 
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
-      <section class="py-10 relative" id="hero">
+      <section class="pt-10 pb-36 relative" id="hero">
         <div class="container flex flex-col-reverse lg:grid grid-cols-2 gap-x-32 items-center">
           <div class="flex flex-col space-y-6 mt-16 lg:mt-0 text-center lg:text-left">
-            <h1 class="font-title font-black text-3xl lg:text-5xl xl:text-6xl">We Give Your Finances Superpowers </h1>
-            <p class="font-gilmer lg:text-xl">We take all your debit cards, credit cards, fintech wallets and bank
-              accounts and mash 'em all up into one Global Card and one Super App.
-              Think what Netflix is to movies and Spotify to music but make it your finances. With superb exchanges
-              rates, expense insight across all linked channels
-              and custom features you woulfiredn't be able to see any where else, Grip will be the only card you'll every
-              need to carry around and we're here for it! 🚀</p>
+            <h1 class="font-title font-black text-3xl lg:text-5xl">Compare Foreign Exchange Charges With Other Providers
+            </h1>
+            <p class="font-gilmer lg:text-xl">
+              You can now compate the rates we charge for international transactions on Grip with rates
+              offered by other providers.
+            </p>
+            <div class="font-gilmer mt-5 lg:text-xl">
+              <p>Please note that additional charges may apply:</p>
+              <ul class="list-disc list-inside mt-2">
+                <li class="list-item">Rates vary depending on your subscription tier and how much of your spending limit
+                  has been utilized.</li>
+                <li class="list-item">Transaction fees may also apply.</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="h-96 lg:h-[500px]"><img src="/about/hero.png" class="object- h-full" alt="" srcset="" /></div>
-        </div>
-      </section>
+          <form class="grid grid-cols-1 gap-y-11">
+            <!-- BASE CURRENCY -->
+            <div class="grid grid-cols-1 gap-y-5">
+              <label for="base-currency" class="block font-medium text-gray-700 font-gilmer">Base Currency</label>
+              <div class="mt-1">
+                <select type="email" name="base_currency" id="base-currency"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full"
+                  placeholder="you@example.com">
+                  <option>United States</option>
+                  <option selected>Canada</option>
+                  <option>Mexico</option>
+                </select>
+              </div>
+            </div>
 
-      <section class="py-60 bg-white relative">
-        <div class="container flex flex-col">
-          <div class=""></div>
+            <!-- TARGET CURRENCY -->
+            <div class="grid grid-cols-1 gap-y-5">
+              <label for="target-currency" class="block font-medium text-gray-700 font-gilmer">Target Currency</label>
+              <div class="mt-1">
+                <select type="email" name="target_currency" id="target-currency"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full"
+                  placeholder="you@example.com">
+                  <option>United States</option>
+                  <option selected>Canada</option>
+                  <option>Mexico</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- AMOUNT-->
+            <div class="grid grid-cols-1 gap-y-5">
+              <label for="amount" class="block font-medium text-gray-700 font-gilmer">Amount</label>
+              <div class="mt-1">
+                <input type="number" name="amount" id="amount"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full"
+                  placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <button
+              class="ml-auto w-min bg-primary py-6 px-16 text-white drop-shadow-[0px_27.651px_55.302px_rgba(11,4,205,0.29)] rounded-xl">Calculate</button>
+          </form>
         </div>
       </section>
     </main>

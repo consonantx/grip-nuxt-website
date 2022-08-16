@@ -11,13 +11,11 @@
       <Link rel="manifest" href="/favicon/site.webmanifest" />
       <Link rel="preload" as="image" href="/home/header_image.png" />
     </Head>
-
-    <LayoutHeader :delay="0.8"></LayoutHeader>
     <LayoutNavbar></LayoutNavbar>
 
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
-      <HomeHero></HomeHero>
+      <HomeAlternateHero></HomeAlternateHero>
       <HomeReason></HomeReason>
       <HomeFeature></HomeFeature>
       <HomeFaq></HomeFaq>

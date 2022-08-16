@@ -1,5 +1,5 @@
 <template>
-  <nav class="py-16 bg-transparent text-white">
+  <nav class="py-16 bg-transparent text-white z-10 relative">
     <div class="container flex flex-row justify-center">
       <NuxtLink to="/">
         <Motion :initial="{ opacity: 0, y: -50 }" :animate="{ opacity: [0, 1], y: [-50, 0 ] }"
