@@ -17,7 +17,7 @@
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
       <section class="pt-10 pb-36 relative" id="hero">
-        <div class="container flex flex-col-reverse lg:grid grid-cols-2 gap-x-32 items-center">
+        <div class="container flex flex-col lg:grid grid-cols-2 gap-x-32 items-center">
           <div class="flex flex-col space-y-6 mt-16 lg:mt-0 text-center lg:text-left">
             <h1 class="font-title font-black text-3xl lg:text-5xl">Compare Foreign Exchange Charges With Other Providers
             </h1>
@@ -27,7 +27,7 @@
             </p>
             <div class="font-gilmer mt-5 lg:text-xl">
               <p>Please note that additional charges may apply:</p>
-              <ul class="list-disc list-inside mt-2">
+              <ul class="list-disc list-inside mt-2 text-left">
                 <li class="list-item">Rates vary depending on your subscription tier and how much of your spending limit
                   has been utilized.</li>
                 <li class="list-item">Transaction fees may also apply.</li>
@@ -35,7 +35,7 @@
             </div>
           </div>
 
-          <form class="grid grid-cols-1 gap-y-11">
+          <form class="grid grid-cols-1 gap-y-11 mt-16 lg-mt-0 w-full lg:w-auto">
             <!-- BASE CURRENCY -->
             <div class="grid grid-cols-1 gap-y-5">
               <label for="base-currency" class="block font-medium text-gray-700 font-gilmer">Base Currency</label>
@@ -70,12 +70,12 @@
               <div class="mt-1">
                 <input type="number" name="amount" id="amount"
                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full"
-                  placeholder="you@example.com" />
+                  placeholder="0.00" />
               </div>
             </div>
 
             <button
-              class="ml-auto w-min bg-primary py-6 px-16 text-white drop-shadow-[0px_27.651px_55.302px_rgba(11,4,205,0.29)] rounded-xl">Calculate</button>
+              class="mx-auto lg:mr-0 lg:ml-auto w-min bg-primary py-6 px-16 text-white drop-shadow-[0px_27.651px_55.302px_rgba(11,4,205,0.29)] rounded-xl">Calculate</button>
           </form>
         </div>
       </section>
