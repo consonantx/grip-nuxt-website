@@ -17,7 +17,7 @@
           <slot></slot>
         </p>
 
-        <div class="mt-4 lg:mt-10 w-max">
+        <div class="mt-10 w-max mx-auto md:mr-auto md:ml-0">
           <NuxtLink :href="props.action" v-if="props.action"
             class="border-2 py-4 px-6 rounded-xl border-[#e3e3e3] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
             <span class="font-gilmer">Learn More</span>
