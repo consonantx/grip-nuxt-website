@@ -43,7 +43,7 @@
           and handle the rest.
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Lockdown" image-url="/features/lockdown.png">
+        <FeaturesFeatureItem title="Lockdown" image-url="/features/lockdown.png" action="/features/lockdown">
           The holy grail of security, at your finger tips. Lockdown is a first-of-it’s-kind revolutionary approach to
           ensuring user financial security that you wouldn’t find anywhere else (Go ahead, look, we’re waiting 😄 ).
           Click here to find out more.

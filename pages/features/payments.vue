@@ -31,14 +31,14 @@
           </div>
         </div>
 
-        <FeaturesFeatureItem title="Grip Physical & Virtual Cards" image-url="/features/cards.png">
+        <FeaturesFeatureItem title="Grip Physical & Virtual Cards" image-url="/features/cards.png" action="/features/cards">
           The ideal companion to the Grip app! Get a free virtual card for online payments and Chose one of multiple
           Grip physical card designs we offer that best suits your taste and finance needs. Spend online, in Africa or
           Globally in 200+ countries while taking advantage of all your accounts and fintech wallets with just one card.
           Click here to learn more.
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Fallback" image-url="/features/fallback.png" :is-inverse="true">
+        <FeaturesFeatureItem title="Fallback" image-url="/features/fallback.png" :is-inverse="true" action="/features/fallback">
           Did someone say declined? If you have multiple cards/wallets linked to Grip, you could set fallbacks so when
           you primary card/wallet fails, we automatically charge the fallback cards and eliminate awkward moments. click
           here to find out more
