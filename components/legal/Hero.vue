@@ -49,7 +49,7 @@ const props = defineProps<{
 :deep(p),
 :deep(li),
 :deep(h2) {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 :deep(ol),
