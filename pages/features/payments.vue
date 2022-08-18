@@ -23,7 +23,7 @@
         mediums. Spend online and offline in 200+ countries, while managing your finances seamlessly.
       </FeaturesHero>
 
-      <section class="py-16 bg-white relative">
+      <section class="pt-16 bg-white relative">
         <div class="container flex flex-col">
           <div
             class="text-sm lg:text-lg text-primary font-gilmer uppercase border-2 border-[#e3e3e3] rounded-full tracking-widest px-4 lg:px-6 py-4 leading-none w-max mx-auto">

@@ -11,7 +11,7 @@
         <source src="/home/header_video.mp4" type="video/mp4" />
       </video>
     </div>
-    <div class="container pb-10">
+    <div class="container pb-10" @click="playHeaderVideo">
       <div class="flex flex-col lg:flex-row relative z-[2] pb-16 md:pb-0">
         <div class="relative flex flex-col justify-center">
           <div
@@ -72,8 +72,14 @@ const scrollTo = (elementId: string) => {
   }
 }
 
+const playHeaderVideo = () => {
+  if (videoRef.value) {
+    return videoRef.value.play()
+  }
+}
+
 try {
-  videoRef.value.play()
+  playHeaderVideo()
 } catch (error) {
   console.log('browser does not support autoplay')
 }
