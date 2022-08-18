@@ -29,7 +29,7 @@
       </div>
 
       <!-- CARD SWITCHER -->
-      <div class="flex flex-col mt-16 lg:mt-0 w-4/5 lg:w-auto">
+      <div class="flex flex-col mt-16 lg:mt-0 w-5/6 lg:w-auto">
         <div
           class="w-full lg:h-[28rem] xl:h-[37.5rem] bg-[url('/home/card_switcher_bg.svg')] bg-contain bg-no-repeat py-4">
           <Presence :exit-before-enter="true">
