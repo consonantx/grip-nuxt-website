@@ -149,7 +149,6 @@ const { data: cardDesigns } = await useLazyFetch("/api/designs", {
       designName: "Default",
       frontBackViewUrl: "/home/card_default_front.svg",
       backgroundHexColor: "#F5F5F5",
-
     },
   ]
 })
