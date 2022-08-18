@@ -2,7 +2,7 @@
   <div>
     <Presence>
       <Motion :initial="{ y: 200, opacity: 0 }" :animate="{ y: [200, 0], opacity: [0, 1] }"
-        :exit="{ y: 200, opacity: 0 }" :transition="{ duration: 0.5, easing: 'ease-in' }"
+        :exit="{ y: 200, opacity: 0 }" :transition="{ duration: 0.25, easing: 'ease-in' }"
         class="z-[11] fixed inset-0 bg-black bg-opacity-50" v-if="showMenu"></Motion>
     </Presence>
 
@@ -51,7 +51,7 @@
           </button>
 
           <NuxtLink href="https://waitlist.trygrip.co" target="__blank"
-            class="py-4 px-5 bg-primary text-white font-title uppercase text-sm leading-none font-bold rounded-full flex-1 shadow-lg shadow-[#00000026]">
+            class="py-4 px-5 bg-primary text-white font-title uppercase text-sm leading-none font-bold rounded-full flex-1 drop-shadow-md hover:drop-shadow-xl shadow-[#00000026]">
             join waitlist</NuxtLink>
         </div>
       </Motion>

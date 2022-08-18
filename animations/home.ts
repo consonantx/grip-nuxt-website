@@ -7,10 +7,10 @@ export const reasonSectionAnimation = (
   steps: Ref<HTMLElement>
 ) => {
   timeline([
-    [sectionTitle.value, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.75, allowWebkitAcceleration: true }],
-    [mainText.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.75, at: 0.5, allowWebkitAcceleration: true }],
+    [sectionTitle.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.70, easing: [0.26, 0.6, 0.35, 1], allowWebkitAcceleration: true }],
+    [mainText.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.70, easing: [0.26, 0.6, 0.35, 1], at: 0.3, allowWebkitAcceleration: true }],
     // @ts-ignoreallowWebkitAcceleration: true
-    [steps.value.children, { opacity: [0, 1], y: [ 50, 0 ] }, { duration: 0.75, delay: stagger(0.25), at: 1,  }],
+    [steps.value.children, { opacity: [0, 1], y: [50, 0] }, { duration: 0.70, delay: stagger(0.19), easing: [0.26, 0.6, 0.35, 1], at: 0.4,  }],
   ], {})
 }
 
@@ -31,7 +31,7 @@ export const faqSectionAnimation = (
   sectionTitle: Ref<HTMLElement>,
 ) => {
   timeline([
-    [sectionTitle.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.8, easing: "ease-out", allowWebkitAcceleration: true }],
+    [sectionTitle.value, { opacity: [0, 1], y: [50, 0] }, { duration: 0.6, easing: "ease-out", allowWebkitAcceleration: true }],
   ])
 }
 
@@ -43,10 +43,10 @@ export const heroSectionAnimation = (
   subTitle: Ref<HTMLElement>
 ) => {
   timeline([
-    [titleLineOne.value, { transform: ["translateY(100%)", "translateY(0%)"], }, { duration: 1, easing: [0.42, 0, 1, 1], delay: 0.5, allowWebkitAcceleration: true }],
-    [titleLineTwo.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.42, 0, 1, 1], at: 1, allowWebkitAcceleration: true }],
-    [subTitleLine.value, { transform: ["translateX(-100%)", "translateX(0%)"] }, { duration: 1, easing: [0.42, 0, 1, 1], at: 1, allowWebkitAcceleration: true }],
-    [sectionCover.value, { transform: ["translateX(0%)", "translateX(250%)"] }, { duration: 5, easing: [0.2, 0.6, 0.35, 1], at: 1.2 }],
-    [subTitle.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: [0.42, 0, 1, 1], at: 1, allowWebkitAcceleration: true }],
+    [titleLineOne.value, { transform: ["translateY(100%)", "translateY(0%)"], }, { duration: 1, easing: [0.26, 0.6, 0.35, 1], delay: 0.5, allowWebkitAcceleration: true }],
+    [titleLineTwo.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.26, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
+    [subTitleLine.value, { transform: ["translateX(-100%)", "translateX(0%)"] }, { duration: 1, easing: [0.26, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
+    [sectionCover.value, { transform: ["translateX(0%)", "translateX(250%)"] }, { duration: 5, easing: [0.26, 0.6, 0.35, 1], at: 1.2 }],
+    [subTitle.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: [0.26, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
   ])
 }

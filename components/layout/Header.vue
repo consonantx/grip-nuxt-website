@@ -3,7 +3,7 @@
     <div class="container flex flex-row justify-center">
       <NuxtLink to="/">
         <Motion :initial="{ opacity: 0, y: -50 }" :animate="{ opacity: [0, 1], y: [-50, 0 ] }"
-          :transition="{ duration: 0.8, delay }">
+          :transition="{ duration: 0.4, delay }">
           <img src="/logo-dark.svg" alt="Grip Logo" class="h-8 lg:h-10" v-if="props.isDark">
           <img src="/logo.svg" alt="Grip Logo" class="h-8 lg:h-10" v-else>
         </Motion>

@@ -55,9 +55,9 @@
 
       <!-- IMAGE -->
       <div
-        class="relative lg:absolute right-0 translate-y-20 md:translate-y-30 xl:-translate-y-20 2xl:-translate-y-40 md:w-[35rem] xl:w-[42.5rem] 2xl:w-auto">
+        class="relative lg:absolute right-0 translate-y-20 md:translate-y-30 xl:translate-y-20 2xl:-translate-y-36 md:w-[35rem] xl:w-[42.5rem] 2xl:w-auto">
         <img src="/home/why_section_image.png" class="z-[1] relative" alt="">
-        <div class="absolute bg-[#078ae636] blur-[325px] left-[45%] right-[6.5%] top-[27.5%] bottom-[9%]"></div>
+        <div class="absolute bg-[#078ae636] blur-[70px] left-[45%] right-[6.5%] top-[27.5%] bottom-[9%]"></div>
       </div>
     </div>
   </section>

@@ -3,7 +3,7 @@
     <div class="container grid lg:grid-cols-2 gap-x-48 content-center justify-items-center">
       <!-- DESIGNED WITH... -->
       <div class="flex flex-col text-white justify-center" ref="cardSectionDescriptionRef">
-        <h2 class="text-4xl lg:text-7xl font-title w-min">
+        <h2 class="text-4xl lg:text-6xl font-title w-min">
           Designed <br />
           With <br />
           <div class="w-min relative overflow-hidden">
@@ -42,7 +42,7 @@
             </template>
           </Presence>
         </div>
-        <div class="bg-white p-4 lg:p-6 rounded-2xl flex items-center justify-between">
+        <div class="bg-white p-4 lg:p-6 rounded-[30px] flex items-center justify-between">
           <Presence :exit-before-enter="true">
             <template v-for="(design, index) in cardDesigns" :key="index">
               <Motion :initial="cardDesignNameSwitcher.initial" :animate="cardDesignNameSwitcher.animate"
@@ -86,7 +86,7 @@ setInterval(() => {
   } else {
     cardDesignTextSwitcher.value = 1
   }
-}, 5000)
+}, 6000)
 
 const cardDesignTextSwitcherAnimation = computed(() => ({
   initial: {
@@ -100,6 +100,11 @@ const cardDesignTextSwitcherAnimation = computed(() => ({
   exit: {
     opacity: 0,
     transform: "translateY(-100%)",
+  },
+  transition: {
+    duration: 0.65,
+    delay: 0.3,
+    ease: "easeOut",
   }
 }))
 
@@ -118,7 +123,7 @@ const cardDesignImageSwitcher = computed(() => ({
   },
   transition: {
     duration: 0.35,
-    ease: "easeInOut",
+    ease: "easeOut",
   }
 }))
 

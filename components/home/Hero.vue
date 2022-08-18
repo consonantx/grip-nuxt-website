@@ -2,7 +2,7 @@
   <section class="h-[57rem] lg:h-[40rem] xl:h-[50rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden"
     id="hero" ref="targetSection">
     <h1 class="hidden">You only need one card</h1>
-    <div class="absolute inset-0 bg-overlay z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
+    <div class="absolute inset-0 bg-black z-[1]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
     <div class="container flex flex-col lg:flex-row">
       <div class="relative flex flex-col justify-center">
         <div

@@ -4,7 +4,7 @@
     <div
       :class="['container flex flex-col items-center gap-x-20 text-center md:text-left',  props.isInverse ? 'md:flex-row-reverse' : 'md:flex-row']">
       <!-- IMAGE -->
-      <div class="relative w-2/3 max-w-[30rem] md:w-auto mb-5 lg:mb-0">
+      <div class="relative w-2/3 min-w-[20rem] max-w-[30rem] md:w-auto mb-5 lg:mb-0">
         <img :src="props.imageUrl" class="z-[1] relative object-contain" alt="">
       </div>
 
