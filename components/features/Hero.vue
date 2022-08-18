@@ -103,6 +103,10 @@ import { Motion, Presence } from "motion/vue"
 
 import featuredFeatures from "~~/data/featuredFeatures"
 
+const props = defineProps<{
+  
+}>()
+
 const targetSection = ref<HTMLElement>(null)
 
 const activeFeatureIndex = ref(0)

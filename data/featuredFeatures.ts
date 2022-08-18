@@ -8,8 +8,8 @@ export default [
     imageTwo: '/home/features/cash_wallet.png',
     imageThree: '/home/features/entertainment.png',
     imageFour: '/home/features/offline_store.png',
-    action: '',
-    actionType: '',
+    action: '/features/payments',
+    actionType: 'internal',
     hasAction: true,
   },
   {
@@ -21,8 +21,8 @@ export default [
     imageTwo: '/home/features/cash_chest_white.png',
     imageThree: '/home/features/cash_chest_blue.png',
     imageFour: '/home/features/cash_wallet.png',
-    action: '',
-    actionType: '',
+    action: '/features/security',
+    actionType: 'internal',
     hasAction: true,
   },
   {
@@ -34,8 +34,8 @@ export default [
     imageTwo: '/home/features/cash_wallet.png',
     imageThree: '/home/features/fallback.png',
     imageFour: '/home/features/online_store.png',
-    action: '',
-    actionType: '',
+    action: '/features/fallback',
+    actionType: 'internal',
     hasAction: true,
   }
 ]
