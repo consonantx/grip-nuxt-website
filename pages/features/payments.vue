@@ -16,7 +16,12 @@
 
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
-      <FeaturesHero></FeaturesHero>
+      <FeaturesHero title-line-one="Unifying All The" title-line-two="Ways You Spend"
+        image-one="/home/features/cash_wallet.png" image-two="/home/features/offline_store.png"
+        image-three="/home/features/pos.png" image-four="/home/features/entertainment.png">
+        Grip is the easiest way to spend, save and manage your daily spending and finances across all your financial
+        mediums. Spend online and offline in 200+ countries, while managing your finances seamlessly.
+      </FeaturesHero>
 
       <section class="py-16 bg-white relative">
         <div class="container flex flex-col">

@@ -16,7 +16,12 @@
 
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
-      <FeaturesHero></FeaturesHero>
+      <FeaturesHero title-line-one="Security First," title-line-two="Last & Always."
+        image-one="/home/features/insurance.png" image-two="/home/features/cash_chest_white.png"
+        image-three="/home/features/cash_chest_blue.png" image-four="/home/features/cash_wallet.png">
+        Grip is the technological embodiment of user security. We put your security front and center and make sure you
+        can go about your daily financial activities knowing we’ve got your back a 100%.
+      </FeaturesHero>
 
       <section class="py-16 bg-white relative">
         <div class="container flex flex-col">

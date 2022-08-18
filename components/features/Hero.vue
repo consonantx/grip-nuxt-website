@@ -2,24 +2,24 @@
   <section class="bg-dark text-white text-center py-12 lg:py-0" ref="targetSection">
     <div class="container flex flex-col items-center justify-center top-0 sticky overflow-hidden">
       <!-- Titles -->
-      <div class="flex flex-col items-center mt-4 lg:mt-10 mb-3 lg:mb-8 lg:space-y-2">
-        <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
+      <div class="flex flex-col items-center mt-4 lg:mt-10 mb-3 lg:mb-6 lg:space-y-2">
+        <div class="font-title text-5xl lg:text-6xl xl:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
               :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition">
-              Security First,
+              {{ props.titleLineOne }}
             </Motion>
           </Presence>
         </div>
       </div>
 
       <!-- Titles -->
-      <div class="flex flex-col items-center mt-4 mb-3 lg:mb-8 lg:space-y-2">
-        <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
+      <div class="flex flex-col items-center mt-2 mb-3 lg:mb-16 lg:space-y-2">
+        <div class="font-title text-5xl lg:text-6xl xl:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
               :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition">
-              Last and Always
+              {{ props.titleLineTwo }}
             </Motion>
           </Presence>
         </div>
@@ -31,8 +31,7 @@
         :initial="descriptionTextSwitcherAnimation.initial"
           :animate="descriptionTextSwitcherAnimation.animate" :exit="descriptionTextSwitcherAnimation.exit"
           :transition="descriptionTextSwitcherAnimation.transition">
-          Grip is the technological embodiment of user security. We put your security front and center and make sure you
-          can go about your daily financial activities knowing we’ve got your back a 100%.
+          <slot></slot>
         </Motion>
       </Presence>
 
@@ -48,46 +47,46 @@
 
       <!-- Feature Images -->
       <div class="flex justify-around -space-x-5">
-        <div class="lg:absolute lg:-top-20 lg:left-0 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:-top-16 md:-left-5 lg:left-0 h-36 lg:h-60 w-36 lg:w-60">
           <Presence :exit-before-enter="true">
             <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
               :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition" tag="img"
-              src="/home/features/insurance.png" class="w-full h-full object-cover">
+              :src="props.imageOne" class="w-full h-full object-cover">
             </Motion>
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:-top-20 lg:right-0 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute md:-right-5 lg:-top-5 lg:right-0 h-36 lg:h-60 w-36 lg:w-60">
           <Presence :exit-before-enter="true">
             <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
               :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition" tag="img"
-              src="/home/features/cash_chest_white.png" class="w-full h-full object-cover">
+              :src="props.imageTwo" class="w-full h-full object-cover">
             </Motion>
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:bottom-10 lg:left-20 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:bottom-16 lg:-left-5 h-36 lg:h-60 w-36 lg:w-60">
           <Presence :exit-before-enter="true">
             <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
               :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition" tag="img"
-              src="/home/features/cash_chest_blue.png" class="w-full h-full object-cover">
+              :src="props.imageThree" class="w-full h-full object-cover">
             </Motion>
           </Presence>
         </div>
 
-        <div class="lg:absolute lg:bottom-10 lg:right-20 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+        <div class="lg:absolute lg:bottom-16 lg:-right-5 h-36 lg:h-60 w-36 lg:w-60">
           <Presence :exit-before-enter="true">
             <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
               :exit="imageSwitcherAnimation.exit" :transition="imageSwitcherAnimation.transition" tag="img"
-              src="/home/features/cash_wallet.png" class="w-full h-full object-cover">
+              :src="props.imageFour" class="w-full h-full object-cover">
             </Motion>
           </Presence>
         </div>
       </div>
 
-      <div class="flex items-center flex-col justify-center pt-24">
-        <div class="flex justify-center lg:justify-end -translate-y-24 md:-translate-y-72 lg:-translate-y-12">
-          <button class="flex flex-col items-center" @click="scrollTo('why-grip-section')">
+      <div class="flex items-center flex-col justify-center pt-24 pb-10">
+        <div class="flex justify-center lg:justify-end -translate-y-10 lg:-translate-y-12">
+          <button class="flex flex-col items-center" @click="scrollTo(500)">
             <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
             <p class="font-display text-[10px] leading-none">Scroll Down</p>
           </button>
@@ -104,19 +103,15 @@ import { Motion, Presence } from "motion/vue"
 import featuredFeatures from "~~/data/featuredFeatures"
 
 const props = defineProps<{
-  
+  titleLineOne: string,
+  titleLineTwo: string,
+  imageOne: string,
+  imageTwo: string,
+  imageThree: string,
+  imageFour: string
 }>()
 
 const targetSection = ref<HTMLElement>(null)
-
-const activeFeatureIndex = ref(0)
-const activeFeature = computed(() => featuredFeatures[activeFeatureIndex.value])
-
-const scrollTo = (elementId: string) => {
-  if (document.querySelector(`#${elementId}`)) {
-    document.querySelector(`#${elementId}`).scrollIntoView({ behavior: "smooth", block: "start" })
-  }
-}
 
 
 const titleTextSwitcherAnimation = computed(() => ({
@@ -173,5 +168,12 @@ const descriptionTextSwitcherAnimation = computed(() => ({
   }
 }))
 
+const scrollTo = (elementId: string | number) => {
+  if (typeof elementId === 'string' && document.querySelector(`#${elementId}`)) {
+    document.querySelector(`#${elementId}`).scrollIntoView({ behavior: "smooth", block: "start" })
+  } else if (typeof elementId === 'number') {
+    window.scrollBy({ top: elementId, left: 0, behavior: "smooth" })
+  }
+}
 
 </script>
