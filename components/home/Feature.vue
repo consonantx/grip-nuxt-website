@@ -8,7 +8,7 @@
 
       <!-- Titles -->
       <div class="flex flex-col items-center mt-4 lg:mt-10  mb-3 lg:mb-8 lg:space-y-2">
-        <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
+        <div class="font-title text-4xl md:text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <template v-for="(titles, index) in allTitles" :key="index">
               <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
@@ -20,7 +20,7 @@
           </Presence>
         </div>
 
-        <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
+        <div class="font-title text-4xl md:text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <template v-for="(titles, index) in allTitles" :key="index">
               <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
@@ -32,7 +32,7 @@
           </Presence>
         </div>
 
-        <div class="font-title text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
+        <div class="font-title text-4xl md:text-5xl lg:text-8xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <template v-for="(titles, index) in allTitles" :key="index">
               <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"

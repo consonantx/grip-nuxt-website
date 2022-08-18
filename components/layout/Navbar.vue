@@ -28,7 +28,7 @@
 
     <Presence>
       <Motion :initial="{ y: 200, opacity: 0 }" :animate="{ y: [200, 0], opacity: [0, 1] }"
-        :transition="{ duration: 0.75, delay: willShowNavbar ? 0.2 : 0 }" class="fixed bottom-10 flex justify-center inset-x-0 z-10" v-if="shouldShowNavbar">
+        :transition="{ duration: 0.75, delay: 0 }" class="fixed bottom-10 flex justify-center inset-x-0 z-10" v-if="shouldShowNavbar">
         <div class="p-1 rounded-full bg-white flex space-x-2 items-stretch shadow-xl shadow-[#00000012]">
           <!-- Desktop Menu Options -->
           <div class="space-x-2 hidden md:flex">
@@ -71,17 +71,14 @@ const { y } = useWindowScroll()
 
 const { height } = useWindowSize()
 
-const willShowNavbar = ref(height.value > 768)
+const navbarViewThreshold = height.value + 100
 
-if (height.value > 768) {
-  shouldShowNavbar.value = true
-} else {
-  watch(y, () => {
-    if (y.value > 768) {
-      shouldShowNavbar.value = true
-    } else {
-      shouldShowNavbar.value = false
-    }
-  })
-}
+watch(y, () => {
+  if (y.value > navbarViewThreshold) {
+    shouldShowNavbar.value = true
+  } else {
+    shouldShowNavbar.value = false
+  }
+})
+
 </script>

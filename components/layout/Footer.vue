@@ -25,13 +25,16 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="md:col-span-7 grid gap-y-10 grip-cols-1 md:grid-cols-2 lg:grid-cols-4 md:ml-20">
+        <div class="md:col-span-7 grid gap-y-10 grid-cols-2 lg:grid-cols-4 md:ml-20">
           <div class="flex flex-col space-y-4">
             <h3 class="text-gray-400 font-gilmer text-sm font-semibold mb-2">Features</h3>
-            <NuxtLink to="/features/fallback" class="font-gilmer text-sm">Fallback</NuxtLink>
+            <NuxtLink to="/features/payments" class="font-gilmer text-sm">Payments</NuxtLink>
+            <NuxtLink to="/features/security" class="font-gilmer text-sm">Security</NuxtLink>
+
+            <!-- <NuxtLink to="/features/fallback" class="font-gilmer text-sm">Fallback</NuxtLink>
             <NuxtLink to="/features/lockdown" class="font-gilmer text-sm">Lockdown</NuxtLink>
             <NuxtLink to="/features/transaction-pooling" class="font-gilmer text-sm">Transaction Pooling</NuxtLink>
-            <NuxtLink to="/features/cards" class="font-gilmer text-sm">Dollar Cards</NuxtLink>
+            <NuxtLink to="/features/cards" class="font-gilmer text-sm">Dollar Cards</NuxtLink> -->
           </div>
 
           <div class="flex flex-col space-y-4">
