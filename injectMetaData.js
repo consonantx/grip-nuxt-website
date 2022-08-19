@@ -2,9 +2,10 @@
 var fs = require('fs');
 const { parse, HTMLElement } = require('node-html-parser')
 
-console.log(process.env)
+console.log(process.env.NETLIFY)
+console.log(process.env.VERCEL)
 
-const dir = process.env.NETLIFY === 'true' ? './dist/index.html' : process.env.VERCEL === '1' ? './.vercel_build_output/static/index.html' : './.output/public/index.html'
+const dir = process.env.NETLIFY == 'true' ? './dist/index.html' : process.env.VERCEL == '1' ? './.vercel_build_output/static/index.html' : './.output/public/index.html'
 
 var file = fs.readFileSync(dir, 'utf8');
 var content = parse(file.toString());
