@@ -12,7 +12,7 @@
       </video>
     </div>
     <div class="container lg:pb-10" @click="playHeaderVideo">
-      <div class="flex flex-col lg:flex-row relative z-[2] pb-16 md:pb-0">
+      <div class="flex flex-col lg:flex-row relative z-[2] pb-16 lg:pb-0">
         <div class="relative flex flex-col justify-center">
           <div
             class="text-left text-[110px] lg:text-[100px] xl:text-[155px] uppercase font-title inline-block leading-none font-black text-white">
@@ -23,17 +23,17 @@
               <div ref="sectionTitleTwoRef">CARD</div>
             </div>
           </div>
-          <div class=" pl-20 lg:pl-20 relative mx-auto lg:ml-0 lg:text-xl font-title overflow-hidden">
-            <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-10 lg:w-16"
+          <div class="md:pl-12 lg:pl-20 relative lg:ml-0 lg:text-xl font-title overflow-hidden w-10/12 lg:w-auto">
+            <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-10 lg:w-16 hidden md:flex"
               ref="subtitleLineRef">
             </div>
-            <div ref="subtitleRef">One card and app to supercharge your finances</div>
+            <div ref="subtitleRef">One card and app to supercharge your finances.</div>
           </div>
         </div>
       </div>
 
       <!-- HERO FOOTER -->
-      <div class="relative z-[2] hidden lg:flex">
+      <div class="relative z-[2] hidden lg:block">
         <div class="flex justify-center lg:justify-end -translate-y-6 md:-translate-y-72 lg:-translate-y-12">
           <button class="flex flex-col items-center" @click="scrollTo('why-grip-section')">
             <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
