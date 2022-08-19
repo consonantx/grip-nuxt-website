@@ -38,8 +38,6 @@
               About
               Us
             </NuxtLink>
-            <NuxtLink to="/faq" class="flex items-center px-3 rounded-full font-title" exact-active-class="bg-hue">FAQ
-            </NuxtLink>
             <NuxtLink href="https://blog.trygrip.co" class="flex items-center px-3 rounded-full font-title"
               exact-active-class="bg-hue">Blog</NuxtLink>
           </div>

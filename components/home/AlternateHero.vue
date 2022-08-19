@@ -11,15 +11,15 @@
         <source src="/home/header_video1.mp4" type="video/mp4" />
       </video>
     </div>
-    <div class="container pb-10" @click="playHeaderVideo">
+    <div class="container lg:pb-10" @click="playHeaderVideo">
       <div class="flex flex-col lg:flex-row relative z-[2] pb-16 md:pb-0">
         <div class="relative flex flex-col justify-center">
           <div
-            class="text-center lg:text-left text-[80px] lg:text-[100px] xl:text-[155px] uppercase font-title leading-none font-black text-white">
-            <div class="font-title overflow-y-hidden relative">
+            class="text-left text-[80px] lg:text-[100px] xl:text-[155px] uppercase font-title inline-block leading-none font-black text-white">
+            <div class="font-title overflow-y-hidden relative lg:top-5">
               <div ref="sectionTitleOneRef">GRIP</div>
             </div>
-            <div class="font-title overflow-y-hidden relative lg:-top-[10%]">
+            <div class="font-title overflow-y-hidden relative">
               <div ref="sectionTitleTwoRef">CARD</div>
             </div>
           </div>
@@ -33,7 +33,7 @@
       </div>
 
       <!-- HERO FOOTER -->
-      <div class="relative z-[2]">
+      <div class="relative z-[2] hidden lg:flex">
         <div class="flex justify-center lg:justify-end -translate-y-6 md:-translate-y-72 lg:-translate-y-12">
           <button class="flex flex-col items-center" @click="scrollTo('why-grip-section')">
             <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
