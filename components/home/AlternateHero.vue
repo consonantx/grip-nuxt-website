@@ -8,7 +8,7 @@
     <div class="absolute inset-0 bg-black opacity-20 z-[1]"></div>
     <div class="absolute inset-0 z-0">
       <video autoplay loop muted playsinline class="w-full h-full object-cover" ref="videoRef">
-        <source src="/home/header_video1.mp4" type="video/mp4" />
+        <source src="/home/header_video.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="container lg:pb-10" @click="playHeaderVideo">
