@@ -15,7 +15,7 @@
       <div class="flex flex-col lg:flex-row relative z-[2] pb-16 md:pb-0">
         <div class="relative flex flex-col justify-center">
           <div
-            class="text-center lg:text-left text-[80px] lg:text-[100px] xl:text-[155px] uppercase font-title leading-none font-black text-white">
+            class="text-center lg:text-left text-[110px] lg:text-[100px] xl:text-[155px] uppercase font-title leading-none font-black text-white">
             <div class="font-title overflow-y-hidden relative">
               <div ref="sectionTitleOneRef">GRIP</div>
             </div>
