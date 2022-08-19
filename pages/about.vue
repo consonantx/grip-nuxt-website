@@ -27,12 +27,6 @@
           <div class="h-96 lg:h-[500px]"><img src="/about/hero.png" class="object- h-full" alt="" srcset=""/></div>
         </div>
       </section>
-
-      <section class="py-60 bg-white relative">
-        <div class="container flex flex-col">
-          <div class=""></div>
-        </div>
-      </section>
     </main>
 
     <LayoutFooter></LayoutFooter>
