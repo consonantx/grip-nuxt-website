@@ -2,10 +2,7 @@
 var fs = require('fs');
 const { parse, HTMLElement } = require('node-html-parser')
 
-console.log(process.env.NETLIFY)
-console.log(process.env.VERCEL)
-
-const dir = process.env.NETLIFY == 'true' ? './dist/index.html' : process.env.VERCEL == '1' ? './.vercel_build_output/static/index.html' : './.output/public/index.html'
+const dir = process.env.NETLIFY === 'true' ? './dist/index.html' : process.env.VERCEL === '1' ? './.vercel_build_output/static/index.html' : './.output/public/index.html'
 
 var file = fs.readFileSync(dir, 'utf8');
 var content = parse(file.toString());
@@ -110,5 +107,5 @@ for (const metaTag in metaTags) {
   }
 }
 
-fs.writeFileSync('./.output/public/index.html', content.toString());
+fs.writeFileSync(dir, content.toString());
 console.log('html metdata updated');
