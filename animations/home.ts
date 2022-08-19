@@ -43,10 +43,10 @@ export const heroSectionAnimation = (
   subTitle: Ref<HTMLElement>
 ) => {
   timeline([
-    [titleLineOne.value, { transform: ["translateY(100%)", "translateY(0%)"], }, { duration: 1, easing: [0.26, 0.6, 0.35, 1], delay: 0.5, allowWebkitAcceleration: true }],
-    [titleLineTwo.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.75, easing: [0.26, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
-    [subTitleLine.value, { transform: ["translateX(-100%)", "translateX(0%)"] }, { duration: 1, easing: [0.26, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
-    [sectionCover.value, { transform: ["translateX(0%)", "translateX(250%)"] }, { duration: 5, easing: [0.26, 0.6, 0.35, 1], at: 1.2 }],
+    [titleLineOne.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.5, easing: [0.26, 0.6, 0.35, 1], allowWebkitAcceleration: true }],
+    [titleLineTwo.value, { transform: ["translateY(100%)", "translateY(0%)"], opacity: [0, 1] }, { duration: 0.7, easing: [0.26, 0.6, 0.35, 1], at: 0.2, allowWebkitAcceleration: true }],
+    [subTitleLine.value, { transform: ["translateX(-100%)", "translateX(0%)"] }, { duration: 0.6, easing: [0.26, 0.6, 0.35, 1], at: 0.5, allowWebkitAcceleration: true }],
+    [sectionCover.value, { transform: ["translateY(100%)", "translateY(0%)"] }, { duration: 0.3, easing: [0.26, 0.6, 0.35, 1], at:0.1}],
     [subTitle.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: [0.26, 0.6, 0.35, 1], at: 1, allowWebkitAcceleration: true }],
   ])
 }

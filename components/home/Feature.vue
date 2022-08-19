@@ -2,7 +2,7 @@
   <section class="bg-white min-h-screen text-center h-[400vh] py-12 lg:py-0" ref="targetSection">
     <div class="container flex flex-col items-center justify-center top-0 sticky min-h-screen overflow-hidden">
       <div
-        class="text-sm lg:text-lg text-primary font-gilmer uppercase border-2 border-[#e3e3e3] rounded-full tracking-widest px-4 lg:px-6 py-4 leading-none">
+        class="text-sm lg:text-lg text-primary font-gilmer uppercase border-2 border-[#F8F8F8] rounded-full tracking-widest px-4 lg:px-6 py-5 leading-none">
         features <span class="drop-shadow-lg ml-2">🚀</span>
       </div>
 
@@ -61,15 +61,15 @@
       <div class="mt-4 lg:mt-10 mb-0 lg:mb-16">
         <NuxtLink :href="activeFeature?.action" :target="activeFeature?.actionType === 'internal' ? '' : '__blank'"
           v-if="activeFeature?.hasAction"
-          class="border-2 p-4 lg:p-5 rounded-xl border-[#e3e3e3] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
+          class="border-2 p-4 lg:p-5 lg:rounded-[20px] border-[#F8F8F8] text-black lg:text-lg font-semibold leading-none flex items-center transition duration-200 hover:border-primary hover:border-opacity-40">
           <span class="font-gilmer">Find Out More</span>
           <ArrowRightIcon class="w-5 text-primary ml-2 -rotate-45"></ArrowRightIcon>
         </NuxtLink>
       </div>
 
       <!-- Feature Images -->
-      <div class="flex justify-around -space-x-5">
-        <div class="lg:absolute lg:top-20 lg:left-0 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
+      <div class="flex justify-around -space-x-8">
+        <div class="lg:absolute lg:top-10 lg:left-0 h-36 lg:h-60 xl:h-80 w-36 lg:w-60 xl:w-80">
           <Presence :exit-before-enter="true">
             <template v-for="(image, index) in allImages" :key="index">
               <Motion :initial="imageSwitcherAnimation.initial" :animate="imageSwitcherAnimation.animate"
@@ -203,19 +203,22 @@ const titleTextSwitcherAnimation = computed(() => ({
 const imageSwitcherAnimation = computed(() => ({
   initial: {
     opacity: 0,
-    scale: 0.2,
+    scale: 0.0,
+    transform: "translateY(0%)",
   },
   animate: {
     opacity: 1,
     scale: 1,
+    transform: "translateY(0%)",
   },
   exit: {
     opacity: 0,
     scale: 0.2,
+    transform: "translateY(-100%)",
   },
   transition: {
     duration: 0.5,
-    ease: "easeInOut",
+    ease: "ease-out",
   }
 }))
 

@@ -2,29 +2,29 @@
   <section
     class="h-[40rem] xl:h-[52rem] lg:min-h-[30rem] w-full text-white relative overflow-hidden flex flex-col justify-between"
     id="hero" ref="targetSection">
-    <LayoutHeader :delay="0.8" class="backdrop-blur-sm"></LayoutHeader>
+    <LayoutHeader :delay="0.5" class="backdrop-blur-sm"></LayoutHeader>
     <h1 class="hidden">You only need one card</h1>
     <div class="absolute inset-0 bg-overlay z-[3]" ref="sectionCoverRef" v-if="shouldShowCover"></div>
     <div class="absolute inset-0 bg-black opacity-20 z-[1]"></div>
     <div class="absolute inset-0 z-0">
       <video autoplay loop muted playsinline class="w-full h-full object-cover" ref="videoRef">
-        <source src="/home/header_video.mp4" type="video/mp4" />
+        <source src="/home/header_video1.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="container pb-10" @click="playHeaderVideo">
       <div class="flex flex-col lg:flex-row relative z-[2] pb-16 md:pb-0">
         <div class="relative flex flex-col justify-center">
           <div
-            class="text-center lg:text-left text-[80px] lg:text-[100px] xl:text-[155px] uppercase font-title leading-none font-black text-white transition-colors duration-200 ease-in-out hover:text-secondary">
+            class="text-center lg:text-left text-[80px] lg:text-[100px] xl:text-[155px] uppercase font-title leading-none font-black text-white">
             <div class="font-title overflow-y-hidden relative">
               <div ref="sectionTitleOneRef">GRIP</div>
             </div>
-            <div class="font-title overflow-y-hidden relative">
+            <div class="font-title overflow-y-hidden relative lg:-top-[10%]">
               <div ref="sectionTitleTwoRef">CARD</div>
             </div>
           </div>
-          <div class=" pl-20 lg:pl-36 relative mx-auto lg:ml-0 lg:text-xl font-title overflow-hidden">
-            <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-16 lg:w-32"
+          <div class=" pl-20 lg:pl-20 relative mx-auto lg:ml-0 lg:text-xl font-title overflow-hidden">
+            <div class="absolute top-1/2 left-0 -translate-y-1/2 h-[2px] bg-secondary w-10 lg:w-16"
               ref="subtitleLineRef">
             </div>
             <div ref="subtitleRef">One card and app to supercharge your finances</div>
