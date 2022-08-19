@@ -1,10 +1,13 @@
 // read file and convert content to string
 var fs = require('fs');
 const { parse, HTMLElement } = require('node-html-parser')
+
+console.log(process.env)
+
 var file = fs.readFileSync('./.output/public/index.html', 'utf8');
 var content = parse(file.toString());
 
-console.log(process.env)
+".vercel_build_output/static";
 
 const htmlHeadElement = content.querySelector('head');
 // replace content
