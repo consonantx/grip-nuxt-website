@@ -4,6 +4,8 @@ const { parse, HTMLElement } = require('node-html-parser')
 var file = fs.readFileSync('./.output/public/index.html', 'utf8');
 var content = parse(file.toString());
 
+console.log(process.env)
+
 const htmlHeadElement = content.querySelector('head');
 // replace content
 
