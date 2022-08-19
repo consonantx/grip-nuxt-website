@@ -22,7 +22,9 @@
       </div>
       <div
         class="rotate-[15deg] lg:rotate-0 lg:absolute -translate-x-[5%] md:translate-x-[10%] lg:translate-x-[55%] translate-y-[10%] md:translate-y-[5%] lg:-translate-y-16 xl:-translate-y-24 w-[55rem] md:w-[65rem] lg:w-auto 2xl:w-[90rem]">
-        <img src="/home/header_image.png" class="object-fill lg:w-10/12 xl:w-11/12" />
+        <img
+          src="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934856/website/home/header_image_rwjsni.webp"
+          class="object-fill lg:w-10/12 xl:w-11/12" />
       </div>
     </div>
 

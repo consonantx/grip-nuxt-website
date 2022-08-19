@@ -2,7 +2,8 @@
   <section id="why-grip-section" class="bg-light pt-24 lg:py-52 relative overflow-y-hidden" ref="targetSection">
     <div class="container grid grid-cols-1 lg:grid-cols-2 gap-x-24">
       <div class="flex flex-col">
-        <h2 class="text-primary font-gilmer text-lg lg:text-2xl font-semibold" ref="titleRef">Why Grip? We're the best in Finances
+        <h2 class="text-primary font-gilmer text-lg lg:text-2xl font-semibold" ref="titleRef">Why Grip? We're the best
+          in Finances
           <span class="drop-shadow-xl">🚀</span>
         </h2>
         <p class="mt-3 lg:mt-11 mb-11 lg:mb-20 text-2xl lg:text-3xl font-title font-bold" ref="mainTextRef">
@@ -12,7 +13,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10 lg:gap-y-20" ref="stepsRef">
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/profile.svg" alt="Profile Image"/>
+            <img src="/home/icons/profile.svg" alt="Profile Image" />
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Choose a Plan</h3>
               <p class="text-xs font-title">
@@ -22,7 +23,7 @@
           </div>
 
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/slider.svg" alt="Slider Image"/>
+            <img src="/home/icons/slider.svg" alt="Slider Image" />
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Sign Up</h3>
               <p class="text-xs font-title">
@@ -32,7 +33,7 @@
           </div>
 
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/link.svg" alt="Link Channels"/>
+            <img src="/home/icons/link.svg" alt="Link Channels" />
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Link your Cards, Accounts & Wallets</h3>
               <p class="text-xs font-title">
@@ -42,7 +43,7 @@
           </div>
 
           <div class="flex flex-col lg:flex-row items-start space-y-2 lg:space-y-0 lg:space-x-4">
-            <img src="/home/icons/manage.svg" alt="Manage Channels"/>
+            <img src="/home/icons/manage.svg" alt="Manage Channels" />
             <div class="flex flex-col space-y-2">
               <h3 class="font-gilmer font-semibold">Manage & Pay</h3>
               <p class="text-xs font-title">
@@ -55,8 +56,10 @@
 
       <!-- IMAGE -->
       <div
-        class="relative lg:absolute right-0 translate-y-20 md:translate-y-30 xl:translate-y-20 2xl:-translate-y-36 md:w-[35rem] xl:w-[42.5rem] 2xl:w-auto">
-        <img src="/home/why_section_image.png" class="z-[1] relative" alt="">
+        class="relative lg:absolute right-0 translate-y-0 md:translate-y-30 xl:translate-y-20 2xl:-translate-y-36 md:w-[35rem] xl:w-[42.5rem] 2xl:w-auto">
+        <img
+          src="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934854/website/home/why_section_image_ellbz1.webp"
+          class="z-[1] relative" alt="">
         <div class="absolute bg-[#078ae636] blur-[70px] left-[45%] right-[6.5%] top-[27.5%] bottom-[9%]"></div>
       </div>
     </div>

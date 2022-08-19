@@ -31,19 +31,24 @@
           </div>
         </div>
 
-        <FeaturesFeatureItem title="Spending Limits You'd Love" image-url="/features/spending_limits.png">
+        <FeaturesFeatureItem title="Spending Limits You'd Love"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934853/website/features/spending_limits_mgih8p.webp">
           Get complete control over your spending, set how much you’d like to spend on your physical cards and virtual
           cards, set how frequently you want these limit to be applied (daily, weekly, monthly) and watch Grip kick in
           and handle the rest.
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Own every bit of your cards" image-url="/features/own_it.png" :is-inverse="true">
+        <FeaturesFeatureItem title="Own every bit of your cards"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934852/website/features/own_it_cc7ok0.webp"
+          :is-inverse="true">
           Get complete control over your spending, set how much you’d like to spend on your physical cards and virtual
           cards, set how frequently you want these limit to be applied (daily, weekly, monthly) and watch Grip kick in
           and handle the rest.
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Lockdown" image-url="/features/lockdown.png" action="/features/lockdown">
+        <FeaturesFeatureItem title="Lockdown"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934847/website/features/lockdown_ieccte.webp"
+          action="/features/lockdown">
           The holy grail of security, at your finger tips. Lockdown is a first-of-it’s-kind revolutionary approach to
           ensuring user financial security that you wouldn’t find anywhere else (Go ahead, look, we’re waiting 😄 ).
           Click here to find out more.

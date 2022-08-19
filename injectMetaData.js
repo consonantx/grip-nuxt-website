@@ -69,7 +69,8 @@ const metaTags = [
   },
   {
     name: "image",
-    content: "https://grip-nuxt-website.vercel.app/og_image.png",
+    content:
+      "https://res.cloudinary.com/consonantafrica/image/upload/v1660934859/website/og_image_el72ft.png",
   },
   {
     name: "twitter:card",
@@ -90,7 +91,8 @@ const metaTags = [
   },
   {
     name: "twitter:image",
-    content: "https://grip-nuxt-website.vercel.app/og_image.png",
+    content:
+      "https://res.cloudinary.com/consonantafrica/image/upload/v1660934859/website/og_image_el72ft.png",
   },
 ];
 

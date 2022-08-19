@@ -31,26 +31,33 @@
           </div>
         </div>
 
-        <FeaturesFeatureItem title="Grip Physical & Virtual Cards" image-url="/features/cards.png" action="/features/cards">
+        <FeaturesFeatureItem title="Grip Physical & Virtual Cards"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934840/website/features/cards_fszsoa.webp"
+          action="/features/cards">
           The ideal companion to the Grip app! Get a free virtual card for online payments and Chose one of multiple
           Grip physical card designs we offer that best suits your taste and finance needs. Spend online, in Africa or
           Globally in 200+ countries while taking advantage of all your accounts and fintech wallets with just one card.
           Click here to learn more.
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Fallback" image-url="/features/fallback.png" :is-inverse="true" action="/features/fallback">
+        <FeaturesFeatureItem title="Fallback"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934845/website/features/fallback_prnzvg.webp"
+          :is-inverse="true" action="/features/fallback">
           Did someone say declined? If you have multiple cards/wallets linked to Grip, you could set fallbacks so when
           you primary card/wallet fails, we automatically charge the fallback cards and eliminate awkward moments. click
           here to find out more
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Transaction Pooling" image-url="/features/pooling.png">
+        <FeaturesFeatureItem title="Transaction Pooling"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934849/website/features/pooling_ipnn0c.webp">
           “Hello John? Yes i’m about to make the transfer, i just have to move the money from…” we literally have all
           been John at some point in our lives, but not anymore. Have money split across various accounts? Pool them all
           together in one transaction!
         </FeaturesFeatureItem>
 
-        <FeaturesFeatureItem title="Bill Payments" image-url="/features/bill_payments.png" :is-inverse="true">
+        <FeaturesFeatureItem title="Bill Payments"
+          image-url="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934848/website/features/bill_payments_z8dcwn.webp"
+          :is-inverse="true">
           Pay all your local and international bills from the same place you spend and manage, enjoy a truly unified
           financial experience that only we can offer.
         </FeaturesFeatureItem>
