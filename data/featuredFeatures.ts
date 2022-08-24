@@ -15,7 +15,7 @@ export default [
   {
     titleOne: 'Bank-Level',
     titleTwo: 'Security',
-    titleThree: 'Features',
+    titleThree: '',
     description: 'Stay ahead of the curb with world class security systems and a robust level of protection.',
     imageOne: 'https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934854/website/home/features/insurance_yzncuu.png',
     imageTwo: 'https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934854/website/home/features/cash_chest_white_e8nsa9.webp',

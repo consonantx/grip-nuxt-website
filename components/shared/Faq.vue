@@ -43,7 +43,7 @@ const targetSection = ref<HTMLElement>(null)
 const animateComponent = () => timeline([
   [targetSection.value, { y: [50, 0], opacity: [0, 1] }, { duration: 0.5, easing: "ease-out", endDelay: props.animationDelay ?? 0 }],
   // @ts-ignore
-  [targetSection.value.children, { y: [50, 0], opacity: [0 ,1] }, { duration: 0.5, easing: "ease-out", delay: stagger(0.25) }]
+  [targetSection.value.children, { y: [50, 0], opacity: [0 ,1] }, { duration: 0.4, easing: "ease-out", delay: stagger(0.25) }]
 ])
 
 useAnimationTrigger(targetSection, () => animateComponent())

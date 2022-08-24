@@ -60,7 +60,7 @@
         <img
           src="https://res.cloudinary.com/consonantafrica/image/upload/q_70/v1660934854/website/home/why_section_image_ellbz1.webp"
           class="z-[1] relative" alt="">
-        <div class="absolute bg-[#078ae636] blur-[70px] left-[45%] right-[6.5%] top-[27.5%] bottom-[9%]"></div>
+        <div class="absolute bg-[#0789e645] blur-[70px] left-[45%] right-[6.5%] top-[27.5%] bottom-[9%]"></div>
       </div>
     </div>
   </section>
