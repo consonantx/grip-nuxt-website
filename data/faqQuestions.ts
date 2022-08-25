@@ -38,7 +38,7 @@ export default [
   {
     question: "Will there be a maintenance fee for a Grip card?",
     answer:
-      "No, users would not be charged a quarterly maintenance fee for their Grip card.",
+      "No, users would not be charged a maintenance fee for their Grip card.",
     isFeatured: true,
   },
   {
