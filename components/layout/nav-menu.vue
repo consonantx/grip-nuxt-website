@@ -7,22 +7,8 @@
     :enter="containerMotion.enter"
     :leave="containerMotion.initial"
   >
-    <div
-      class="bg-[#0d0d0d] text-white text-opacity-80 rounded-3xl px-9 py-12 w-[90%] grid grid-cols-1 gap-y-6 mx-auto lg:border lg:border-secondary shadow-lg"
-      v-motion
-      :initial="menuMotion.initial"
-      :enter="menuMotion.enter"
-      :leave="menuMotion.initial"
-    >
-      <!-- About -->
-      <nuxt-link to="/join" class="flex items-center cursor-pointer" @click.native="$emit('close')">
-        <p class="text-xl lg:text-2xl">Join Waitlist</p>
-      </nuxt-link>
-      <!-- Track -->
-      <!-- <nuxt-link to="/track" class="flex items-center cursor-pointer" @click.native="$emit('close')">
-        <p class="text-xl lg:text-2xl">Track your position</p>
-      </nuxt-link> -->
-    </div>
+
+
   </div>
 </template>
 
