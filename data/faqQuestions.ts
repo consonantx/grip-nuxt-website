@@ -1,5 +1,11 @@
 export default [
   {
+    question: "What does Grip do?",
+    answer:
+      "Grip consolidates all the ways you currently spend and save into a single app. We’re the wallet you never knew you needed! Add all your credit cards, debit cards, fintech wallets and bank accounts into our app and pay from them all with your Grip card, the only card you’ll ever need to carry around.",
+    isFeatured: true,
+  },
+  {
     question: "How safe is a Grip card? ",
     answer:
       "Grip is PCI-DSS certified among others, making our application as secure as that of a bank. Our card is also 100% secured with world-class security systems and features that put user security front end center. Read more here on <a href='https://blog.trygrip.co/how-grip-keeps-you-secure/' target='__blank' style='font-weight: 700; text-decoration: underline'>“How Grip Keeps You Secure.”</a>",
@@ -22,12 +28,6 @@ export default [
     answer:
       "Our Grip cards have no bank imposed limits on international transactions and you can spend as much foreign exchange as you’re legally allowed to (which should be about $8,500 daily).",
     isFeatured: false,
-  },
-  {
-    question: "What does grip do?",
-    answer:
-      "Grip consolidates all the ways you currently spend and save into a single app. We’re the wallet you never knew you needed! Add all your credit cards, debit cards, fintech wallets and bank accounts into our app and pay from them all with your Grip card, the only card you’ll ever need to carry around.",
-    isFeatured: true,
   },
   {
     question: "Is crypto accessible using Grip? If yes how does it work?",
