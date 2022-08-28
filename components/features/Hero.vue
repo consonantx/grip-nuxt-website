@@ -98,7 +98,7 @@
 
 <script lang="ts" setup>
 import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
-import { Motion, Presence } from "motion/vue"
+import { Motion, Presence } from "@motionone/vue/dist/motion-vue.ssr.js"
 
 import featuredFeatures from "~~/data/featuredFeatures"
 

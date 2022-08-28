@@ -16,7 +16,7 @@
 
 <script lang="ts" setup>
 import { Vue3Lottie } from "vue3-lottie"
-import { Motion, Presence } from "motion/vue"
+import { Motion, Presence } from "@motionone/vue/dist/motion-vue.ssr.js"
 import { useTimeoutFn } from "@vueuse/core"
 
 import AnimationData from "@/data/loaderData"

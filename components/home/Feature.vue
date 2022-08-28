@@ -146,7 +146,7 @@
 
 <script lang="ts" setup>
 import { ArrowRightIcon } from "@heroicons/vue/solid"
-import { Motion, Presence } from "motion/vue"
+import { Motion, Presence } from "@motionone/vue/dist/motion-vue.ssr.js"
 import { useElementBounding, useElementSize, useWindowScroll } from "@vueuse/core"
 
 import featuredFeatures from "~~/data/featuredFeatures"

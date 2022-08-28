@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Motion } from "motion/vue"
+import { Motion } from "@motionone/vue/dist/motion-vue.ssr.js"
 
 const props = defineProps<{
   isDark?: boolean,
