@@ -38,7 +38,7 @@ const metaTags = [
   {
     property: "og:url",
     name: "og:url",
-    content: "https://grip-nuxt-website.vercel.app",
+    content: "https://trygrip.co",
   },
   {
     property: "og:description",
@@ -65,7 +65,7 @@ const metaTags = [
   {
     property: "og:image",
     name: "og:image",
-    content: "https://grip-nuxt-website.vercel.app/og_image.png",
+    content: "https://trygrip.co/og_image.png",
   },
   {
     name: "image",

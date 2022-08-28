@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "postbuild": "node ./injectMetaData.js",
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
