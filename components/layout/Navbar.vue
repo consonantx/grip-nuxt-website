@@ -10,7 +10,8 @@
       <Motion :initial="{ transform: 'scaleY(0.2)', opacity: 0 }"
         :animate="{ transform: ['scaleY(0.2)', 'scaleY(1)'], opacity: [0, 1] }"
         :exit="{ transform: 'scaleY(0.2)', opacity: 0 }" :transition="{ duration: 0.3, easing: 'ease-out', delay: 0.5 }"
-        v-if="showMenu" class="origin-top top-4 inset-x-4 bg-light pt-10 pb-6 px-6 z-[12] fixed rounded-3xl backdrop-blur-md bg-opacity-70">
+        v-if="showMenu"
+        class="origin-top top-4 inset-x-4 bg-light pt-10 pb-6 px-6 z-[12] fixed rounded-3xl backdrop-blur-md bg-opacity-70">
         <div class="flex flex-col space-y-4">
           <NuxtLink to="/" class="font-gilmer text-sm font-semibold" @click="showMenu = false">Home</NuxtLink>
           <NuxtLink to="/about" class="font-gilmer text-sm font-semibold" @click="showMenu = false">About Us</NuxtLink>
@@ -28,7 +29,8 @@
 
     <Presence>
       <Motion :initial="{ y: 200, opacity: 0 }" :animate="{ y: [200, 0], opacity: [0, 1] }"
-        :transition="{ duration: 0.75, delay: 0 }" class="fixed bottom-10 flex justify-center inset-x-0 z-10" v-if="shouldShowNavbar">
+        :transition="{ duration: 0.75, delay: 0 }" class="fixed bottom-10 flex justify-center inset-x-0 z-10"
+        v-if="shouldShowNavbar">
         <div class="p-1 rounded-full bg-white flex space-x-2 items-stretch shadow-xl shadow-[#00000012]">
           <!-- Desktop Menu Options -->
           <div class="space-x-2 hidden md:flex">
@@ -48,9 +50,9 @@
             <span class="font-title text-base uppercase leading-none">Menu</span>
           </button>
 
-          <NuxtLink href="https://waitlist.trygrip.co" target="__blank"
+          <NuxtLink href="https://onelink.to/grip" target="__blank"
             class="py-4 px-5 bg-primary text-white font-title uppercase text-sm leading-none font-bold rounded-full flex-1 drop-shadow-md hover:drop-shadow-xl shadow-[#00000026]">
-            join waitlist</NuxtLink>
+            Get Card</NuxtLink>
         </div>
       </Motion>
     </Presence>
