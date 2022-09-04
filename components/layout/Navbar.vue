@@ -60,7 +60,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Motion, Presence } from "@motionone/vue/dist/motion-vue.ssr.js"
+import { Motion, Presence } from "@motionone/vue"
 import { MenuIcon, XCircleIcon } from "@heroicons/vue/solid" 
 import { useWindowScroll, useWindowSize } from "@vueuse/core"
 

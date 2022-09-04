@@ -3,7 +3,8 @@
     <div class="container flex flex-col items-center justify-center top-0 sticky overflow-hidden">
       <!-- Titles -->
       <div class="flex flex-col items-center mt-4 lg:mt-10 mb-3 lg:mb-6 lg:space-y-2">
-        <div class="font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight w-max relative overflow-hidden">
+        <div
+          class="font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
               :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition">
@@ -15,7 +16,8 @@
 
       <!-- Titles -->
       <div class="flex flex-col items-center mt-2 mb-10 lg:mb-16 lg:space-y-2">
-        <div class="font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight w-max relative overflow-hidden">
+        <div
+          class="font-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight w-max relative overflow-hidden">
           <Presence :exit-before-enter="true">
             <Motion :initial="titleTextSwitcherAnimation.initial" :animate="titleTextSwitcherAnimation.animate"
               :exit="titleTextSwitcherAnimation.exit" :transition="titleTextSwitcherAnimation.transition">
@@ -27,10 +29,9 @@
 
       <!-- Description -->
       <Presence :exit-before-enter="true">
-        <Motion tag="p" class="text-gray-400 font-gilmer text-base lg:text-xl max-w-xl pb-5 lg:-mt-4" 
-        :initial="descriptionTextSwitcherAnimation.initial"
-          :animate="descriptionTextSwitcherAnimation.animate" :exit="descriptionTextSwitcherAnimation.exit"
-          :transition="descriptionTextSwitcherAnimation.transition">
+        <Motion tag="p" class="text-gray-400 font-gilmer text-base lg:text-xl max-w-xl pb-5 lg:-mt-4"
+          :initial="descriptionTextSwitcherAnimation.initial" :animate="descriptionTextSwitcherAnimation.animate"
+          :exit="descriptionTextSwitcherAnimation.exit" :transition="descriptionTextSwitcherAnimation.transition">
           <slot></slot>
         </Motion>
       </Presence>
@@ -98,7 +99,7 @@
 
 <script lang="ts" setup>
 import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
-import { Motion, Presence } from "@motionone/vue/dist/motion-vue.ssr.js"
+import { Motion, Presence } from "@motionone/vue"
 
 import featuredFeatures from "~~/data/featuredFeatures"
 

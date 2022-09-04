@@ -73,7 +73,7 @@
 
 <script lang="ts" setup>
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/vue/solid"
-import { Motion, Presence } from "@motionone/vue/dist/motion-vue.ssr.js"
+import { Motion, Presence } from "@motionone/vue"
 
 import { cardSectionAnimation } from "@/animations/home"
 import { InternalCardDesigns } from "@/interfaces/cardDesigns"
