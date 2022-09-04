@@ -20,7 +20,7 @@ export default [
   {
     question: "When is the app getting launched?",
     answer:
-      "We’ll be launching soon, and once we do, everyone who’s on the waitlist would be the first to know! You can join our waitlist <a href='https://waitlist.trygrip.co' style='font-weight: 700; text-decoration: underline'>here</a>",
+      "We are live and available to everyone on android and iOS stores!!!",
     isFeatured: true,
   },
   {
