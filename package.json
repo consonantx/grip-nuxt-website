@@ -8,6 +8,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.1.2",
     "@types/markdown-it": "^12.2.3",
+    "@types/uuid": "^8.3.4",
     "node-html-parser": "^5.4.2-0",
     "nuxt": "npm:nuxt3@latest"
   },
@@ -17,6 +18,7 @@
     "@vueuse/core": "^8.7.4",
     "motion": "^10.14.1",
     "sass": "^1.49.9",
+    "uuid": "^8.3.2",
     "vue-markdown-render": "^2.0.0",
     "vue3-carousel": "^0.1.40",
     "vue3-lottie": "^2.2.5"

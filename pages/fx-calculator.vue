@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light">
+  <div :class="['bg-light', { 'fixed': showRates }]">
 
     <Head>
       <Title>FX Calculator | Grip - One Card, All Payments Everything</Title>
@@ -25,10 +25,11 @@
         :animate="{ transform: ['scaleY(0.2) translateY(-50%) translateX(-50%)', 'scaleY(1) translateY(-50%) translateX(-50%)'], opacity: [0, 1] }"
         :exit="{ transform: 'scaleY(0.2) translateY(-50%) translateX(-50%)', opacity: 0 }"
         :transition="{ duration: 0.3, easing: 'ease-out', delay: 0.1 }" v-if="showRates"
-        class="origin-center bg-light pt-10 pb-8 px-10 z-[12] absolute rounded-3xl backdrop-blur-md bg-opacity-80 max-w-[500px] top-1/2 left-1/2 transform mx-auto text-center">
+        class="origin-center bg-light pt-10 pb-8 px-10 z-[12] fixed rounded-3xl backdrop-blur-md bg-opacity-80 max-w-[500px] top-1/2 left-1/2 transform mx-auto text-center">
         <div class="flex flex-col space-y-8">
           <h2 class="font-title text-xl">If you made this transaction today, you would pay:</h2>
-          <p class="font-extrabold font-title text-5xl text-primary">{{ getCurrencyInformation(ratesInformation.targetCurrency).name
+          <p class="font-extrabold font-title text-5xl text-primary">{{
+              getCurrencyInformation(ratesInformation.targetCurrency).name
           }}
             {{ formatNumber(ratesInformation.targetCurrencyAmount) }}</p>
 
@@ -37,7 +38,8 @@
               <p class="font-gilmer text-sm text-gray-500">Exchange Rate</p>
               <p class="font-gilmer text-sm">{{ getCurrencyInformation(ratesInformation.baseCurrency).name }} 1 =
                 {{ getCurrencyInformation(ratesInformation.targetCurrency).name }} {{
-                formatNumber(ratesInformation.conversionRate) }}</p>
+                    formatNumber(ratesInformation.conversionRate)
+                }}</p>
             </div>
             <div class="flex justify-between">
               <p class="font-gilmer text-sm text-gray-500">Precision Amount</p>
@@ -47,7 +49,7 @@
           </div>
         </div>
         <div class="flex items-center justify-center mt-16">
-          <button @click="showRates = !showRates"
+          <button @click="clearFields()"
             class="mx-auto w-max bg-primary py-6 px-16 text-white drop-shadow-[0px_27.651px_55.302px_rgba(11,4,205,0.29)] rounded-xl disabled:opacity-50 disabled:cursor-not-allowed">
             Okay, Got it.
           </button>
@@ -84,9 +86,9 @@
             <div class="grid grid-cols-1 gap-y-5">
               <label for="base-currency" class="block font-medium text-gray-700 font-gilmer">Base Currency</label>
               <div class="mt-1">
-                <select name="base_currency" id="base-currency" @change="(e) => targetCurrency = e.target?.value"
+                <select name="base_currency" id="base-currency" v-model="targetCurrency"
                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full">
-                  <option value selected disabled>Select the currency you own</option>
+                  <option selected disabled>Select the currency you own</option>
                   <option :value="currency.value"
                     v-for="(currency, index) in [...supportedCurrencies].filter(x => x.value != baseCurrency)"
                     :key="index">{{ currency.name }}</option>
@@ -99,9 +101,9 @@
               <label for="target-currency" class="block font-medium text-gray-700 font-gilmer">Target
                 Currency</label>
               <div class="mt-1">
-                <select name="target_currency" id="target-currency" @change="(e) => baseCurrency = e.target?.value"
+                <select name="target_currency" id="target-currency" v-model="baseCurrency"
                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full">
-                  <option value selected disabled>Select the currency you want to spend</option>
+                  <option selected disabled>Select the currency you want to spend</option>
                   <option :value="currency.value"
                     v-for="(currency, index) in [...supportedCurrencies].filter(x => x.value != targetCurrency)"
                     :key="index">{{ currency.name }}</option>
@@ -111,15 +113,15 @@
 
             <!-- AMOUNT-->
             <div class="grid grid-cols-1 gap-y-5">
-              <label for="amount" class="block font-medium text-gray-700 font-gilmer">Amount</label>
+              <label for="amount" class="block font-medium text-gray-700 font-gilmer">Amount <span v-if="baseCurrency">({{getCurrencyInformation(baseCurrency).name}})</span></label>
               <div class="mt-1">
-                <input type="number" name="amount" id="amount" @change="(e) => amount = e.target?.value"
+                <input type="number" name="amount" id="amount" v-model="amount"
                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full"
                   placeholder="Amount to spend in target currency" />
               </div>
             </div>
 
-            <button type="submit" :disabled="!baseCurrency || !targetCurrency || !amount || isFetchingRates"
+            <button type="submit" :disabled="baseCurrency === null || targetCurrency === null || !amount || isFetchingRates"
               class="mx-auto lg:mr-0 lg:ml-auto w-min bg-primary py-6 px-16 text-white drop-shadow-[0px_27.651px_55.302px_rgba(11,4,205,0.29)] rounded-xl disabled:opacity-50 disabled:cursor-not-allowed flex">
               <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
                 v-if="isFetchingRates" viewBox="0 0 24 24">
@@ -142,6 +144,7 @@
 <script lang="ts" setup>
 import { Motion, Presence } from "@motionone/vue"
 import { FxConversionResponse } from "~~/interfaces/fx"
+import { v4 } from "uuid"
 
 const baseCurrency = ref(null)
 const targetCurrency = ref(null)
@@ -149,6 +152,7 @@ const amount = ref(null)
 const showRates = ref(false)
 const isFetchingRates = ref(false)
 const ratesInformation = ref(null as unknown as FxConversionResponse['data'])
+const key = ref(v4())
 
 const { data: supportedCurrencies } = await useLazyFetch("/api/fx", {
   default: () => [
@@ -161,14 +165,16 @@ const { data: supportedCurrencies } = await useLazyFetch("/api/fx", {
 
 const calculateEchangeRate = async () => {
   isFetchingRates.value = true
-  const { data: exchangeRate } = await useLazyFetch<FxConversionResponse['data']>(`/api/fx`, {
+  const { data: exchangeRate, pending, refresh } = await useFetch<FxConversionResponse['data']>(`/api/fx`, {
     method: 'POST',
     body: JSON.stringify({
       baseCurrency: parseInt(baseCurrency.value),
       targetCurrency: parseInt(targetCurrency.value),
       amount: parseFloat(amount.value)
-    })
+    }),
+    key: key.value
   })
+
   if (exchangeRate) {
     console.log(exchangeRate.value)
     ratesInformation.value = exchangeRate.value
@@ -192,7 +198,15 @@ const formatNumber = (number: string) => {
 const formatPrecisionNumber = (number: string) => {
   return parseFloat(number).toLocaleString('en-US', {
     maximumFractionDigits: 2,
-  minimumFractionDigits: 2
+    minimumFractionDigits: 2
   })
+}
+
+const clearFields = () => {
+  baseCurrency.value = null
+  targetCurrency.value = null
+  amount.value = null
+  showRates.value = false
+  key.value = v4()
 }
 </script>
