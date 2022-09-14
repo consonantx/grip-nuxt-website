@@ -86,24 +86,9 @@
             <div class="grid grid-cols-1 gap-y-5">
               <label for="base-currency" class="block font-medium text-gray-700 font-gilmer">Base Currency</label>
               <div class="mt-1">
-                <select name="base_currency" id="base-currency" v-model="targetCurrency"
+                <select name="base_currency" id="base-currency" v-model="baseCurrency"
                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full">
                   <option selected disabled>Select the currency you own</option>
-                  <option :value="currency.value"
-                    v-for="(currency, index) in [...supportedCurrencies].filter(x => x.value != baseCurrency)"
-                    :key="index">{{ currency.name }}</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- TARGET CURRENCY -->
-            <div class="grid grid-cols-1 gap-y-5">
-              <label for="target-currency" class="block font-medium text-gray-700 font-gilmer">Target
-                Currency</label>
-              <div class="mt-1">
-                <select name="target_currency" id="target-currency" v-model="baseCurrency"
-                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full">
-                  <option selected disabled>Select the currency you want to spend</option>
                   <option :value="currency.value"
                     v-for="(currency, index) in [...supportedCurrencies].filter(x => x.value != targetCurrency)"
                     :key="index">{{ currency.name }}</option>
@@ -111,9 +96,23 @@
               </div>
             </div>
 
+            <!-- TARGET CURRENCY -->
+            <div class="grid grid-cols-1 gap-y-5">
+              <label for="target-currency" class="block font-medium text-gray-700 font-gilmer">Target Currency</label>
+              <div class="mt-1">
+                <select name="target_currency" id="target-currency" v-model="targetCurrency"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full">
+                  <option selected disabled>Select the currency you want to spend</option>
+                  <option :value="currency.value"
+                    v-for="(currency, index) in [...supportedCurrencies].filter(x => x.value != baseCurrency)"
+                    :key="index">{{ currency.name }}</option>
+                </select>
+              </div>
+            </div>
+
             <!-- AMOUNT-->
             <div class="grid grid-cols-1 gap-y-5">
-              <label for="amount" class="block font-medium text-gray-700 font-gilmer">Amount <span v-if="baseCurrency">({{getCurrencyInformation(baseCurrency).name}})</span></label>
+              <label for="amount" class="block font-medium text-gray-700 font-gilmer">Amount <span v-if="targetCurrency">({{getCurrencyInformation(targetCurrency).name}})</span></label>
               <div class="mt-1">
                 <input type="number" name="amount" id="amount" v-model="amount"
                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-6 rounded-lg bg-gray-100 border-none font-gilmer w-full"
