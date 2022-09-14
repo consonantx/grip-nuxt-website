@@ -21,12 +21,10 @@
       <Meta name="twitter:description"
         content="Access, manage and pay from all your bank accounts and fintech wallets, anywhere in the world, with one global card and one super app." />
       <Meta name="twitter:image" content="https://trygrip.co/og_image.png" />
-      <Script>
-        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+      <Script children="!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
         },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
         a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-        twq('config','oc27m');
-      </Script>
+        twq('config','oc27m');"/>
     </Head>
     <!-- TODO: add loader back -->
     <SharedLoader @is-completed="() => showPage = true"></SharedLoader>
