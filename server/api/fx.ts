@@ -2,7 +2,7 @@ import { FxConversionRequest, FxConversionResponse, FxCurrencies } from "~~/inte
 
 
 export default defineEventHandler(async (event) => {
-  switch (event.req.method) {
+  switch (event.node.req) {
     case 'GET':
       const data = await $fetch<FxCurrencies>(`https://api.grip.technology/fx/currency`, {
         headers: {
