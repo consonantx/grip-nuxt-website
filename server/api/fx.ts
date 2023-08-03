@@ -2,7 +2,7 @@ import { FxConversionRequest, FxConversionResponse, FxCurrencies } from "~~/inte
 
 
 export default defineEventHandler(async (event) => {
-  switch (event.node.req) {
+  switch (event.node.req.method) {
     case 'GET':
       const data = await $fetch<FxCurrencies>(`https://api.grip.technology/fx/currency`, {
         headers: {
@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
         }
       })
       if (data) {
-        event.res.statusCode = 200
+        event.node.res.statusCode = 200
         return data.data
       }
       event.res.statusCode = 500
@@ -25,22 +25,22 @@ export default defineEventHandler(async (event) => {
         },
         method: 'POST',
         body: JSON.stringify({
-          ...(await useBody(event) as FxConversionRequest)
+          ...(await readBody(event) as FxConversionRequest)
         })
       })
       if (conversionResponse) {
-        event.res.statusCode = 200
+        event.node.res.statusCode = 200
         return conversionResponse.data
       }
-      event.res.statusCode = 500
+      event.node.res.statusCode = 500
       console.log(conversionResponse)
       return {
         error: 'something went wrong'
       }
     default:
-      event.res.statusCode = 405
+      event.node.res.statusCode = 405
       return {
-        error: 'method not allowed'
+        error: event.node.req.method + ' method not allowed'
       }
   }
 })
