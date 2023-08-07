@@ -38,7 +38,7 @@
       <div class="relative z-[2] hidden lg:block">
         <div class="flex justify-center lg:justify-end -translate-y-6 md:-translate-y-72 lg:-translate-y-12">
           <button class="flex flex-col items-center" @click="scrollTo('why-grip-section')">
-            <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
+            <ArrowDownCircleIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowDownCircleIcon>
             <p class="font-display text-[10px] leading-none">Scroll Down</p>
           </button>
         </div>
@@ -48,29 +48,30 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
+import { ArrowDownCircleIcon } from "@heroicons/vue/24/outline"
 import { useTimeoutFn } from "@vueuse/core"
 
 import { heroSectionAnimation } from "@/animations/home"
 import { Ref } from "@/interfaces"
 
 const shouldShowCover = ref(true)
-const targetSection = ref<HTMLElement>(null)
+const targetSection = ref<HTMLElement | null>(null)
 
-const sectionTitleOneRef = ref<HTMLElement>(null)
-const sectionTitleTwoRef = ref<HTMLElement>(null)
-const sectionCoverRef = ref<HTMLElement>(null)
-const subtitleLineRef = ref<HTMLElement>(null)
-const subtitleRef = ref<HTMLElement>(null)
-const videoRef = ref<HTMLVideoElement>(null)
+const sectionTitleOneRef = ref<HTMLElement | null>(null)
+const sectionTitleTwoRef = ref<HTMLElement | null>(null)
+const sectionCoverRef = ref<HTMLElement | null>(null)
+const subtitleLineRef = ref<HTMLElement | null>(null)
+const subtitleRef = ref<HTMLElement | null>(null)
+const videoRef = ref<HTMLVideoElement | null>(null)
 
 useTimeoutFn(() => shouldShowCover.value = false, 2000)
 
+// @ts-ignore
 useAnimationTrigger(targetSection, () => heroSectionAnimation(sectionTitleOneRef, sectionTitleTwoRef, sectionCoverRef, subtitleLineRef, subtitleRef))
 
 const scrollTo = (elementId: string) => {
   if (document.querySelector(`#${elementId}`)) {
-    document.querySelector(`#${elementId}`).scrollIntoView({ behavior: "smooth", block: "start" })
+    document.querySelector(`#${elementId}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 }
 

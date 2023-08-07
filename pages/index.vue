@@ -15,7 +15,9 @@
 
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
-      <HomeAlternateHero></HomeAlternateHero>
+      <ClientOnly>
+        <HomeAlternateHero></HomeAlternateHero>
+      </ClientOnly>
       <HomeReason></HomeReason>
       <HomeFeature></HomeFeature>
       <HomeFaq></HomeFaq>

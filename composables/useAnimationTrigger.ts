@@ -2,7 +2,7 @@ import { UseIntersectionObserverOptions, useIntersectionObserver } from "@vueuse
 import { Ref } from "~~/interfaces"
 
 export const useAnimationTrigger = (
-  targetSection: Ref<HTMLElement>,
+  targetSection: Ref<HTMLElement | null>,
   animationCallback: () => void,
   options?: UseIntersectionObserverOptions
 ) => {
@@ -11,7 +11,7 @@ export const useAnimationTrigger = (
   if (targetSection.value) targetSection.value.hidden = true
   // @ts-ignore
   const { stop } = useIntersectionObserver(targetSection, ([{ isIntersecting }], observerElement) => {
-    if (!targetIsInView.value && isIntersecting) {
+    if (!targetIsInView.value && isIntersecting && targetSection.value) {
       targetIsInView.value = true
       targetSection.value.hidden = false
       animationCallback()

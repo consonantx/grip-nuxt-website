@@ -88,7 +88,7 @@
       <div class="flex items-center flex-col justify-center pt-20 pb-6 lg:pb-10">
         <div class="flex justify-center lg:justify-end -translate-y-10 lg:-translate-y-12">
           <button class="flex flex-col items-center" @click="scrollTo(500)">
-            <ArrowCircleDownIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowCircleDownIcon>
+            <ArrowDownCircleIcon class="w-10 lg:w-14 mb-3 stroke-1 animate-bounce duration-1000"></ArrowDownCircleIcon>
             <p class="font-display text-[10px] leading-none">Scroll Down</p>
           </button>
         </div>
@@ -98,7 +98,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
+import { ArrowDownCircleIcon } from "@heroicons/vue/24/outline"
 import { Motion, Presence } from "@motionone/vue"
 
 import featuredFeatures from "~~/data/featuredFeatures"
@@ -112,7 +112,7 @@ const props = defineProps<{
   imageFour: string
 }>()
 
-const targetSection = ref<HTMLElement>(null)
+const targetSection = ref<HTMLElement | null>(null)
 
 
 const titleTextSwitcherAnimation = computed(() => ({
@@ -170,8 +170,8 @@ const descriptionTextSwitcherAnimation = computed(() => ({
 }))
 
 const scrollTo = (elementId: string | number) => {
-  if (typeof elementId === 'string' && document.querySelector(`#${elementId}`)) {
-    document.querySelector(`#${elementId}`).scrollIntoView({ behavior: "smooth", block: "start" })
+  if (typeof elementId === 'string' && document?.querySelector(`#${elementId}`)) {
+    document?.querySelector(`#${elementId}`)?.scrollIntoView({ behavior: "smooth", block: "start" })
   } else if (typeof elementId === 'number') {
     window.scrollBy({ top: elementId, left: 0, behavior: "smooth" })
   }
