@@ -16,8 +16,8 @@
 <script lang="ts" setup>
 import { faqSectionAnimation } from "@/animations/home"
 
-const sectionTitleRef = ref<HTMLElement>(null)
-const targetSection = ref<HTMLElement>(null)
+const sectionTitleRef = ref<HTMLElement | null>(null)
+const targetSection = ref<HTMLElement | null>(null)
 
-useAnimationTrigger(targetSection, () => faqSectionAnimation(sectionTitleRef))
+useAnimationTrigger(targetSection as Ref<HTMLElement>, () => faqSectionAnimation(sectionTitleRef as Ref<HTMLElement>))
 </script>

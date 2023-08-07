@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import { animate, stagger } from "motion"
 
-const preFooterRef = ref<HTMLElement>(null)
+const preFooterRef = ref<HTMLElement | null>(null)
 
 // @ts-ignore
 useAnimationTrigger(preFooterRef, () => animate(preFooterRef.value.children, {

@@ -61,7 +61,7 @@
 
 <script lang="ts" setup>
 import { Motion, Presence } from "@motionone/vue"
-import { MenuIcon, XCircleIcon } from "@heroicons/vue/solid" 
+import { Bars3Icon as MenuIcon, XCircleIcon } from "@heroicons/vue/24/solid" 
 import { useWindowScroll, useWindowSize } from "@vueuse/core"
 
 const showMenu = ref(false)

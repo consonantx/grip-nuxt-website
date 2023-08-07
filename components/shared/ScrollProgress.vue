@@ -30,7 +30,7 @@ const props = defineProps<{
 }>()
 
 const scrollProgress = computed(() => props.scrollProgress ?? 1)
-const pathRef = ref<SVGPathElement>(null)
+const pathRef = ref<SVGPathElement | null>(null)
 
 const draw = (progress: number) => {
   return {

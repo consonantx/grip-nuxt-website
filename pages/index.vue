@@ -25,8 +25,3 @@
     <LayoutFooter></LayoutFooter>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { ArrowCircleDownIcon } from "@heroicons/vue/outline"
-
-</script>

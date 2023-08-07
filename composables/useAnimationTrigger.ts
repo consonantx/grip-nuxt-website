@@ -1,10 +1,10 @@
-import { IntersectionObserverOptions, useIntersectionObserver } from "@vueuse/core"
+import { UseIntersectionObserverOptions, useIntersectionObserver } from "@vueuse/core"
 import { Ref } from "~~/interfaces"
 
 export const useAnimationTrigger = (
   targetSection: Ref<HTMLElement>,
   animationCallback: () => void,
-  options?: IntersectionObserverOptions
+  options?: UseIntersectionObserverOptions
 ) => {
   const targetIsInView = ref(false)
   
