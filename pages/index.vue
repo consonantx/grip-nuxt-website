@@ -16,7 +16,7 @@
     <main class="flex flex-col relative">
       <!-- HERO SECTION -->
       <ClientOnly>
-        <HomeAlternateHero></HomeAlternateHero>
+        <HomeAlternateHero fallback-tag="span" fallback="Loading..."></HomeAlternateHero>
       </ClientOnly>
       <HomeReason></HomeReason>
       <HomeFeature></HomeFeature>

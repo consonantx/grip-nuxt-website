@@ -27,7 +27,9 @@
       <Meta name="twitter:image" content="https://trygrip.co/og_image.png" />
     </Head>
     <!-- TODO: add loader back -->
-    <SharedLoader @is-completed="() => showPage = true"></SharedLoader>
+    <ClientOnly>
+      <SharedLoader @is-completed="() => showPage = true"></SharedLoader>
+    </ClientOnly>
     <NuxtPage v-if="showPage" />
   </div>
 </template>
